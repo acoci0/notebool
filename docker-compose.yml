@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: notmarket-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: notmarket
+      POSTGRES_USER: notmarket
+      POSTGRES_PASSWORD: notmarket_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - notmarket_pgdata:/var/lib/postgresql/data
+
+volumes:
+  notmarket_pgdata:
