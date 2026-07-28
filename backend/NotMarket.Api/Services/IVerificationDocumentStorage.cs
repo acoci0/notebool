@@ -10,4 +10,8 @@ public interface IVerificationDocumentStorage
     Task<Stream?> OpenReadAsync(
         string relativePath,
         CancellationToken cancellationToken);
+
+    Task DeleteAsync(
+        string relativePath,
+        CancellationToken cancellationToken);
 }

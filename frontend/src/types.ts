@@ -71,3 +71,29 @@ export type NoteSubmission = {
   generatedPdfBlobPath?: string | null;
   createdAt: string;
 };
+
+export type StudentProfile = {
+  id: string;
+  email: string;
+  displayName: string;
+  role: string;
+};
+
+export type StudentLoginResponse = {
+  accessToken: string;
+  expiresAt: string;
+  student: StudentProfile;
+};
+
+export type StudentVerificationItem = {
+  id: string;
+  universityName: string;
+  facultyName: string;
+  departmentName: string;
+  status: string;
+  documentIssueDate: string;
+  reviewNote?: string | null;
+  reviewedAt?: string | null;
+  expiresAt?: string | null;
+  createdAt: string;
+};

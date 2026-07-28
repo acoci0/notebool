@@ -77,4 +77,47 @@ public sealed class LocalVerificationDocumentStorage(
 
         return Task.FromResult<Stream?>(stream);
     }
+
+    public Task DeleteAsync(
+        string relativePath,
+        CancellationToken cancellationToken)
+    {
+        cancellationToken.ThrowIfCancellationRequested();
+
+        if (string.IsNullOrWhiteSpace(relativePath))
+        {
+            return Task.CompletedTask;
+        }
+
+        var root =
+            Path.GetFullPath(_rootPath);
+
+        var fullPath =
+            Path.GetFullPath(
+                Path.Combine(
+                    root,
+                    relativePath));
+
+        var rootWithSeparator =
+            root.EndsWith(
+                Path.DirectorySeparatorChar)
+                ? root
+                : root +
+                Path.DirectorySeparatorChar;
+
+        if (!fullPath.StartsWith(
+                rootWithSeparator,
+                StringComparison.Ordinal))
+        {
+            throw new InvalidOperationException(
+                "Geçersiz doğrulama belgesi yolu.");
+        }
+
+        if (File.Exists(fullPath))
+        {
+            File.Delete(fullPath);
+        }
+
+        return Task.CompletedTask;
+    }
 }

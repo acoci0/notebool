@@ -21,3 +21,15 @@ public sealed record StudentVerificationCreatedResponse(
     string Status,
     DateOnly DocumentIssueDate,
     DateTimeOffset CreatedAt);
+
+public sealed record StudentVerificationListItemResponse(
+    Guid Id,
+    string UniversityName,
+    string FacultyName,
+    string DepartmentName,
+    string Status,
+    DateOnly DocumentIssueDate,
+    string? ReviewNote,
+    DateTimeOffset? ReviewedAt,
+    DateTimeOffset? ExpiresAt,
+    DateTimeOffset CreatedAt);
