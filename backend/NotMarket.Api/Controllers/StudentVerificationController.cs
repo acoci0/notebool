@@ -4,6 +4,7 @@ using System.Security.Cryptography;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using NotMarket.Api.Contracts;
 using NotMarket.Api.Data;
 using NotMarket.Api.Domain;
@@ -16,7 +17,8 @@ namespace NotMarket.Api.Controllers;
 [Authorize(Policy = "StudentOnly")]
 public sealed class StudentVerificationsController(
     AppDbContext db,
-    IVerificationDocumentStorage storage)
+    IVerificationDocumentStorage storage,
+    ILogger<StudentVerificationsController> logger)
     : ControllerBase
 {
     private const long MaxFileSize =
@@ -43,24 +45,21 @@ public sealed class StudentVerificationsController(
             await db.StudentVerifications
                 .AsNoTracking()
                 .Where(
-                    x =>
-                        x.UserId ==
-                        userId.Value)
+                    x => x.UserId == userId.Value)
                 .OrderByDescending(
                     x => x.CreatedAt)
                 .Select(
-                    x =>
-                        new StudentVerificationListItemResponse(
-                            x.Id,
-                            x.UniversityName,
-                            x.FacultyName,
-                            x.DepartmentName,
-                            x.Status.ToString(),
-                            x.DocumentIssueDate,
-                            x.ReviewNote,
-                            x.ReviewedAt,
-                            x.ExpiresAt,
-                            x.CreatedAt))
+                    x => new StudentVerificationListItemResponse(
+                        x.Id,
+                        x.UniversityName,
+                        x.FacultyName,
+                        x.DepartmentName,
+                        x.Status.ToString(),
+                        x.DocumentIssueDate,
+                        x.ReviewNote,
+                        x.ReviewedAt,
+                        x.ExpiresAt,
+                        x.CreatedAt))
                 .ToListAsync(
                     cancellationToken);
 
@@ -72,12 +71,6 @@ public sealed class StudentVerificationsController(
      * karara bağlanmamış doğrulamasını siler.
      *
      * DELETE /api/student/verifications/{verificationId}
-     *
-     * Sadece:
-     * - Kaydın sahibi
-     * - Pending durumundaki kayıt
-     *
-     * silinebilir.
      */
     [HttpDelete("{verificationId:guid}")]
     public async Task<IActionResult> DeletePending(
@@ -92,21 +85,15 @@ public sealed class StudentVerificationsController(
         }
 
         /*
-         * Sadece giriş yapan öğrenciye ait
-         * doğrulama kaydı bulunabilir.
-         *
-         * Böylece başka bir öğrencinin
-         * verification ID'sini bilen kullanıcı
-         * o kaydı silemez.
+         * Kayıt hem belirtilen ID'ye hem de
+         * giriş yapan öğrenciye ait olmalıdır.
          */
         var verification =
             await db.StudentVerifications
                 .SingleOrDefaultAsync(
                     x =>
-                        x.Id ==
-                        verificationId &&
-                        x.UserId ==
-                        userId.Value,
+                        x.Id == verificationId &&
+                        x.UserId == userId.Value,
                     cancellationToken);
 
         if (verification is null)
@@ -119,8 +106,8 @@ public sealed class StudentVerificationsController(
         }
 
         /*
-         * Sadece Pending kayıtlar
-         * öğrenci tarafından geri çekilebilir.
+         * Öğrenci yalnızca Pending durumundaki
+         * başvurusunu geri çekebilir.
          */
         if (verification.Status !=
             VerificationStatus.Pending)
@@ -132,20 +119,11 @@ public sealed class StudentVerificationsController(
             });
         }
 
-        /*
-         * Dosya yolunu DB kaydını silmeden
-         * önce saklıyoruz.
-         */
         var documentPath =
             verification.DocumentBlobPath;
 
         /*
-         * Önce veritabanındaki doğrulama
-         * kaydını kaldırıyoruz.
-         *
-         * Böylece dosya silme işleminde
-         * problem yaşansa bile kullanıcı
-         * açısından doğrulama geri çekilmiş olur.
+         * Önce veritabanı kaydını kaldır.
          */
         db.StudentVerifications.Remove(
             verification);
@@ -154,17 +132,28 @@ public sealed class StudentVerificationsController(
             cancellationToken);
 
         /*
-         * Ardından private storage'daki
-         * öğrenci belgesini kaldırıyoruz.
+         * Ardından private storage dosyasını
+         * temizlemeyi dene.
+         *
+         * Dosya temizliği başarısız olsa bile
+         * veritabanı kaydı silindiği için kullanıcıya
+         * başarısız sonuç göstermiyoruz. Hata loglanır.
          */
-        await storage.DeleteAsync(
-            documentPath,
-            cancellationToken);
+        try
+        {
+            await storage.DeleteAsync(
+                documentPath,
+                cancellationToken);
+        }
+        catch (Exception exception)
+        {
+            logger.LogWarning(
+                exception,
+                "Silinen öğrenci doğrulamasının dosyası temizlenemedi. VerificationId: {VerificationId}, Path: {DocumentPath}",
+                verificationId,
+                documentPath);
+        }
 
-        /*
-         * 204 No Content:
-         * Silme işlemi başarıyla tamamlandı.
-         */
         return NoContent();
     }
 
@@ -189,11 +178,10 @@ public sealed class StudentVerificationsController(
         }
 
         /*
-         * Akademik alan kontrolleri.
+         * Zorunlu akademik alan kontrolleri.
          */
         if (
-            string.IsNullOrWhiteSpace(
-                request.UniversityName) ||
+            request.UniversityId == Guid.Empty ||
             string.IsNullOrWhiteSpace(
                 request.FacultyName) ||
             string.IsNullOrWhiteSpace(
@@ -203,6 +191,36 @@ public sealed class StudentVerificationsController(
             {
                 message =
                     "Üniversite, fakülte ve bölüm bilgileri zorunludur."
+            });
+        }
+
+        /*
+         * Frontend'den gelen UniversityId değerini
+         * backend'in akademik master datasında doğrula.
+         *
+         * Sadece:
+         * - mevcut,
+         * - aktif,
+         * - Türkiye'ye ait
+         *
+         * üniversiteler kabul edilir.
+         */
+        var university =
+            await db.AcademicUniversities
+                .AsNoTracking()
+                .SingleOrDefaultAsync(
+                    x =>
+                        x.Id == request.UniversityId &&
+                        x.IsActive &&
+                        x.CountryCode == "TR",
+                    cancellationToken);
+
+        if (university is null)
+        {
+            return BadRequest(new
+            {
+                message =
+                    "Geçerli bir Türkiye üniversitesi seçmelisiniz."
             });
         }
 
@@ -221,11 +239,9 @@ public sealed class StudentVerificationsController(
         }
 
         /*
-         * Maksimum 10 MB.
+         * Maksimum dosya boyutu: 10 MB.
          */
-        if (
-            request.Document.Length >
-            MaxFileSize)
+        if (request.Document.Length > MaxFileSize)
         {
             return BadRequest(new
             {
@@ -251,10 +267,9 @@ public sealed class StudentVerificationsController(
         }
 
         /*
-         * Sadece uzantıya güvenmiyoruz.
-         *
-         * Dosyanın gerçek PDF header'ına
-         * sahip olması gerekir.
+         * Yalnızca uzantıya güvenilmez.
+         * Dosya içeriğinin %PDF- header'ı
+         * kontrol edilir.
          */
         if (!await IsPdfAsync(
                 request.Document,
@@ -268,7 +283,7 @@ public sealed class StudentVerificationsController(
         }
 
         /*
-         * Belge tarihi kontrolü.
+         * Belge tarihi yyyy-MM-dd biçiminde olmalı.
          */
         if (!DateOnly.TryParseExact(
                 request.DocumentIssueDate,
@@ -288,9 +303,6 @@ public sealed class StudentVerificationsController(
             DateOnly.FromDateTime(
                 DateTime.UtcNow);
 
-        /*
-         * Belge tarihi gelecekte olamaz.
-         */
         if (documentIssueDate > today)
         {
             return BadRequest(new
@@ -301,15 +313,13 @@ public sealed class StudentVerificationsController(
         }
 
         /*
-         * Şimdilik formdan gelen tarih
-         * üzerinden son 30 gün kontrolü.
+         * Şimdilik formdan gelen tarih üzerinden
+         * son 30 gün kontrolü yapılır.
          *
-         * İleride PDF içerisindeki gerçek
-         * belge tarihi okunacak.
+         * İleride PDF içerisindeki gerçek belge
+         * tarihi ayrıca okunacaktır.
          */
-        if (
-            documentIssueDate <
-            today.AddDays(-30))
+        if (documentIssueDate < today.AddDays(-30))
         {
             return BadRequest(new
             {
@@ -319,17 +329,19 @@ public sealed class StudentVerificationsController(
         }
 
         /*
-         * Kullanıcı tarafından girilen
-         * akademik bilgileri normalize et.
+         * Fakülte ve bölüm metinlerindeki
+         * gereksiz boşlukları temizle.
+         *
+         * Üniversite adı kullanıcıdan alınmaz.
+         * Veritabanındaki canonical isim kullanılır.
          */
-        var university =
-            request.UniversityName.Trim();
-
         var faculty =
-            request.FacultyName.Trim();
+            NormalizeDisplayText(
+                request.FacultyName);
 
         var department =
-            request.DepartmentName.Trim();
+            NormalizeDisplayText(
+                request.DepartmentName);
 
         /*
          * PDF SHA-256 hash değeri.
@@ -340,8 +352,7 @@ public sealed class StudentVerificationsController(
                 cancellationToken);
 
         /*
-         * Aynı PDF daha önce sisteme
-         * yüklenmiş mi?
+         * Aynı dosya daha önce yüklenmiş mi?
          */
         var documentAlreadyExists =
             await db.StudentVerifications
@@ -362,29 +373,38 @@ public sealed class StudentVerificationsController(
         }
 
         /*
-         * Aynı öğrenci aynı akademik alan
-         * için zaten Pending başvuru
-         * oluşturmuş mu?
+         * Aynı öğrenci aynı üniversite, fakülte
+         * ve bölüm için Pending başvuruya sahip mi?
+         *
+         * UniversityId null olan eski kayıtlar için
+         * UniversityName fallback kontrolü yapılır.
          */
         var duplicatePending =
             await db.StudentVerifications
                 .AsNoTracking()
                 .AnyAsync(
                     x =>
-                        x.UserId ==
-                        userId.Value &&
+                        x.UserId == userId.Value &&
 
-                        x.UniversityName ==
-                        university &&
+                        (
+                            x.UniversityId ==
+                                university.Id ||
+
+                            (
+                                x.UniversityId == null &&
+                                x.UniversityName ==
+                                    university.Name
+                            )
+                        ) &&
 
                         x.FacultyName ==
-                        faculty &&
+                            faculty &&
 
                         x.DepartmentName ==
-                        department &&
+                            department &&
 
                         x.Status ==
-                        VerificationStatus.Pending,
+                            VerificationStatus.Pending,
                     cancellationToken);
 
         if (duplicatePending)
@@ -397,8 +417,8 @@ public sealed class StudentVerificationsController(
         }
 
         /*
-         * Aynı akademik yetki halen
-         * aktif durumda mı?
+         * Aynı akademik yetki için geçerli bir
+         * Approved doğrulama bulunuyor mu?
          */
         var now =
             DateTimeOffset.UtcNow;
@@ -408,20 +428,27 @@ public sealed class StudentVerificationsController(
                 .AsNoTracking()
                 .AnyAsync(
                     x =>
-                        x.UserId ==
-                        userId.Value &&
+                        x.UserId == userId.Value &&
 
-                        x.UniversityName ==
-                        university &&
+                        (
+                            x.UniversityId ==
+                                university.Id ||
+
+                            (
+                                x.UniversityId == null &&
+                                x.UniversityName ==
+                                    university.Name
+                            )
+                        ) &&
 
                         x.FacultyName ==
-                        faculty &&
+                            faculty &&
 
                         x.DepartmentName ==
-                        department &&
+                            department &&
 
                         x.Status ==
-                        VerificationStatus.Approved &&
+                            VerificationStatus.Approved &&
 
                         (
                             x.ExpiresAt == null ||
@@ -448,8 +475,11 @@ public sealed class StudentVerificationsController(
                 cancellationToken);
 
         /*
-         * StudentVerification kaydı
-         * Pending olarak oluşturulur.
+         * StudentVerification kaydı oluşturulur.
+         *
+         * UniversityName frontend'den değil,
+         * AcademicUniversities tablosundaki
+         * canonical kayıttan alınır.
          */
         var verification =
             new StudentVerification
@@ -457,8 +487,11 @@ public sealed class StudentVerificationsController(
                 UserId =
                     userId.Value,
 
+                UniversityId =
+                    university.Id,
+
                 UniversityName =
-                    university,
+                    university.Name,
 
                 FacultyName =
                     faculty,
@@ -485,13 +518,34 @@ public sealed class StudentVerificationsController(
         db.StudentVerifications.Add(
             verification);
 
-        await db.SaveChangesAsync(
-            cancellationToken);
+        try
+        {
+            await db.SaveChangesAsync(
+                cancellationToken);
+        }
+        catch
+        {
+            /*
+             * Veritabanına kayıt başarısız olursa
+             * storage'a yazılmış PDF'i temizlemeyi dene.
+             */
+            try
+            {
+                await storage.DeleteAsync(
+                    relativePath,
+                    CancellationToken.None);
+            }
+            catch (Exception cleanupException)
+            {
+                logger.LogWarning(
+                    cleanupException,
+                    "Başarısız doğrulama kaydının dosyası temizlenemedi. Path: {DocumentPath}",
+                    relativePath);
+            }
 
-        /*
-         * Oluşturulan doğrulamayı
-         * frontend'e döndür.
-         */
+            throw;
+        }
+
         return Created(
             $"/api/student/verifications/{verification.Id}",
             new StudentVerificationCreatedResponse(
@@ -521,10 +575,27 @@ public sealed class StudentVerificationsController(
     }
 
     /*
+     * Baştaki, sondaki ve tekrarlanan
+     * boşlukları temizler.
+     */
+    private static string NormalizeDisplayText(
+        string value)
+    {
+        var parts =
+            value.Trim()
+                .Split(
+                    ' ',
+                    StringSplitOptions.RemoveEmptyEntries);
+
+        return string.Join(
+            ' ',
+            parts);
+    }
+
+    /*
      * PDF magic-byte kontrolü.
      *
-     * Geçerli PDF başlangıcı:
-     *
+     * Geçerli başlangıç:
      * %PDF-
      */
     private static async Task<bool> IsPdfAsync(
@@ -558,8 +629,7 @@ public sealed class StudentVerificationsController(
     }
 
     /*
-     * PDF'in SHA-256 hash değerini
-     * oluşturur.
+     * PDF'in SHA-256 hash değerini oluşturur.
      */
     private static async Task<string>
         CalculateSha256Async(

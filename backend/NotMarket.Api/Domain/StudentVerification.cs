@@ -11,6 +11,10 @@ public sealed class StudentVerification
     public ApplicationUser User { get; set; } = null!;
 
     [MaxLength(180)]
+    
+    public Guid? UniversityId { get; set; }
+
+    public AcademicUniversity? University { get; set; }
     public required string UniversityName { get; set; }
 
     [MaxLength(180)]

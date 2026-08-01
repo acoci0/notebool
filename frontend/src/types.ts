@@ -97,3 +97,8 @@ export type StudentVerificationItem = {
   expiresAt?: string | null;
   createdAt: string;
 };
+
+export type AcademicUniversity = {
+  id: string;
+  name: string;
+};

@@ -2,7 +2,7 @@ namespace NotMarket.Api.Contracts;
 
 public sealed class StudentVerificationUploadRequest
 {
-    public required string UniversityName { get; init; }
+    public required Guid UniversityId { get; init; }
 
     public required string FacultyName { get; init; }
 
