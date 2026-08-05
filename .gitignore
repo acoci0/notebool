@@ -7,3 +7,6 @@
 *.suo
 .DS_Store
 .vscode/
+
+# Runtime verification documents
+backend/NotMarket.Api/App_Data/

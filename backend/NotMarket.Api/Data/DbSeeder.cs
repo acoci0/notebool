@@ -13,16 +13,62 @@ public static class DbSeeder
         CancellationToken cancellationToken = default)
     {
         /*
-         * Üniversite kataloğu, demo öğrenci
-         * doğrulamasından önce oluşturulmalıdır.
+         * Önce üniversiteler oluşturulur.
          */
         await SeedAcademicUniversitiesAsync(
             db,
             cancellationToken);
 
         /*
-         * Admin kullanıcı ayarları.
+         * Üniversitelere bağlı akademik birim
+         * ve programlar oluşturulur.
          */
+        await SeedAcademicStructureAsync(
+            db,
+            cancellationToken);
+
+        /*
+         * Admin kullanıcısı oluşturulur.
+         */
+        await SeedAdminAsync(
+            db,
+            configuration,
+            cancellationToken);
+
+        /*
+         * Sistemde hiç öğrenci yoksa demo
+         * kullanıcılar ve demo kayıtlar eklenir.
+         */
+        var studentExists =
+            await db.Users.AnyAsync(
+                x => x.Role == UserRole.Student,
+                cancellationToken);
+
+        if (!studentExists)
+        {
+            await SeedDemoDataAsync(
+                db,
+                cancellationToken);
+        }
+
+        /*
+         * Eski doğrulama kayıtlarını mümkün
+         * olduğunda yeni canonical akademik
+         * kayıtlara bağlar.
+         */
+        await BackfillLegacyVerificationsAsync(
+            db,
+            cancellationToken);
+    }
+
+    /*
+     * Admin kullanıcısını oluşturur.
+     */
+    private static async Task SeedAdminAsync(
+        AppDbContext db,
+        IConfiguration configuration,
+        CancellationToken cancellationToken)
+    {
         var adminEmail =
             (
                 configuration["SeedAdmin:Email"] ??
@@ -44,77 +90,62 @@ public static class DbSeeder
                 x => x.Email == adminEmail,
                 cancellationToken);
 
-        if (admin is null)
+        if (admin is not null)
         {
-            admin =
-                new ApplicationUser
-                {
-                    Email =
-                        adminEmail,
-
-                    DisplayName =
-                        adminDisplayName,
-
-                    PasswordHash =
-                        string.Empty,
-
-                    Role =
-                        UserRole.Admin,
-
-                    Status =
-                        AccountStatus.Active
-                };
-
-            var hasher =
-                new PasswordHasher<ApplicationUser>();
-
-            admin.PasswordHash =
-                hasher.HashPassword(
-                    admin,
-                    adminPassword);
-
-            db.Users.Add(admin);
-
-            await db.SaveChangesAsync(
-                cancellationToken);
+            return;
         }
 
-        /*
-         * Sistemde hiç öğrenci yoksa demo
-         * kullanıcıları ve demo kayıtları ekle.
-         */
-        var studentExists =
-            await db.Users.AnyAsync(
-                x => x.Role == UserRole.Student,
-                cancellationToken);
+        admin =
+            new ApplicationUser
+            {
+                Email =
+                    adminEmail,
 
-        if (!studentExists)
-        {
-            await SeedDemoDataAsync(
-                db,
-                cancellationToken);
-        }
+                DisplayName =
+                    adminDisplayName,
+
+                PasswordHash =
+                    string.Empty,
+
+                Role =
+                    UserRole.Admin,
+
+                Status =
+                    AccountStatus.Active
+            };
+
+        var hasher =
+            new PasswordHasher<ApplicationUser>();
+
+        admin.PasswordHash =
+            hasher.HashPassword(
+                admin,
+                adminPassword);
+
+        db.Users.Add(admin);
+
+        await db.SaveChangesAsync(
+            cancellationToken);
     }
 
     /*
-     * Türkiye'deki üniversiteler için başlangıç
+     * Türkiye üniversiteleri için başlangıç
      * master datasını oluşturur.
      *
-     * Bu işlem idempotent'tir:
-     * aynı üniversiteyi tekrar eklemez.
+     * İşlem idempotent'tir:
+     * uygulama her başladığında aynı kayıtları
+     * tekrar eklemez.
      */
     private static async Task SeedAcademicUniversitiesAsync(
         AppDbContext db,
         CancellationToken cancellationToken)
     {
         /*
-         * İlk geliştirme listesi.
+         * Geliştirme aşamasında kullanılan
+         * başlangıç üniversite listesi.
          *
-         * Bu liste yalnızca Türkiye'deki
-         * üniversitelerden oluşmaktadır.
-         *
-         * İlerleyen aşamada eksiksiz master liste
-         * ayrı bir veri dosyasından alınabilir.
+         * Bu liste eksiksiz üretim kataloğu
+         * olarak değerlendirilmemelidir.
          */
         var universityNames =
             new[]
@@ -151,9 +182,6 @@ public static class DbSeeder
                 "Yıldız Teknik Üniversitesi"
             };
 
-        /*
-         * Mevcut Türkiye üniversitelerini getir.
-         */
         var existingUniversities =
             await db.AcademicUniversities
                 .Where(
@@ -161,17 +189,12 @@ public static class DbSeeder
                 .ToListAsync(
                     cancellationToken);
 
-        /*
-         * Normalize edilmiş isim üzerinden
-         * hızlı mükerrer kontrolü.
-         */
         var existingByNormalizedName =
             existingUniversities.ToDictionary(
                 x => x.NormalizedName,
                 StringComparer.Ordinal);
 
-        foreach (var universityName
-                 in universityNames)
+        foreach (var universityName in universityNames)
         {
             var normalizedName =
                 AcademicTextNormalizer.Normalize(
@@ -183,11 +206,8 @@ public static class DbSeeder
                     out var existingUniversity)
             )
             {
-                /*
-                 * Kayıt zaten varsa canonical
-                 * görünüm değerlerini güncel tut.
-                 */
-                var changed = false;
+                var changed =
+                    false;
 
                 if (
                     existingUniversity.Name !=
@@ -197,7 +217,8 @@ public static class DbSeeder
                     existingUniversity.Name =
                         universityName;
 
-                    changed = true;
+                    changed =
+                        true;
                 }
 
                 if (
@@ -208,7 +229,8 @@ public static class DbSeeder
                     existingUniversity.CountryCode =
                         "TR";
 
-                    changed = true;
+                    changed =
+                        true;
                 }
 
                 if (!existingUniversity.IsActive)
@@ -216,7 +238,8 @@ public static class DbSeeder
                     existingUniversity.IsActive =
                         true;
 
-                    changed = true;
+                    changed =
+                        true;
                 }
 
                 if (changed)
@@ -257,8 +280,431 @@ public static class DbSeeder
     }
 
     /*
-     * Demo öğrenci, doğrulama ve not
-     * kayıtlarını oluşturur.
+     * Geliştirme ve frontend testi için
+     * örnek akademik hiyerarşi oluşturur.
+     *
+     * AcademicUniversity
+     *      └── AcademicUnit
+     *              └── AcademicProgram
+     */
+    private static async Task SeedAcademicStructureAsync(
+        AppDbContext db,
+        CancellationToken cancellationToken)
+    {
+        var structure =
+            new[]
+            {
+                new AcademicUnitSeed(
+                    "Marmara Üniversitesi",
+                    "Fen Fakültesi",
+                    AcademicUnitType.Faculty,
+                    new[]
+                    {
+                        "Matematik",
+                        "Fizik",
+                        "Kimya",
+                        "Biyoloji",
+                        "İstatistik"
+                    }),
+
+                new AcademicUnitSeed(
+                    "Marmara Üniversitesi",
+                    "Mühendislik Fakültesi",
+                    AcademicUnitType.Faculty,
+                    new[]
+                    {
+                        "Bilgisayar Mühendisliği",
+                        "Endüstri Mühendisliği",
+                        "Makine Mühendisliği",
+                        "Elektrik-Elektronik Mühendisliği"
+                    }),
+
+                new AcademicUnitSeed(
+                    "Marmara Üniversitesi",
+                    "Teknoloji Fakültesi",
+                    AcademicUnitType.Faculty,
+                    new[]
+                    {
+                        "Bilgisayar Mühendisliği",
+                        "Elektrik-Elektronik Mühendisliği",
+                        "Mekatronik Mühendisliği"
+                    }),
+
+                new AcademicUnitSeed(
+                    "İstanbul Teknik Üniversitesi",
+                    "Bilgisayar ve Bilişim Fakültesi",
+                    AcademicUnitType.Faculty,
+                    new[]
+                    {
+                        "Bilgisayar Mühendisliği",
+                        "Yapay Zeka ve Veri Mühendisliği"
+                    }),
+
+                new AcademicUnitSeed(
+                    "İstanbul Teknik Üniversitesi",
+                    "Elektrik-Elektronik Fakültesi",
+                    AcademicUnitType.Faculty,
+                    new[]
+                    {
+                        "Elektrik Mühendisliği",
+                        "Elektronik ve Haberleşme Mühendisliği",
+                        "Kontrol ve Otomasyon Mühendisliği"
+                    }),
+
+                new AcademicUnitSeed(
+                    "Boğaziçi Üniversitesi",
+                    "Mühendislik Fakültesi",
+                    AcademicUnitType.Faculty,
+                    new[]
+                    {
+                        "Bilgisayar Mühendisliği",
+                        "Elektrik-Elektronik Mühendisliği",
+                        "Endüstri Mühendisliği",
+                        "Makine Mühendisliği"
+                    }),
+
+                new AcademicUnitSeed(
+                    "Boğaziçi Üniversitesi",
+                    "Fen-Edebiyat Fakültesi",
+                    AcademicUnitType.Faculty,
+                    new[]
+                    {
+                        "Matematik",
+                        "Fizik",
+                        "Kimya",
+                        "Psikoloji"
+                    }),
+
+                new AcademicUnitSeed(
+                    "Yıldız Teknik Üniversitesi",
+                    "Elektrik-Elektronik Fakültesi",
+                    AcademicUnitType.Faculty,
+                    new[]
+                    {
+                        "Bilgisayar Mühendisliği",
+                        "Elektrik Mühendisliği",
+                        "Elektronik ve Haberleşme Mühendisliği"
+                    }),
+
+                new AcademicUnitSeed(
+                    "Yıldız Teknik Üniversitesi",
+                    "Fen-Edebiyat Fakültesi",
+                    AcademicUnitType.Faculty,
+                    new[]
+                    {
+                        "Matematik",
+                        "Fizik",
+                        "Kimya"
+                    })
+            };
+
+        /*
+         * Seed tanımlarında kullanılan
+         * üniversiteleri getir.
+         */
+        var universities =
+            await db.AcademicUniversities
+                .Where(
+                    x =>
+                        x.CountryCode == "TR" &&
+                        x.IsActive)
+                .ToListAsync(
+                    cancellationToken);
+
+        var universitiesByNormalizedName =
+            universities.ToDictionary(
+                x => x.NormalizedName,
+                StringComparer.Ordinal);
+
+        /*
+         * Yapı tanımlarında kullanılan
+         * üniversite ID'lerini belirle.
+         */
+        var targetUniversityIds =
+            new HashSet<Guid>();
+
+        foreach (var item in structure)
+        {
+            var normalizedUniversityName =
+                AcademicTextNormalizer.Normalize(
+                    item.UniversityName);
+
+            if (
+                !universitiesByNormalizedName.TryGetValue(
+                    normalizedUniversityName,
+                    out var university)
+            )
+            {
+                throw new InvalidOperationException(
+                    $"Akademik yapı seed işlemi için üniversite bulunamadı: {item.UniversityName}");
+            }
+
+            targetUniversityIds.Add(
+                university.Id);
+        }
+
+        /*
+         * Mevcut akademik birimleri getir.
+         */
+        var existingUnits =
+            await db.AcademicUnits
+                .Where(
+                    x =>
+                        targetUniversityIds.Contains(
+                            x.UniversityId))
+                .ToListAsync(
+                    cancellationToken);
+
+        var unitsByKey =
+            existingUnits.ToDictionary(
+                x =>
+                    (
+                        x.UniversityId,
+                        x.NormalizedName
+                    ));
+
+        /*
+         * Eksik akademik birimleri oluştur.
+         */
+        foreach (var item in structure)
+        {
+            var normalizedUniversityName =
+                AcademicTextNormalizer.Normalize(
+                    item.UniversityName);
+
+            var university =
+                universitiesByNormalizedName[
+                    normalizedUniversityName];
+
+            var normalizedUnitName =
+                AcademicTextNormalizer.Normalize(
+                    item.UnitName);
+
+            var key =
+                (
+                    university.Id,
+                    normalizedUnitName
+                );
+
+            if (
+                unitsByKey.TryGetValue(
+                    key,
+                    out var existingUnit)
+            )
+            {
+                var changed =
+                    false;
+
+                if (
+                    existingUnit.Name !=
+                    item.UnitName
+                )
+                {
+                    existingUnit.Name =
+                        item.UnitName;
+
+                    changed =
+                        true;
+                }
+
+                if (
+                    existingUnit.UnitType !=
+                    item.UnitType
+                )
+                {
+                    existingUnit.UnitType =
+                        item.UnitType;
+
+                    changed =
+                        true;
+                }
+
+                if (!existingUnit.IsActive)
+                {
+                    existingUnit.IsActive =
+                        true;
+
+                    changed =
+                        true;
+                }
+
+                if (changed)
+                {
+                    existingUnit.UpdatedAt =
+                        DateTimeOffset.UtcNow;
+                }
+
+                continue;
+            }
+
+            var academicUnit =
+                new AcademicUnit
+                {
+                    UniversityId =
+                        university.Id,
+
+                    Name =
+                        item.UnitName,
+
+                    NormalizedName =
+                        normalizedUnitName,
+
+                    UnitType =
+                        item.UnitType,
+
+                    IsActive =
+                        true
+                };
+
+            db.AcademicUnits.Add(
+                academicUnit);
+
+            unitsByKey.Add(
+                key,
+                academicUnit);
+        }
+
+        /*
+         * Yeni akademik birimlerin ID'leri
+         * veritabanına yazılır.
+         */
+        await db.SaveChangesAsync(
+            cancellationToken);
+
+        /*
+         * Kullanılan akademik birimlerin
+         * programlarını getir.
+         */
+        var targetUnitIds =
+            unitsByKey.Values
+                .Select(x => x.Id)
+                .ToHashSet();
+
+        var existingPrograms =
+            await db.AcademicPrograms
+                .Where(
+                    x =>
+                        targetUnitIds.Contains(
+                            x.AcademicUnitId))
+                .ToListAsync(
+                    cancellationToken);
+
+        var programsByKey =
+            existingPrograms.ToDictionary(
+                x =>
+                    (
+                        x.AcademicUnitId,
+                        x.NormalizedName
+                    ));
+
+        /*
+         * Eksik programları oluştur.
+         */
+        foreach (var item in structure)
+        {
+            var normalizedUniversityName =
+                AcademicTextNormalizer.Normalize(
+                    item.UniversityName);
+
+            var university =
+                universitiesByNormalizedName[
+                    normalizedUniversityName];
+
+            var normalizedUnitName =
+                AcademicTextNormalizer.Normalize(
+                    item.UnitName);
+
+            var academicUnit =
+                unitsByKey[
+                    (
+                        university.Id,
+                        normalizedUnitName
+                    )];
+
+            foreach (var programName
+                     in item.ProgramNames)
+            {
+                var normalizedProgramName =
+                    AcademicTextNormalizer.Normalize(
+                        programName);
+
+                var key =
+                    (
+                        academicUnit.Id,
+                        normalizedProgramName
+                    );
+
+                if (
+                    programsByKey.TryGetValue(
+                        key,
+                        out var existingProgram)
+                )
+                {
+                    var changed =
+                        false;
+
+                    if (
+                        existingProgram.Name !=
+                        programName
+                    )
+                    {
+                        existingProgram.Name =
+                            programName;
+
+                        changed =
+                            true;
+                    }
+
+                    if (!existingProgram.IsActive)
+                    {
+                        existingProgram.IsActive =
+                            true;
+
+                        changed =
+                            true;
+                    }
+
+                    if (changed)
+                    {
+                        existingProgram.UpdatedAt =
+                            DateTimeOffset.UtcNow;
+                    }
+
+                    continue;
+                }
+
+                var academicProgram =
+                    new AcademicProgram
+                    {
+                        AcademicUnitId =
+                            academicUnit.Id,
+
+                        Name =
+                            programName,
+
+                        NormalizedName =
+                            normalizedProgramName,
+
+                        IsActive =
+                            true
+                    };
+
+                db.AcademicPrograms.Add(
+                    academicProgram);
+
+                programsByKey.Add(
+                    key,
+                    academicProgram);
+            }
+        }
+
+        await db.SaveChangesAsync(
+            cancellationToken);
+    }
+
+    /*
+     * Demo öğrenci, doğrulama, talep ve
+     * not kaydı oluşturur.
      */
     private static async Task SeedDemoDataAsync(
         AppDbContext db,
@@ -319,28 +765,25 @@ public static class DbSeeder
             ayse,
             mehmet);
 
-        /*
-         * Demo doğrulaması için canonical
-         * Marmara Üniversitesi kaydını getir.
-         */
-        var marmaraNormalizedName =
-            AcademicTextNormalizer.Normalize(
-                "Marmara Üniversitesi");
-
         var marmaraUniversity =
-            await db.AcademicUniversities
-                .SingleOrDefaultAsync(
-                    x =>
-                        x.CountryCode == "TR" &&
-                        x.NormalizedName ==
-                        marmaraNormalizedName,
-                    cancellationToken);
+            await GetUniversityAsync(
+                db,
+                "Marmara Üniversitesi",
+                cancellationToken);
 
-        if (marmaraUniversity is null)
-        {
-            throw new InvalidOperationException(
-                "Marmara Üniversitesi seed kaydı bulunamadı.");
-        }
+        var scienceFaculty =
+            await GetAcademicUnitAsync(
+                db,
+                marmaraUniversity.Id,
+                "Fen Fakültesi",
+                cancellationToken);
+
+        var mathematicsProgram =
+            await GetAcademicProgramAsync(
+                db,
+                scienceFaculty.Id,
+                "Matematik",
+                cancellationToken);
 
         var verification =
             new StudentVerification
@@ -354,14 +797,26 @@ public static class DbSeeder
                 University =
                     marmaraUniversity,
 
+                AcademicUnitId =
+                    scienceFaculty.Id,
+
+                AcademicUnit =
+                    scienceFaculty,
+
+                AcademicProgramId =
+                    mathematicsProgram.Id,
+
+                AcademicProgram =
+                    mathematicsProgram,
+
                 UniversityName =
                     marmaraUniversity.Name,
 
                 FacultyName =
-                    "Fen Fakültesi",
+                    scienceFaculty.Name,
 
                 DepartmentName =
-                    "Matematik",
+                    mathematicsProgram.Name,
 
                 DocumentBlobPath =
                     "demo/verifications/ayse.pdf",
@@ -373,10 +828,6 @@ public static class DbSeeder
                     DateOnly.FromDateTime(
                         DateTime.UtcNow.AddDays(-7)),
 
-                /*
-                 * Pending kayıt henüz onaylanmadığı
-                 * için geçerlilik tarihi yoktur.
-                 */
                 ExpiresAt =
                     null,
 
@@ -394,7 +845,7 @@ public static class DbSeeder
                     marmaraUniversity.Name,
 
                 DepartmentName =
-                    "Matematik",
+                    mathematicsProgram.Name,
 
                 CourseName =
                     "Analiz II",
@@ -461,4 +912,267 @@ public static class DbSeeder
         await db.SaveChangesAsync(
             cancellationToken);
     }
+
+    /*
+     * Eski doğrulamalarda yalnızca snapshot
+     * isimleri varsa canonical ID alanlarını
+     * mümkün olduğunda doldurur.
+     */
+    private static async Task BackfillLegacyVerificationsAsync(
+        AppDbContext db,
+        CancellationToken cancellationToken)
+    {
+        var verifications =
+            await db.StudentVerifications
+                .Where(
+                    x =>
+                        x.UniversityId == null ||
+                        x.AcademicUnitId == null ||
+                        x.AcademicProgramId == null)
+                .ToListAsync(
+                    cancellationToken);
+
+        if (verifications.Count == 0)
+        {
+            return;
+        }
+
+        var universities =
+            await db.AcademicUniversities
+                .Where(
+                    x =>
+                        x.CountryCode == "TR" &&
+                        x.IsActive)
+                .ToListAsync(
+                    cancellationToken);
+
+        var universitiesByName =
+            universities.ToDictionary(
+                x => x.NormalizedName,
+                StringComparer.Ordinal);
+
+        var units =
+            await db.AcademicUnits
+                .Where(x => x.IsActive)
+                .ToListAsync(
+                    cancellationToken);
+
+        var unitsByKey =
+            units.ToDictionary(
+                x =>
+                    (
+                        x.UniversityId,
+                        x.NormalizedName
+                    ));
+
+        var programs =
+            await db.AcademicPrograms
+                .Where(x => x.IsActive)
+                .ToListAsync(
+                    cancellationToken);
+
+        var programsByKey =
+            programs.ToDictionary(
+                x =>
+                    (
+                        x.AcademicUnitId,
+                        x.NormalizedName
+                    ));
+
+        var changed =
+            false;
+
+        foreach (var verification in verifications)
+        {
+            /*
+             * Eski kayıtta UniversityId yoksa
+             * snapshot üniversite isminden bul.
+             */
+            if (verification.UniversityId is null)
+            {
+                var normalizedUniversityName =
+                    AcademicTextNormalizer.Normalize(
+                        verification.UniversityName);
+
+                if (
+                    universitiesByName.TryGetValue(
+                        normalizedUniversityName,
+                        out var university)
+                )
+                {
+                    verification.UniversityId =
+                        university.Id;
+
+                    changed =
+                        true;
+                }
+            }
+
+            if (
+                verification.UniversityId is null
+            )
+            {
+                continue;
+            }
+
+            /*
+             * Akademik birimi FacultyName
+             * snapshot alanından eşleştir.
+             */
+            if (verification.AcademicUnitId is null)
+            {
+                var normalizedUnitName =
+                    AcademicTextNormalizer.Normalize(
+                        verification.FacultyName);
+
+                if (
+                    unitsByKey.TryGetValue(
+                        (
+                            verification.UniversityId.Value,
+                            normalizedUnitName
+                        ),
+                        out var academicUnit)
+                )
+                {
+                    verification.AcademicUnitId =
+                        academicUnit.Id;
+
+                    changed =
+                        true;
+                }
+            }
+
+            if (
+                verification.AcademicUnitId is null
+            )
+            {
+                continue;
+            }
+
+            /*
+             * Akademik programı DepartmentName
+             * snapshot alanından eşleştir.
+             */
+            if (verification.AcademicProgramId is null)
+            {
+                var normalizedProgramName =
+                    AcademicTextNormalizer.Normalize(
+                        verification.DepartmentName);
+
+                if (
+                    programsByKey.TryGetValue(
+                        (
+                            verification.AcademicUnitId.Value,
+                            normalizedProgramName
+                        ),
+                        out var academicProgram)
+                )
+                {
+                    verification.AcademicProgramId =
+                        academicProgram.Id;
+
+                    changed =
+                        true;
+                }
+            }
+        }
+
+        if (changed)
+        {
+            await db.SaveChangesAsync(
+                cancellationToken);
+        }
+    }
+
+    /*
+     * Canonical üniversite kaydını getirir.
+     */
+    private static async Task<AcademicUniversity>
+        GetUniversityAsync(
+            AppDbContext db,
+            string universityName,
+            CancellationToken cancellationToken)
+    {
+        var normalizedName =
+            AcademicTextNormalizer.Normalize(
+                universityName);
+
+        return
+            await db.AcademicUniversities
+                .SingleOrDefaultAsync(
+                    x =>
+                        x.CountryCode == "TR" &&
+                        x.NormalizedName ==
+                            normalizedName,
+                    cancellationToken)
+            ??
+            throw new InvalidOperationException(
+                $"Üniversite seed kaydı bulunamadı: {universityName}");
+    }
+
+    /*
+     * Canonical akademik birim kaydını getirir.
+     */
+    private static async Task<AcademicUnit>
+        GetAcademicUnitAsync(
+            AppDbContext db,
+            Guid universityId,
+            string unitName,
+            CancellationToken cancellationToken)
+    {
+        var normalizedName =
+            AcademicTextNormalizer.Normalize(
+                unitName);
+
+        return
+            await db.AcademicUnits
+                .SingleOrDefaultAsync(
+                    x =>
+                        x.UniversityId ==
+                            universityId &&
+                        x.NormalizedName ==
+                            normalizedName,
+                    cancellationToken)
+            ??
+            throw new InvalidOperationException(
+                $"Akademik birim seed kaydı bulunamadı: {unitName}");
+    }
+
+    /*
+     * Canonical akademik program kaydını getirir.
+     */
+    private static async Task<AcademicProgram>
+        GetAcademicProgramAsync(
+            AppDbContext db,
+            Guid academicUnitId,
+            string programName,
+            CancellationToken cancellationToken)
+    {
+        var normalizedName =
+            AcademicTextNormalizer.Normalize(
+                programName);
+
+        return
+            await db.AcademicPrograms
+                .SingleOrDefaultAsync(
+                    x =>
+                        x.AcademicUnitId ==
+                            academicUnitId &&
+                        x.NormalizedName ==
+                            normalizedName,
+                    cancellationToken)
+            ??
+            throw new InvalidOperationException(
+                $"Akademik program seed kaydı bulunamadı: {programName}");
+    }
+
+    /*
+     * Bir üniversiteye bağlı akademik birim
+     * ve program seed tanımı.
+     */
+    private sealed record AcademicUnitSeed(
+        string UniversityName,
+        string UnitName,
+        AcademicUnitType UnitType,
+        IReadOnlyList<string> ProgramNames);
 }

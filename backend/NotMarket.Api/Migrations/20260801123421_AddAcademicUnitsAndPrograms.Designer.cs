@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NotMarket.Api.Data;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace NotMarket.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260801123421_AddAcademicUnitsAndPrograms")]
+    partial class AddAcademicUnitsAndPrograms
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -181,7 +184,7 @@ namespace NotMarket.Api.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("NotMarket.Api.Domain.AuditLog", b =>
@@ -221,7 +224,7 @@ namespace NotMarket.Api.Migrations
 
                     b.HasIndex("CreatedAt");
 
-                    b.ToTable("AuditLogs", (string)null);
+                    b.ToTable("AuditLogs");
                 });
 
             modelBuilder.Entity("NotMarket.Api.Domain.NoteRequest", b =>
@@ -267,7 +270,7 @@ namespace NotMarket.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("NoteRequests", (string)null);
+                    b.ToTable("NoteRequests");
                 });
 
             modelBuilder.Entity("NotMarket.Api.Domain.NoteSubmission", b =>
@@ -328,7 +331,7 @@ namespace NotMarket.Api.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("NoteSubmissions", (string)null);
+                    b.ToTable("NoteSubmissions");
                 });
 
             modelBuilder.Entity("NotMarket.Api.Domain.StudentVerification", b =>
@@ -408,7 +411,7 @@ namespace NotMarket.Api.Migrations
 
                     b.HasIndex("UserId", "UniversityId", "AcademicUnitId", "AcademicProgramId", "Status");
 
-                    b.ToTable("StudentVerifications", (string)null);
+                    b.ToTable("StudentVerifications");
                 });
 
             modelBuilder.Entity("NotMarket.Api.Domain.AcademicProgram", b =>

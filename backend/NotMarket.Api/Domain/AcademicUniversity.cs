@@ -49,11 +49,18 @@ public sealed class AcademicUniversity
     public DateTimeOffset? UpdatedAt { get; set; }
 
     /*
+ * Üniversiteye bağlı fakülte, enstitü,
+ * yüksekokul ve diğer akademik birimler.
+ */
+    public ICollection<AcademicUnit>
+        AcademicUnits { get; set; } =
+            new List<AcademicUnit>();
+    
+    /*
      * Bu üniversiteye bağlı öğrenci
      * doğrulamalarının navigation alanı.
      */
     public ICollection<StudentVerification>
-        StudentVerifications
-    { get; set; } =
+        StudentVerifications { get; set; } =
             new List<StudentVerification>();
 }

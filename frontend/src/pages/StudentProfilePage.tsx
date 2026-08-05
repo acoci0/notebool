@@ -23,6 +23,8 @@ import studentApi from "../api/studentClient";
 import { useStudentAuth } from "../auth/StudentAuthContext";
 
 import type {
+  AcademicProgram,
+  AcademicUnit,
   AcademicUniversity,
   StudentVerificationItem,
 } from "../types";
@@ -93,34 +95,97 @@ export default function StudentProfilePage() {
     setHighlightedUniversityIndex,
   ] = useState(-1);
 
-  /*
-   * Üniversite alanının odak durumunu tutar.
-   *
-   * API isteği geç tamamlansa bile odak
-   * kaybedildiyse dropdown tekrar açılmaz.
-   */
   const universityInputFocusedRef =
     useRef(false);
 
-  /*
-   * Üniversite alanı artık gerçek input değil,
-   * contentEditable bir div olduğu için DOM
-   * referansını ayrıca tutuyoruz.
-   */
   const universityEditorRef =
     useRef<HTMLDivElement | null>(null);
 
   /*
-   * Diğer form alanları.
+   * Akademik birim autocomplete state'leri.
    */
-  const [facultyName, setFacultyName] =
-    useState("");
-
   const [
-    departmentName,
-    setDepartmentName,
+    academicUnitQuery,
+    setAcademicUnitQuery,
   ] = useState("");
 
+  const [
+    selectedAcademicUnit,
+    setSelectedAcademicUnit,
+  ] = useState<AcademicUnit | null>(
+    null
+  );
+
+  const [
+    academicUnitResults,
+    setAcademicUnitResults,
+  ] = useState<AcademicUnit[]>([]);
+
+  const [
+    academicUnitSearching,
+    setAcademicUnitSearching,
+  ] = useState(false);
+
+  const [
+    academicUnitDropdownOpen,
+    setAcademicUnitDropdownOpen,
+  ] = useState(false);
+
+  const [
+    highlightedAcademicUnitIndex,
+    setHighlightedAcademicUnitIndex,
+  ] = useState(-1);
+
+  const academicUnitInputFocusedRef =
+    useRef(false);
+
+  const academicUnitEditorRef =
+    useRef<HTMLDivElement | null>(null);
+
+  /*
+   * Bölüm / program autocomplete state'leri.
+   */
+  const [
+    academicProgramQuery,
+    setAcademicProgramQuery,
+  ] = useState("");
+
+  const [
+    selectedAcademicProgram,
+    setSelectedAcademicProgram,
+  ] = useState<AcademicProgram | null>(
+    null
+  );
+
+  const [
+    academicProgramResults,
+    setAcademicProgramResults,
+  ] = useState<AcademicProgram[]>([]);
+
+  const [
+    academicProgramSearching,
+    setAcademicProgramSearching,
+  ] = useState(false);
+
+  const [
+    academicProgramDropdownOpen,
+    setAcademicProgramDropdownOpen,
+  ] = useState(false);
+
+  const [
+    highlightedAcademicProgramIndex,
+    setHighlightedAcademicProgramIndex,
+  ] = useState(-1);
+
+  const academicProgramInputFocusedRef =
+    useRef(false);
+
+  const academicProgramEditorRef =
+    useRef<HTMLDivElement | null>(null);
+
+  /*
+   * Belge alanları.
+   */
   const [
     documentIssueDate,
     setDocumentIssueDate,
@@ -130,7 +195,7 @@ export default function StudentProfilePage() {
     useState<File | null>(null);
 
   /*
-   * Öğrencinin mevcut doğrulamalarını getirir.
+   * Öğrencinin doğrulamalarını getirir.
    */
   const load = useCallback(async () => {
     setLoading(true);
@@ -156,19 +221,14 @@ export default function StudentProfilePage() {
     }
   }, []);
 
-  /*
-   * Sayfa açıldığında doğrulamaları getirir.
-   */
   useEffect(() => {
     void load();
   }, [load]);
 
   /*
-   * contentEditable alanın görünen metnini
-   * React state'i ile eşit tutar.
-   *
-   * Normal yazma sırasında metinler zaten
-   * eşit olduğu için imleç konumu bozulmaz.
+   * contentEditable alanların görünen
+   * metinlerini React state'leriyle
+   * senkronize eder.
    */
   useEffect(() => {
     const editor =
@@ -183,18 +243,40 @@ export default function StudentProfilePage() {
     }
   }, [universityQuery]);
 
+  useEffect(() => {
+    const editor =
+      academicUnitEditorRef.current;
+
+    if (
+      editor &&
+      editor.textContent !== academicUnitQuery
+    ) {
+      editor.textContent =
+        academicUnitQuery;
+    }
+  }, [academicUnitQuery]);
+
+  useEffect(() => {
+    const editor =
+      academicProgramEditorRef.current;
+
+    if (
+      editor &&
+      editor.textContent !==
+        academicProgramQuery
+    ) {
+      editor.textContent =
+        academicProgramQuery;
+    }
+  }, [academicProgramQuery]);
+
   /*
-   * Kullanıcı üniversite alanına yazdıkça
-   * 300 ms debounce ile backend'de arama yapar.
+   * Üniversite araması.
    */
   useEffect(() => {
     const query =
       universityQuery.trim();
 
-    /*
-     * Seçili üniversitenin canonical adı
-     * değişmeden duruyorsa yeniden arama yapma.
-     */
     if (
       selectedUniversity &&
       query === selectedUniversity.name
@@ -207,10 +289,6 @@ export default function StudentProfilePage() {
       return;
     }
 
-    /*
-     * En az iki karakter girilmeden
-     * backend isteği gönderilmez.
-     */
     if (query.length < 2) {
       setUniversityResults([]);
       setUniversityDropdownOpen(false);
@@ -255,18 +333,10 @@ export default function StudentProfilePage() {
                 : -1
             );
 
-            /*
-             * Input odağını kaybettiyse geç gelen
-             * API yanıtı dropdown'ı açamaz.
-             */
             setUniversityDropdownOpen(
               universityInputFocusedRef.current
             );
           } catch (error: unknown) {
-            /*
-             * Yeni sorgu başladığında önceki
-             * isteğin iptal edilmesi normaldir.
-             */
             if (!controller.signal.aborted) {
               console.error(
                 "Üniversite arama hatası:",
@@ -299,8 +369,273 @@ export default function StudentProfilePage() {
   ]);
 
   /*
-   * Üniversite alanındaki metin değiştiğinde
-   * eski seçim geçersiz hâle gelirse temizlenir.
+   * Seçili üniversiteye bağlı akademik
+   * birimlerin aranması.
+   */
+  useEffect(() => {
+    const query =
+      academicUnitQuery.trim();
+
+    if (!selectedUniversity) {
+      setAcademicUnitResults([]);
+      setAcademicUnitDropdownOpen(false);
+      setAcademicUnitSearching(false);
+      setHighlightedAcademicUnitIndex(-1);
+
+      return;
+    }
+
+    if (
+      selectedAcademicUnit &&
+      query === selectedAcademicUnit.name
+    ) {
+      setAcademicUnitResults([]);
+      setAcademicUnitDropdownOpen(false);
+      setAcademicUnitSearching(false);
+      setHighlightedAcademicUnitIndex(-1);
+
+      return;
+    }
+
+    if (query.length < 2) {
+      setAcademicUnitResults([]);
+      setAcademicUnitDropdownOpen(false);
+      setAcademicUnitSearching(false);
+      setHighlightedAcademicUnitIndex(-1);
+
+      return;
+    }
+
+    const controller =
+      new AbortController();
+
+    const timer =
+      window.setTimeout(
+        async () => {
+          setAcademicUnitSearching(true);
+
+          setAcademicUnitDropdownOpen(
+            academicUnitInputFocusedRef.current
+          );
+
+          try {
+            const { data } =
+              await studentApi.get<
+                AcademicUnit[]
+              >(
+                "/academic/units",
+                {
+                  params: {
+                    universityId:
+                      selectedUniversity.id,
+                    search: query,
+                  },
+                  signal:
+                    controller.signal,
+                }
+              );
+
+            setAcademicUnitResults(data);
+
+            setHighlightedAcademicUnitIndex(
+              data.length > 0
+                ? 0
+                : -1
+            );
+
+            setAcademicUnitDropdownOpen(
+              academicUnitInputFocusedRef.current
+            );
+          } catch (error: unknown) {
+            if (!controller.signal.aborted) {
+              console.error(
+                "Akademik birim arama hatası:",
+                error
+              );
+
+              setAcademicUnitResults([]);
+              setHighlightedAcademicUnitIndex(-1);
+
+              setAcademicUnitDropdownOpen(
+                academicUnitInputFocusedRef.current
+              );
+            }
+          } finally {
+            if (!controller.signal.aborted) {
+              setAcademicUnitSearching(false);
+            }
+          }
+        },
+        300
+      );
+
+    return () => {
+      window.clearTimeout(timer);
+      controller.abort();
+    };
+  }, [
+    academicUnitQuery,
+    selectedAcademicUnit,
+    selectedUniversity,
+  ]);
+
+  /*
+   * Seçili akademik birime bağlı bölüm
+   * ve programların aranması.
+   */
+  useEffect(() => {
+    const query =
+      academicProgramQuery.trim();
+
+    if (!selectedAcademicUnit) {
+      setAcademicProgramResults([]);
+      setAcademicProgramDropdownOpen(false);
+      setAcademicProgramSearching(false);
+      setHighlightedAcademicProgramIndex(-1);
+
+      return;
+    }
+
+    if (
+      selectedAcademicProgram &&
+      query === selectedAcademicProgram.name
+    ) {
+      setAcademicProgramResults([]);
+      setAcademicProgramDropdownOpen(false);
+      setAcademicProgramSearching(false);
+      setHighlightedAcademicProgramIndex(-1);
+
+      return;
+    }
+
+    if (query.length < 2) {
+      setAcademicProgramResults([]);
+      setAcademicProgramDropdownOpen(false);
+      setAcademicProgramSearching(false);
+      setHighlightedAcademicProgramIndex(-1);
+
+      return;
+    }
+
+    const controller =
+      new AbortController();
+
+    const timer =
+      window.setTimeout(
+        async () => {
+          setAcademicProgramSearching(true);
+
+          setAcademicProgramDropdownOpen(
+            academicProgramInputFocusedRef.current
+          );
+
+          try {
+            const { data } =
+              await studentApi.get<
+                AcademicProgram[]
+              >(
+                "/academic/programs",
+                {
+                  params: {
+                    academicUnitId:
+                      selectedAcademicUnit.id,
+                    search: query,
+                  },
+                  signal:
+                    controller.signal,
+                }
+              );
+
+            setAcademicProgramResults(data);
+
+            setHighlightedAcademicProgramIndex(
+              data.length > 0
+                ? 0
+                : -1
+            );
+
+            setAcademicProgramDropdownOpen(
+              academicProgramInputFocusedRef.current
+            );
+          } catch (error: unknown) {
+            if (!controller.signal.aborted) {
+              console.error(
+                "Bölüm/program arama hatası:",
+                error
+              );
+
+              setAcademicProgramResults([]);
+              setHighlightedAcademicProgramIndex(-1);
+
+              setAcademicProgramDropdownOpen(
+                academicProgramInputFocusedRef.current
+              );
+            }
+          } finally {
+            if (!controller.signal.aborted) {
+              setAcademicProgramSearching(false);
+            }
+          }
+        },
+        300
+      );
+
+    return () => {
+      window.clearTimeout(timer);
+      controller.abort();
+    };
+  }, [
+    academicProgramQuery,
+    selectedAcademicProgram,
+    selectedAcademicUnit,
+  ]);
+
+  /*
+   * Program alanını temizler.
+   */
+  const resetAcademicProgramSelection = () => {
+    academicProgramInputFocusedRef.current =
+      false;
+
+    if (academicProgramEditorRef.current) {
+      academicProgramEditorRef.current
+        .replaceChildren();
+    }
+
+    setAcademicProgramQuery("");
+    setSelectedAcademicProgram(null);
+    setAcademicProgramResults([]);
+    setAcademicProgramDropdownOpen(false);
+    setAcademicProgramSearching(false);
+    setHighlightedAcademicProgramIndex(-1);
+  };
+
+  /*
+   * Akademik birim ve program alanlarını
+   * birlikte temizler.
+   */
+  const resetAcademicUnitAndProgramSelections =
+    () => {
+      academicUnitInputFocusedRef.current =
+        false;
+
+      if (academicUnitEditorRef.current) {
+        academicUnitEditorRef.current
+          .replaceChildren();
+      }
+
+      setAcademicUnitQuery("");
+      setSelectedAcademicUnit(null);
+      setAcademicUnitResults([]);
+      setAcademicUnitDropdownOpen(false);
+      setAcademicUnitSearching(false);
+      setHighlightedAcademicUnitIndex(-1);
+
+      resetAcademicProgramSelection();
+    };
+
+  /*
+   * Üniversite alanındaki metin değişimi.
    */
   const handleUniversityQueryChange = (
     value: string
@@ -313,6 +648,8 @@ export default function StudentProfilePage() {
       value !== selectedUniversity.name
     ) {
       setSelectedUniversity(null);
+
+      resetAcademicUnitAndProgramSelections();
     }
 
     if (value.trim().length < 2) {
@@ -324,12 +661,18 @@ export default function StudentProfilePage() {
   };
 
   /*
-   * Dropdown içerisinden canonical
-   * üniversite kaydını seçer.
+   * Üniversite seçimi.
+   *
+   * Üniversite değiştiğinde önceki akademik
+   * birim ve program seçimleri geçersiz olur.
    */
   const selectUniversity = (
     university: AcademicUniversity
   ) => {
+    const universityChanged =
+      selectedUniversity?.id !==
+      university.id;
+
     setSelectedUniversity(university);
     setUniversityQuery(university.name);
     setUniversityResults([]);
@@ -337,19 +680,112 @@ export default function StudentProfilePage() {
     setUniversitySearching(false);
     setHighlightedUniversityIndex(-1);
     setMessage("");
+
+    if (universityChanged) {
+      resetAcademicUnitAndProgramSelections();
+    }
   };
 
   /*
-   * Üniversite dropdown'unda klavye
-   * navigasyonunu yönetir.
+   * Akademik birim alanındaki metin değişimi.
+   */
+  const handleAcademicUnitQueryChange = (
+    value: string
+  ) => {
+    setAcademicUnitQuery(value);
+    setMessage("");
+
+    if (
+      selectedAcademicUnit &&
+      value !== selectedAcademicUnit.name
+    ) {
+      setSelectedAcademicUnit(null);
+
+      resetAcademicProgramSelection();
+    }
+
+    if (value.trim().length < 2) {
+      setAcademicUnitResults([]);
+      setAcademicUnitDropdownOpen(false);
+      setAcademicUnitSearching(false);
+      setHighlightedAcademicUnitIndex(-1);
+    }
+  };
+
+  /*
+   * Akademik birim seçimi.
+   */
+  const selectAcademicUnit = (
+    academicUnit: AcademicUnit
+  ) => {
+    const academicUnitChanged =
+      selectedAcademicUnit?.id !==
+      academicUnit.id;
+
+    setSelectedAcademicUnit(academicUnit);
+    setAcademicUnitQuery(academicUnit.name);
+    setAcademicUnitResults([]);
+    setAcademicUnitDropdownOpen(false);
+    setAcademicUnitSearching(false);
+    setHighlightedAcademicUnitIndex(-1);
+    setMessage("");
+
+    if (academicUnitChanged) {
+      resetAcademicProgramSelection();
+    }
+  };
+
+  /*
+   * Program alanındaki metin değişimi.
+   */
+  const handleAcademicProgramQueryChange = (
+    value: string
+  ) => {
+    setAcademicProgramQuery(value);
+    setMessage("");
+
+    if (
+      selectedAcademicProgram &&
+      value !== selectedAcademicProgram.name
+    ) {
+      setSelectedAcademicProgram(null);
+    }
+
+    if (value.trim().length < 2) {
+      setAcademicProgramResults([]);
+      setAcademicProgramDropdownOpen(false);
+      setAcademicProgramSearching(false);
+      setHighlightedAcademicProgramIndex(-1);
+    }
+  };
+
+  /*
+   * Bölüm / program seçimi.
+   */
+  const selectAcademicProgram = (
+    academicProgram: AcademicProgram
+  ) => {
+    setSelectedAcademicProgram(
+      academicProgram
+    );
+
+    setAcademicProgramQuery(
+      academicProgram.name
+    );
+
+    setAcademicProgramResults([]);
+    setAcademicProgramDropdownOpen(false);
+    setAcademicProgramSearching(false);
+    setHighlightedAcademicProgramIndex(-1);
+    setMessage("");
+  };
+
+  /*
+   * Üniversite klavye navigasyonu.
    */
   const handleUniversityKeyDown = (
     event: KeyboardEvent<HTMLDivElement>
   ) => {
-    /*
-     * contentEditable içinde Enter tuşunun
-     * yeni satır oluşturmasını engeller.
-     */
     if (event.key === "Enter") {
       event.preventDefault();
 
@@ -363,9 +799,7 @@ export default function StudentProfilePage() {
           ];
 
         if (university) {
-          selectUniversity(
-            university
-          );
+          selectUniversity(university);
         }
       }
 
@@ -415,7 +849,157 @@ export default function StudentProfilePage() {
   };
 
   /*
-   * Formu ve autocomplete state'lerini temizler.
+   * Akademik birim klavye navigasyonu.
+   */
+  const handleAcademicUnitKeyDown = (
+    event: KeyboardEvent<HTMLDivElement>
+  ) => {
+    if (!selectedUniversity) {
+      event.preventDefault();
+      return;
+    }
+
+    if (event.key === "Enter") {
+      event.preventDefault();
+
+      if (
+        academicUnitDropdownOpen &&
+        highlightedAcademicUnitIndex >= 0
+      ) {
+        const academicUnit =
+          academicUnitResults[
+            highlightedAcademicUnitIndex
+          ];
+
+        if (academicUnit) {
+          selectAcademicUnit(
+            academicUnit
+          );
+        }
+      }
+
+      return;
+    }
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+
+      setAcademicUnitDropdownOpen(false);
+      setHighlightedAcademicUnitIndex(-1);
+
+      return;
+    }
+
+    if (
+      !academicUnitDropdownOpen ||
+      academicUnitResults.length === 0
+    ) {
+      return;
+    }
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+
+      setHighlightedAcademicUnitIndex(
+        (currentIndex) =>
+          currentIndex >=
+          academicUnitResults.length - 1
+            ? 0
+            : currentIndex + 1
+      );
+
+      return;
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+
+      setHighlightedAcademicUnitIndex(
+        (currentIndex) =>
+          currentIndex <= 0
+            ? academicUnitResults.length - 1
+            : currentIndex - 1
+      );
+    }
+  };
+
+  /*
+   * Bölüm / program klavye navigasyonu.
+   */
+  const handleAcademicProgramKeyDown = (
+    event: KeyboardEvent<HTMLDivElement>
+  ) => {
+    if (!selectedAcademicUnit) {
+      event.preventDefault();
+      return;
+    }
+
+    if (event.key === "Enter") {
+      event.preventDefault();
+
+      if (
+        academicProgramDropdownOpen &&
+        highlightedAcademicProgramIndex >= 0
+      ) {
+        const academicProgram =
+          academicProgramResults[
+            highlightedAcademicProgramIndex
+          ];
+
+        if (academicProgram) {
+          selectAcademicProgram(
+            academicProgram
+          );
+        }
+      }
+
+      return;
+    }
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+
+      setAcademicProgramDropdownOpen(false);
+      setHighlightedAcademicProgramIndex(-1);
+
+      return;
+    }
+
+    if (
+      !academicProgramDropdownOpen ||
+      academicProgramResults.length === 0
+    ) {
+      return;
+    }
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+
+      setHighlightedAcademicProgramIndex(
+        (currentIndex) =>
+          currentIndex >=
+          academicProgramResults.length - 1
+            ? 0
+            : currentIndex + 1
+      );
+
+      return;
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+
+      setHighlightedAcademicProgramIndex(
+        (currentIndex) =>
+          currentIndex <= 0
+            ? academicProgramResults.length - 1
+            : currentIndex - 1
+      );
+    }
+  };
+
+  /*
+   * Formu tamamen temizler.
    */
   const resetForm = () => {
     universityInputFocusedRef.current =
@@ -433,25 +1017,20 @@ export default function StudentProfilePage() {
     setUniversitySearching(false);
     setHighlightedUniversityIndex(-1);
 
-    setFacultyName("");
-    setDepartmentName("");
+    resetAcademicUnitAndProgramSelections();
+
     setDocumentIssueDate("");
     setDocument(null);
   };
 
   /*
-   * Yeni öğrenci doğrulaması gönderir.
+   * Yeni doğrulama gönderimi.
    */
   const submit = async (
     event: FormEvent<HTMLFormElement>
   ) => {
     event.preventDefault();
 
-    /*
-     * Inputa metin yazmak yeterli değildir.
-     * Kullanıcı backend sonuçlarından gerçek
-     * bir üniversite seçmiş olmalıdır.
-     */
     if (
       !selectedUniversity ||
       universityQuery.trim() !==
@@ -465,11 +1044,24 @@ export default function StudentProfilePage() {
     }
 
     if (
-      !facultyName.trim() ||
-      !departmentName.trim()
+      !selectedAcademicUnit ||
+      academicUnitQuery.trim() !==
+        selectedAcademicUnit.name
     ) {
       setMessage(
-        "Fakülte ve bölüm bilgileri zorunludur."
+        "Lütfen seçilen üniversiteye bağlı geçerli bir fakülte veya akademik birim seçin."
+      );
+
+      return;
+    }
+
+    if (
+      !selectedAcademicProgram ||
+      academicProgramQuery.trim() !==
+        selectedAcademicProgram.name
+    ) {
+      setMessage(
+        "Lütfen seçilen akademik birime bağlı geçerli bir bölüm veya program seçin."
       );
 
       return;
@@ -509,10 +1101,6 @@ export default function StudentProfilePage() {
       return;
     }
 
-    /*
-     * Bazı tarayıcılar PDF MIME tipini boş
-     * döndürebildiği için uzantı da kontrol edilir.
-     */
     if (
       document.type !== "application/pdf" &&
       !document.name
@@ -541,23 +1129,19 @@ export default function StudentProfilePage() {
       const formData =
         new FormData();
 
-      /*
-       * UniversityName yerine canonical
-       * UniversityId gönderilir.
-       */
       formData.append(
         "UniversityId",
         selectedUniversity.id
       );
 
       formData.append(
-        "FacultyName",
-        facultyName.trim()
+        "AcademicUnitId",
+        selectedAcademicUnit.id
       );
 
       formData.append(
-        "DepartmentName",
-        departmentName.trim()
+        "AcademicProgramId",
+        selectedAcademicProgram.id
       );
 
       formData.append(
@@ -643,9 +1227,6 @@ export default function StudentProfilePage() {
     }
   };
 
-  /*
-   * Yeni üniversite formunu açar veya kapatır.
-   */
   const toggleForm = () => {
     const nextValue =
       !showForm;
@@ -741,12 +1322,6 @@ export default function StudentProfilePage() {
                 </span>
 
                 <div className="university-autocomplete__control">
-                  {/*
-                   * Gerçek input yerine contentEditable
-                   * kullanıldığı için Safari bu alanı
-                   * kişi veya rehber alanı olarak
-                   * otomatik dolduramaz.
-                   */}
                   <div
                     ref={universityEditorRef}
                     id="notmarket-university-search"
@@ -780,20 +1355,10 @@ export default function StudentProfilePage() {
                         event.currentTarget
                           .textContent ?? "";
 
-                      /*
-                       * Satır sonlarını tek boşluğa
-                       * dönüştürür.
-                       */
                       const value =
-                        rawValue
-                          .replace(
-                            /[\r\n]+/g,
-                            " "
-                          )
-                          .replace(
-                            /\u00a0/g,
-                            " "
-                          );
+                        normalizeEditableText(
+                          rawValue
+                        );
 
                       if (rawValue !== value) {
                         event.currentTarget
@@ -806,19 +1371,13 @@ export default function StudentProfilePage() {
                       );
                     }}
                     onPaste={(event) => {
-                      /*
-                       * Biçimlendirilmiş içerik yerine
-                       * yalnızca düz metin yapıştırılır.
-                       */
                       event.preventDefault();
 
                       const text =
-                        event.clipboardData
-                          .getData("text/plain")
-                          .replace(
-                            /[\r\n]+/g,
-                            " "
-                          );
+                        normalizeEditableText(
+                          event.clipboardData
+                            .getData("text/plain")
+                        );
 
                       insertPlainTextAtCursor(
                         text
@@ -869,11 +1428,6 @@ export default function StudentProfilePage() {
                     }}
                   />
 
-                  {/*
-                   * Form gönderimi JavaScript ile
-                   * yapılsa da seçilmiş canonical ID
-                   * DOM içerisinde de tutulur.
-                   */}
                   <input
                     type="hidden"
                     name="UniversityId"
@@ -901,10 +1455,7 @@ export default function StudentProfilePage() {
                     }
                   >
                     {universitySearching && (
-                      <div
-                        className="university-autocomplete__state"
-                        role="status"
-                      >
+                      <div className="university-autocomplete__state">
                         Üniversiteler aranıyor...
                       </div>
                     )}
@@ -912,10 +1463,7 @@ export default function StudentProfilePage() {
                     {!universitySearching &&
                       universityResults.length ===
                         0 && (
-                        <div
-                          className="university-autocomplete__state"
-                          role="status"
-                        >
+                        <div className="university-autocomplete__state">
                           Eşleşen üniversite
                           bulunamadı.
                         </div>
@@ -949,11 +1497,6 @@ export default function StudentProfilePage() {
                                 index
                               )
                             }
-                            /*
-                             * PointerDown sırasında
-                             * editörün blur olmasını
-                             * engeller.
-                             */
                             onPointerDown={(
                               event
                             ) => {
@@ -981,38 +1524,487 @@ export default function StudentProfilePage() {
                 </small>
               </label>
 
-              <label>
-                Fakülte
+              <label className="university-autocomplete">
+                <span id="academic-unit-field-label">
+                  Fakülte / Akademik birim
+                </span>
 
-                <input
-                  name="notmarket-faculty"
-                  value={facultyName}
-                  placeholder="Örneğin: Fen Fakültesi"
-                  autoComplete="off"
-                  onChange={(event) =>
-                    setFacultyName(
-                      event.target.value
-                    )
-                  }
-                  required
-                />
+                <div className="university-autocomplete__control">
+                  <div
+                    ref={academicUnitEditorRef}
+                    id="notmarket-academic-unit-search"
+                    className="university-autocomplete__editor"
+                    contentEditable={
+                      Boolean(
+                        selectedUniversity
+                      )
+                    }
+                    suppressContentEditableWarning
+                    tabIndex={
+                      selectedUniversity
+                        ? 0
+                        : -1
+                    }
+                    data-placeholder={
+                      selectedUniversity
+                        ? "Fakülte veya akademik birim yazın"
+                        : "Önce üniversite seçin"
+                    }
+                    role="combobox"
+                    aria-labelledby="academic-unit-field-label"
+                    aria-required="true"
+                    aria-disabled={
+                      !selectedUniversity
+                    }
+                    aria-autocomplete="list"
+                    aria-haspopup="listbox"
+                    aria-expanded={
+                      academicUnitDropdownOpen
+                    }
+                    aria-controls={
+                      academicUnitDropdownOpen
+                        ? "academic-unit-search-results"
+                        : undefined
+                    }
+                    aria-activedescendant={
+                      academicUnitDropdownOpen &&
+                      highlightedAcademicUnitIndex >=
+                        0
+                        ? `academic-unit-option-${highlightedAcademicUnitIndex}`
+                        : undefined
+                    }
+                    spellCheck={false}
+                    onInput={(event) => {
+                      if (!selectedUniversity) {
+                        return;
+                      }
+
+                      const rawValue =
+                        event.currentTarget
+                          .textContent ?? "";
+
+                      const value =
+                        normalizeEditableText(
+                          rawValue
+                        );
+
+                      if (rawValue !== value) {
+                        event.currentTarget
+                          .textContent =
+                            value;
+                      }
+
+                      handleAcademicUnitQueryChange(
+                        value
+                      );
+                    }}
+                    onPaste={(event) => {
+                      if (!selectedUniversity) {
+                        event.preventDefault();
+                        return;
+                      }
+
+                      event.preventDefault();
+
+                      const text =
+                        normalizeEditableText(
+                          event.clipboardData
+                            .getData("text/plain")
+                        );
+
+                      insertPlainTextAtCursor(
+                        text
+                      );
+
+                      const currentValue =
+                        event.currentTarget
+                          .textContent ?? "";
+
+                      handleAcademicUnitQueryChange(
+                        currentValue
+                      );
+                    }}
+                    onKeyDown={
+                      handleAcademicUnitKeyDown
+                    }
+                    onFocus={() => {
+                      if (!selectedUniversity) {
+                        return;
+                      }
+
+                      academicUnitInputFocusedRef.current =
+                        true;
+
+                      if (
+                        academicUnitQuery
+                          .trim()
+                          .length >= 2 &&
+                        !selectedAcademicUnit
+                      ) {
+                        setAcademicUnitDropdownOpen(
+                          true
+                        );
+                      }
+                    }}
+                    onBlur={() => {
+                      academicUnitInputFocusedRef.current =
+                        false;
+
+                      window.setTimeout(
+                        () => {
+                          setAcademicUnitDropdownOpen(
+                            false
+                          );
+
+                          setHighlightedAcademicUnitIndex(
+                            -1
+                          );
+                        },
+                        150
+                      );
+                    }}
+                  />
+
+                  <input
+                    type="hidden"
+                    name="AcademicUnitId"
+                    value={
+                      selectedAcademicUnit?.id ??
+                      ""
+                    }
+                  />
+
+                  {selectedAcademicUnit && (
+                    <span className="university-selected-indicator">
+                      Seçildi
+                    </span>
+                  )}
+                </div>
+
+                {academicUnitDropdownOpen && (
+                  <div
+                    id="academic-unit-search-results"
+                    className="university-autocomplete__dropdown"
+                    role="listbox"
+                    aria-label="Akademik birim arama sonuçları"
+                    aria-busy={
+                      academicUnitSearching
+                    }
+                  >
+                    {academicUnitSearching && (
+                      <div className="university-autocomplete__state">
+                        Akademik birimler
+                        aranıyor...
+                      </div>
+                    )}
+
+                    {!academicUnitSearching &&
+                      academicUnitResults.length ===
+                        0 && (
+                        <div className="university-autocomplete__state">
+                          Eşleşen akademik birim
+                          bulunamadı.
+                        </div>
+                      )}
+
+                    {!academicUnitSearching &&
+                      academicUnitResults.map(
+                        (
+                          academicUnit,
+                          index
+                        ) => (
+                          <button
+                            id={`academic-unit-option-${index}`}
+                            key={
+                              academicUnit.id
+                            }
+                            type="button"
+                            role="option"
+                            aria-selected={
+                              index ===
+                              highlightedAcademicUnitIndex
+                            }
+                            className={
+                              index ===
+                              highlightedAcademicUnitIndex
+                                ? "university-autocomplete__option university-autocomplete__option--active"
+                                : "university-autocomplete__option"
+                            }
+                            onMouseEnter={() =>
+                              setHighlightedAcademicUnitIndex(
+                                index
+                              )
+                            }
+                            onPointerDown={(
+                              event
+                            ) => {
+                              event.preventDefault();
+                            }}
+                            onClick={() =>
+                              selectAcademicUnit(
+                                academicUnit
+                              )
+                            }
+                          >
+                            <span>
+                              {
+                                academicUnit.name
+                              }
+                            </span>
+                          </button>
+                        )
+                      )}
+                  </div>
+                )}
+
+                <small>
+                  Üniversiteyi seçtikten sonra
+                  en az iki karakter yazın.
+                </small>
               </label>
 
-              <label>
-                Bölüm
+              <label className="university-autocomplete">
+                <span id="academic-program-field-label">
+                  Bölüm / Program
+                </span>
 
-                <input
-                  name="notmarket-department"
-                  value={departmentName}
-                  placeholder="Örneğin: Matematik"
-                  autoComplete="off"
-                  onChange={(event) =>
-                    setDepartmentName(
-                      event.target.value
-                    )
-                  }
-                  required
-                />
+                <div className="university-autocomplete__control">
+                  <div
+                    ref={academicProgramEditorRef}
+                    id="notmarket-academic-program-search"
+                    className="university-autocomplete__editor"
+                    contentEditable={
+                      Boolean(
+                        selectedAcademicUnit
+                      )
+                    }
+                    suppressContentEditableWarning
+                    tabIndex={
+                      selectedAcademicUnit
+                        ? 0
+                        : -1
+                    }
+                    data-placeholder={
+                      selectedAcademicUnit
+                        ? "Bölüm veya program yazın"
+                        : "Önce akademik birim seçin"
+                    }
+                    role="combobox"
+                    aria-labelledby="academic-program-field-label"
+                    aria-required="true"
+                    aria-disabled={
+                      !selectedAcademicUnit
+                    }
+                    aria-autocomplete="list"
+                    aria-haspopup="listbox"
+                    aria-expanded={
+                      academicProgramDropdownOpen
+                    }
+                    aria-controls={
+                      academicProgramDropdownOpen
+                        ? "academic-program-search-results"
+                        : undefined
+                    }
+                    aria-activedescendant={
+                      academicProgramDropdownOpen &&
+                      highlightedAcademicProgramIndex >=
+                        0
+                        ? `academic-program-option-${highlightedAcademicProgramIndex}`
+                        : undefined
+                    }
+                    spellCheck={false}
+                    onInput={(event) => {
+                      if (
+                        !selectedAcademicUnit
+                      ) {
+                        return;
+                      }
+
+                      const rawValue =
+                        event.currentTarget
+                          .textContent ?? "";
+
+                      const value =
+                        normalizeEditableText(
+                          rawValue
+                        );
+
+                      if (rawValue !== value) {
+                        event.currentTarget
+                          .textContent =
+                            value;
+                      }
+
+                      handleAcademicProgramQueryChange(
+                        value
+                      );
+                    }}
+                    onPaste={(event) => {
+                      if (
+                        !selectedAcademicUnit
+                      ) {
+                        event.preventDefault();
+                        return;
+                      }
+
+                      event.preventDefault();
+
+                      const text =
+                        normalizeEditableText(
+                          event.clipboardData
+                            .getData("text/plain")
+                        );
+
+                      insertPlainTextAtCursor(
+                        text
+                      );
+
+                      const currentValue =
+                        event.currentTarget
+                          .textContent ?? "";
+
+                      handleAcademicProgramQueryChange(
+                        currentValue
+                      );
+                    }}
+                    onKeyDown={
+                      handleAcademicProgramKeyDown
+                    }
+                    onFocus={() => {
+                      if (
+                        !selectedAcademicUnit
+                      ) {
+                        return;
+                      }
+
+                      academicProgramInputFocusedRef.current =
+                        true;
+
+                      if (
+                        academicProgramQuery
+                          .trim()
+                          .length >= 2 &&
+                        !selectedAcademicProgram
+                      ) {
+                        setAcademicProgramDropdownOpen(
+                          true
+                        );
+                      }
+                    }}
+                    onBlur={() => {
+                      academicProgramInputFocusedRef.current =
+                        false;
+
+                      window.setTimeout(
+                        () => {
+                          setAcademicProgramDropdownOpen(
+                            false
+                          );
+
+                          setHighlightedAcademicProgramIndex(
+                            -1
+                          );
+                        },
+                        150
+                      );
+                    }}
+                  />
+
+                  <input
+                    type="hidden"
+                    name="AcademicProgramId"
+                    value={
+                      selectedAcademicProgram?.id ??
+                      ""
+                    }
+                  />
+
+                  {selectedAcademicProgram && (
+                    <span className="university-selected-indicator">
+                      Seçildi
+                    </span>
+                  )}
+                </div>
+
+                {academicProgramDropdownOpen && (
+                  <div
+                    id="academic-program-search-results"
+                    className="university-autocomplete__dropdown"
+                    role="listbox"
+                    aria-label="Bölüm ve program arama sonuçları"
+                    aria-busy={
+                      academicProgramSearching
+                    }
+                  >
+                    {academicProgramSearching && (
+                      <div className="university-autocomplete__state">
+                        Bölüm ve programlar
+                        aranıyor...
+                      </div>
+                    )}
+
+                    {!academicProgramSearching &&
+                      academicProgramResults.length ===
+                        0 && (
+                        <div className="university-autocomplete__state">
+                          Eşleşen bölüm veya
+                          program bulunamadı.
+                        </div>
+                      )}
+
+                    {!academicProgramSearching &&
+                      academicProgramResults.map(
+                        (
+                          academicProgram,
+                          index
+                        ) => (
+                          <button
+                            id={`academic-program-option-${index}`}
+                            key={
+                              academicProgram.id
+                            }
+                            type="button"
+                            role="option"
+                            aria-selected={
+                              index ===
+                              highlightedAcademicProgramIndex
+                            }
+                            className={
+                              index ===
+                              highlightedAcademicProgramIndex
+                                ? "university-autocomplete__option university-autocomplete__option--active"
+                                : "university-autocomplete__option"
+                            }
+                            onMouseEnter={() =>
+                              setHighlightedAcademicProgramIndex(
+                                index
+                              )
+                            }
+                            onPointerDown={(
+                              event
+                            ) => {
+                              event.preventDefault();
+                            }}
+                            onClick={() =>
+                              selectAcademicProgram(
+                                academicProgram
+                              )
+                            }
+                          >
+                            {
+                              academicProgram.name
+                            }
+                          </button>
+                        )
+                      )}
+                  </div>
+                )}
+
+                <small>
+                  Akademik birimi seçtikten
+                  sonra en az iki karakter
+                  yazın.
+                </small>
               </label>
 
               <label>
@@ -1303,6 +2295,24 @@ function formatDateForInput(
     ).padStart(2, "0");
 
   return `${year}-${month}-${day}`;
+}
+
+/*
+ * contentEditable metnini tek satıra
+ * ve düz boşluklara dönüştürür.
+ */
+function normalizeEditableText(
+  value: string
+): string {
+  return value
+    .replace(
+      /[\r\n]+/g,
+      " "
+    )
+    .replace(
+      /\u00a0/g,
+      " "
+    );
 }
 
 /*
