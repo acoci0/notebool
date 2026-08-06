@@ -2,6 +2,20 @@ namespace NotMarket.Api.Domain;
 
 public sealed class AcademicProgram
 {
+    public string? CatalogKey { get; set; }
+
+    public string? CatalogVersion { get; set; }
+
+    public string? SourceName { get; set; }
+
+    public string? DegreeLevel { get; set; }
+
+    public string? EducationLanguage { get; set; }
+
+    public bool IsSelectable { get; set; } = true;
+
+    public DateTimeOffset? LastVerifiedAt { get; set; }
+        
     public Guid Id { get; set; } = Guid.NewGuid();
 
     public Guid AcademicUnitId { get; set; }
