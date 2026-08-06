@@ -10,11 +10,17 @@ public sealed class AppDbContext(
     public DbSet<ApplicationUser> Users =>
         Set<ApplicationUser>();
 
-    public DbSet<StudentVerification> StudentVerifications =>
-        Set<StudentVerification>();
+    public DbSet<StudentVerification>
+        StudentVerifications =>
+            Set<StudentVerification>();
 
-    public DbSet<AcademicUniversity> AcademicUniversities =>
-        Set<AcademicUniversity>();
+    public DbSet<AcademicUniversity>
+        AcademicUniversities =>
+            Set<AcademicUniversity>();
+
+    public DbSet<AcademicUniversityAlias>
+        AcademicUniversityAliases =>
+            Set<AcademicUniversityAlias>();
 
     public DbSet<AcademicUnit> AcademicUnits =>
         Set<AcademicUnit>();
@@ -38,6 +44,7 @@ public sealed class AppDbContext(
 
         ConfigureApplicationUser(modelBuilder);
         ConfigureAcademicUniversity(modelBuilder);
+        ConfigureAcademicUniversityAlias(modelBuilder);
         ConfigureAcademicUnit(modelBuilder);
         ConfigureAcademicProgram(modelBuilder);
         ConfigureStudentVerification(modelBuilder);
@@ -74,6 +81,22 @@ public sealed class AppDbContext(
             x => x.Id);
 
         university.Property(
+                x => x.CatalogKey)
+            .HasMaxLength(100);
+
+        /*
+         * Katalog kapsamındaki üniversiteler
+         * kalıcı CatalogKey üzerinden eşleştirilir.
+         *
+         * Alan nullable olduğu için eski seed
+         * kayıtlarının migration sırasında
+         * bozulmasına neden olmaz.
+         */
+        university.HasIndex(
+                x => x.CatalogKey)
+            .IsUnique();
+
+        university.Property(
                 x => x.Name)
             .HasMaxLength(250)
             .IsRequired();
@@ -88,6 +111,18 @@ public sealed class AppDbContext(
             .HasMaxLength(2)
             .IsRequired();
 
+        university.Property(
+                x => x.City)
+            .HasMaxLength(100);
+
+        university.Property(
+                x => x.CatalogVersion)
+            .HasMaxLength(50);
+
+        university.Property(
+                x => x.SourceName)
+            .HasMaxLength(200);
+
         /*
          * Aynı ülkede aynı normalize edilmiş
          * üniversite adı yalnızca bir kez bulunabilir.
@@ -101,8 +136,7 @@ public sealed class AppDbContext(
             .IsUnique();
 
         /*
-         * Aktif Türkiye üniversitelerini
-         * sorgulayan işlemleri hızlandırır.
+         * Aktif üniversite aramalarını hızlandırır.
          */
         university.HasIndex(
             x => new
@@ -110,6 +144,57 @@ public sealed class AppDbContext(
                 x.CountryCode,
                 x.IsActive
             });
+    }
+
+    private static void ConfigureAcademicUniversityAlias(
+        ModelBuilder modelBuilder)
+    {
+        var alias =
+            modelBuilder.Entity<AcademicUniversityAlias>();
+
+        alias.ToTable(
+            "AcademicUniversityAliases");
+
+        alias.HasKey(
+            x => x.Id);
+
+        alias.Property(
+                x => x.Alias)
+            .HasMaxLength(250)
+            .IsRequired();
+
+        alias.Property(
+                x => x.NormalizedAlias)
+            .HasMaxLength(250)
+            .IsRequired();
+
+        /*
+         * Aynı normalize edilmiş alias iki farklı
+         * üniversiteye bağlanamaz.
+         *
+         * Örnek:
+         * "odtu" yalnızca Orta Doğu Teknik
+         * Üniversitesi kaydına ait olabilir.
+         */
+        alias.HasIndex(
+                x => x.NormalizedAlias)
+            .IsUnique();
+
+        /*
+         * Bir üniversiteye bağlı alias kayıtlarının
+         * sorgulanmasını hızlandırır.
+         */
+        alias.HasIndex(
+            x => x.UniversityId);
+
+        alias.HasOne(
+                x => x.University)
+            .WithMany(
+                x => x.Aliases)
+            .HasForeignKey(
+                x => x.UniversityId)
+            .OnDelete(
+                DeleteBehavior.Cascade);
     }
 
     private static void ConfigureAcademicUnit(
@@ -125,6 +210,18 @@ public sealed class AppDbContext(
             x => x.Id);
 
         academicUnit.Property(
+                x => x.CatalogKey)
+            .HasMaxLength(150);
+
+        /*
+         * Fakülte veya diğer akademik birimler
+         * katalog anahtarına göre eşleştirilir.
+         */
+        academicUnit.HasIndex(
+                x => x.CatalogKey)
+            .IsUnique();
+
+        academicUnit.Property(
                 x => x.Name)
             .HasMaxLength(250)
             .IsRequired();
@@ -137,6 +234,14 @@ public sealed class AppDbContext(
         academicUnit.Property(
                 x => x.UnitType)
             .HasConversion<string>();
+
+        academicUnit.Property(
+                x => x.CatalogVersion)
+            .HasMaxLength(50);
+
+        academicUnit.Property(
+                x => x.SourceName)
+            .HasMaxLength(200);
 
         /*
          * Aynı üniversitede aynı normalize edilmiş
@@ -156,7 +261,7 @@ public sealed class AppDbContext(
 
         /*
          * Üniversiteye bağlı aktif akademik
-         * birimleri sorgulamayı hızlandırır.
+         * birim sorgularını hızlandırır.
          */
         academicUnit.HasIndex(
             x => new
@@ -165,10 +270,6 @@ public sealed class AppDbContext(
                 x.IsActive
             });
 
-        /*
-         * AcademicUniversity
-         *      └── AcademicUnit
-         */
         academicUnit.HasOne(
                 x => x.University)
             .WithMany(
@@ -192,6 +293,18 @@ public sealed class AppDbContext(
             x => x.Id);
 
         academicProgram.Property(
+                x => x.CatalogKey)
+            .HasMaxLength(200);
+
+        /*
+         * Bölüm veya programlar kalıcı katalog
+         * anahtarı üzerinden eşleştirilir.
+         */
+        academicProgram.HasIndex(
+                x => x.CatalogKey)
+            .IsUnique();
+
+        academicProgram.Property(
                 x => x.Name)
             .HasMaxLength(250)
             .IsRequired();
@@ -200,6 +313,31 @@ public sealed class AppDbContext(
                 x => x.NormalizedName)
             .HasMaxLength(250)
             .IsRequired();
+
+        academicProgram.Property(
+                x => x.CatalogVersion)
+            .HasMaxLength(50);
+
+        academicProgram.Property(
+                x => x.SourceName)
+            .HasMaxLength(200);
+
+        academicProgram.Property(
+                x => x.DegreeLevel)
+            .HasMaxLength(50);
+
+        academicProgram.Property(
+                x => x.EducationLanguage)
+            .HasMaxLength(50);
+
+        /*
+         * Yeni ve mevcut programların varsayılan
+         * olarak öğrenci formunda seçilebilir
+         * olmasını sağlar.
+         */
+        academicProgram.Property(
+                x => x.IsSelectable)
+            .HasDefaultValue(true);
 
         /*
          * Aynı akademik birim altında aynı
@@ -215,8 +353,8 @@ public sealed class AppDbContext(
             .IsUnique();
 
         /*
-         * Birime bağlı aktif programların
-         * sorgulanmasını hızlandırır.
+         * Akademik birime bağlı aktif program
+         * sorgularını hızlandırır.
          */
         academicProgram.HasIndex(
             x => new
@@ -226,9 +364,17 @@ public sealed class AppDbContext(
             });
 
         /*
-         * AcademicUnit
-         *      └── AcademicProgram
+         * Öğrenci formunda gösterilecek programların
+         * sorgulanmasını hızlandırır.
          */
+        academicProgram.HasIndex(
+            x => new
+            {
+                x.AcademicUnitId,
+                x.IsActive,
+                x.IsSelectable
+            });
+
         academicProgram.HasOne(
                 x => x.AcademicUnit)
             .WithMany(
@@ -257,14 +403,6 @@ public sealed class AppDbContext(
                 x => x.DocumentHash)
             .IsUnique();
 
-        /*
-         * StudentVerification
-         *      └── AcademicUniversity
-         *
-         * UniversityId nullable olduğu için
-         * eski kayıtlar migration sırasında
-         * bozulmaz.
-         */
         verification.HasOne(
                 x => x.University)
             .WithMany(
@@ -274,10 +412,6 @@ public sealed class AppDbContext(
             .OnDelete(
                 DeleteBehavior.Restrict);
 
-        /*
-         * StudentVerification
-         *      └── AcademicUnit
-         */
         verification.HasOne(
                 x => x.AcademicUnit)
             .WithMany(
@@ -287,10 +421,6 @@ public sealed class AppDbContext(
             .OnDelete(
                 DeleteBehavior.Restrict);
 
-        /*
-         * StudentVerification
-         *      └── AcademicProgram
-         */
         verification.HasOne(
                 x => x.AcademicProgram)
             .WithMany(
@@ -305,7 +435,7 @@ public sealed class AppDbContext(
          * için yaptığı doğrulama kontrollerini
          * hızlandırır.
          *
-         * Bu index unique değildir; geçmişte
+         * Bu indeks unique değildir. Geçmişte
          * reddedilen veya süresi dolan kayıtların
          * saklanmasına izin verir.
          */
