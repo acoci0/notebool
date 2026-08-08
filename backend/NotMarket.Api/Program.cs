@@ -6,9 +6,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NotMarket.Api.Data;
 using NotMarket.Api.Services;
+using NotMarket.Api.Data.AcademicCatalog;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.Configure<AcademicCatalogImportOptions>(
+    builder.Configuration.GetSection(AcademicCatalogImportOptions.SectionName));
 
+builder.Services.AddScoped<AcademicCatalogLoader>();
+builder.Services.AddScoped<AcademicCatalogValidator>();
+builder.Services.AddScoped<AcademicCatalogImporter>();
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
