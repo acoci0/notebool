@@ -2,11 +2,36 @@ namespace NotMarket.Api.Contracts;
 
 public sealed class StudentVerificationUploadRequest
 {
+    /*
+     * Canonical üniversite ID'si.
+     */
     public required Guid UniversityId { get; init; }
 
-    public required string FacultyName { get; init; }
+    /*
+     * Canonical fakülte, enstitü,
+     * yüksekokul veya diğer akademik
+     * birim ID'si.
+     */
+    public Guid AcademicUnitId { get; init; }
 
-    public required string DepartmentName { get; init; }
+    /*
+     * Canonical bölüm veya program ID'si.
+     */
+    public Guid AcademicProgramId { get; init; }
+
+    /*
+     * Bu iki metin alanı mevcut controller
+     * henüz onları kullandığı için geçici olarak
+     * korunmaktadır.
+     *
+     * Controller ve frontend yeni ID sistemine
+     * geçirildikten sonra kaldırılacaklar.
+     */
+    public string FacultyName { get; init; } =
+        string.Empty;
+
+    public string DepartmentName { get; init; } =
+        string.Empty;
 
     public required string DocumentIssueDate { get; init; }
 

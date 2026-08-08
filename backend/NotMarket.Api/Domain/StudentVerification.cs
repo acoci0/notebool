@@ -15,12 +15,19 @@ public sealed class StudentVerification
     public Guid? UniversityId { get; set; }
 
     public AcademicUniversity? University { get; set; }
+
+    public Guid? AcademicUnitId { get; set; }
+
+    public AcademicUnit? AcademicUnit { get; set; }
+
+    public Guid? AcademicProgramId { get; set; }
+
+    public AcademicProgram? AcademicProgram { get; set; }
+
     public required string UniversityName { get; set; }
 
-    [MaxLength(180)]
     public required string FacultyName { get; set; }
 
-    [MaxLength(180)]
     public required string DepartmentName { get; set; }
 
     [MaxLength(500)]

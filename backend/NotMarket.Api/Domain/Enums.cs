@@ -29,3 +29,13 @@ public enum NoteSubmissionStatus
     Approved = 4,
     Rejected = 5
 }
+
+public enum AcademicUnitType
+{
+    Faculty,
+    Institute,
+    School,
+    Conservatory,
+    VocationalSchool,
+    Other
+}

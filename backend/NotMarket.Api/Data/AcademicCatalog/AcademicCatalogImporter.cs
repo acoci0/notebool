@@ -1,0 +1,1026 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using NotMarket.Api.Domain;
+using NotMarket.Api.Services;
+
+namespace NotMarket.Api.Data.AcademicCatalog;
+
+public sealed class AcademicCatalogImportResult
+{
+    public string CatalogVersion { get; set; } =
+        string.Empty;
+
+    public bool DryRun { get; set; }
+
+    public bool DatabaseModified { get; set; }
+
+    public int UniversitiesAdded { get; set; }
+
+    public int UniversitiesUpdated { get; set; }
+
+    public int UniversitiesDeactivated { get; set; }
+
+    public int AliasesAdded { get; set; }
+
+    public int AliasesUpdated { get; set; }
+
+    public int AliasesRemoved { get; set; }
+
+    public int UnitsAdded { get; set; }
+
+    public int UnitsUpdated { get; set; }
+
+    public int UnitsDeactivated { get; set; }
+
+    public int ProgramsAdded { get; set; }
+
+    public int ProgramsUpdated { get; set; }
+
+    public int ProgramsDeactivated { get; set; }
+
+    public List<string> Warnings { get; set; } =
+        [];
+
+    public bool HasChanges =>
+        UniversitiesAdded > 0 ||
+        UniversitiesUpdated > 0 ||
+        UniversitiesDeactivated > 0 ||
+        AliasesAdded > 0 ||
+        AliasesUpdated > 0 ||
+        AliasesRemoved > 0 ||
+        UnitsAdded > 0 ||
+        UnitsUpdated > 0 ||
+        UnitsDeactivated > 0 ||
+        ProgramsAdded > 0 ||
+        ProgramsUpdated > 0 ||
+        ProgramsDeactivated > 0;
+}
+
+public sealed class AcademicCatalogImporter
+{
+    private readonly AppDbContext _db;
+
+    private readonly AcademicCatalogLoader _loader;
+
+    private readonly AcademicCatalogValidator _validator;
+
+    private readonly AcademicCatalogImportOptions _options;
+
+    private readonly ILogger<AcademicCatalogImporter> _logger;
+
+    public AcademicCatalogImporter(
+        AppDbContext db,
+        AcademicCatalogLoader loader,
+        AcademicCatalogValidator validator,
+        IOptions<AcademicCatalogImportOptions> options,
+        ILogger<AcademicCatalogImporter> logger)
+    {
+        _db = db;
+        _loader = loader;
+        _validator = validator;
+        _options = options.Value;
+        _logger = logger;
+    }
+
+    public async Task<AcademicCatalogImportResult> ImportAsync(
+        bool? dryRunOverride = null,
+        CancellationToken cancellationToken = default)
+    {
+        var package =
+            await _loader.LoadAsync(
+                cancellationToken);
+
+        var validation =
+            _validator.Validate(
+                package);
+
+        if (!validation.IsValid)
+        {
+            throw new InvalidDataException(
+                "Academic catalog doğrulaması başarısız:" +
+                Environment.NewLine +
+                string.Join(
+                    Environment.NewLine,
+                    validation.Errors.Select(
+                        x => "- " + x)));
+        }
+
+        var dryRun =
+            dryRunOverride ??
+            _options.DryRun;
+
+        var result =
+            new AcademicCatalogImportResult
+            {
+                CatalogVersion =
+                    package.Manifest.Version,
+
+                DryRun =
+                    dryRun,
+
+                Warnings =
+                    validation.Warnings.ToList()
+            };
+
+        await using var transaction =
+            await _db.Database.BeginTransactionAsync(
+                cancellationToken);
+
+        try
+        {
+            await SynchronizeAsync(
+                package,
+                result,
+                cancellationToken);
+
+            await _db.SaveChangesAsync(
+                cancellationToken);
+
+            if (dryRun)
+            {
+                await transaction.RollbackAsync(
+                    cancellationToken);
+
+                result.DatabaseModified =
+                    false;
+
+                _db.ChangeTracker.Clear();
+
+                _logger.LogInformation(
+                    "Academic catalog dry-run tamamlandı. " +
+                    "Database değiştirilmedi.");
+            }
+            else
+            {
+                await transaction.CommitAsync(
+                    cancellationToken);
+
+                result.DatabaseModified =
+                    result.HasChanges;
+
+                _logger.LogInformation(
+                    "Academic catalog import tamamlandı. " +
+                    "Version: {CatalogVersion}",
+                    result.CatalogVersion);
+            }
+
+            return result;
+        }
+        catch
+        {
+            await transaction.RollbackAsync(
+                cancellationToken);
+
+            _db.ChangeTracker.Clear();
+
+            throw;
+        }
+    }
+
+    private async Task SynchronizeAsync(
+        AcademicCatalogPackage package,
+        AcademicCatalogImportResult result,
+        CancellationToken cancellationToken)
+    {
+        var now =
+            DateTimeOffset.UtcNow;
+
+        var universities =
+            await _db.AcademicUniversities
+                .Include(x => x.Aliases)
+                .Include(x => x.AcademicUnits)
+                    .ThenInclude(x => x.Programs)
+                .ToListAsync(
+                    cancellationToken);
+
+        var selectedUniversityIds =
+            new HashSet<Guid>();
+
+        foreach (
+            var catalogUniversity
+            in package.Universities)
+        {
+            var catalogKey =
+                NormalizeCatalogKey(
+                    catalogUniversity.CatalogKey);
+
+            var normalizedName =
+                NormalizeText(
+                    catalogUniversity.OfficialName);
+
+            var university =
+                universities.FirstOrDefault(
+                    x =>
+                        string.Equals(
+                            x.CatalogKey,
+                            catalogKey,
+                            StringComparison.OrdinalIgnoreCase));
+
+            university ??=
+                universities.FirstOrDefault(
+                    x =>
+                        string.Equals(
+                            x.CountryCode,
+                            catalogUniversity.CountryCode,
+                            StringComparison.OrdinalIgnoreCase) &&
+                        x.NormalizedName == normalizedName);
+
+            var isNew =
+                university is null;
+
+            if (university is null)
+            {
+                university =
+                    new AcademicUniversity
+                    {
+                        CatalogKey =
+                            catalogKey,
+
+                        Name =
+                            catalogUniversity
+                                .OfficialName
+                                .Trim(),
+
+                        NormalizedName =
+                            normalizedName,
+
+                        CountryCode =
+                            catalogUniversity
+                                .CountryCode
+                                .Trim()
+                                .ToUpperInvariant(),
+
+                        IsActive =
+                            catalogUniversity.IsActive
+                    };
+
+                _db.AcademicUniversities.Add(
+                    university);
+
+                universities.Add(
+                    university);
+
+                result.UniversitiesAdded++;
+            }
+
+            var universityChanged =
+                ApplyUniversityMetadata(
+                    university,
+                    catalogUniversity,
+                    package.Manifest.Version,
+                    now);
+
+            if (
+                !isNew &&
+                universityChanged
+            )
+            {
+                result.UniversitiesUpdated++;
+            }
+
+            selectedUniversityIds.Add(
+                university.Id);
+
+            SynchronizeAliases(
+                university,
+                catalogUniversity,
+                result);
+
+            SynchronizeUnits(
+                university,
+                catalogUniversity,
+                package.Manifest.Version,
+                now,
+                result);
+        }
+
+        if (
+            _options.DeactivateMissingUniversities &&
+            package.Manifest
+                .DeactivateUniversitiesOutsideSelection
+        )
+        {
+            foreach (
+                var university
+                in universities)
+            {
+                if (
+                    selectedUniversityIds.Contains(
+                        university.Id)
+                )
+                {
+                    continue;
+                }
+
+                DeactivateUniversity(
+                    university,
+                    now,
+                    result);
+            }
+        }
+    }
+
+    private static bool ApplyUniversityMetadata(
+        AcademicUniversity university,
+        AcademicCatalogUniversity catalog,
+        string catalogVersion,
+        DateTimeOffset now)
+    {
+        var changed =
+            false;
+
+        changed |= SetIfDifferent(
+            university.CatalogKey,
+            NormalizeCatalogKey(
+                catalog.CatalogKey),
+            value =>
+                university.CatalogKey = value);
+
+        changed |= SetIfDifferent(
+            university.Name,
+            catalog.OfficialName.Trim(),
+            value =>
+                university.Name = value);
+
+        changed |= SetIfDifferent(
+            university.NormalizedName,
+            NormalizeText(
+                catalog.OfficialName),
+            value =>
+                university.NormalizedName = value);
+
+        changed |= SetIfDifferent(
+            university.CountryCode,
+            catalog.CountryCode
+                .Trim()
+                .ToUpperInvariant(),
+            value =>
+                university.CountryCode = value);
+
+        changed |= SetIfDifferent(
+            university.City,
+            CleanNullable(
+                catalog.City),
+            value =>
+                university.City = value);
+
+        changed |= SetIfDifferent(
+            university.CatalogVersion,
+            catalogVersion,
+            value =>
+                university.CatalogVersion = value);
+
+        changed |= SetIfDifferent(
+            university.SourceName,
+            CleanNullable(
+                catalog.SourceName) ??
+            "OfficialUniversityWebsite",
+            value =>
+                university.SourceName = value);
+
+        changed |= SetIfDifferent(
+            university.LastVerifiedAt,
+            catalog.VerifiedAt,
+            value =>
+                university.LastVerifiedAt = value);
+
+        changed |= SetIfDifferent(
+            university.IsActive,
+            catalog.IsActive,
+            value =>
+                university.IsActive = value);
+
+        if (changed)
+        {
+            university.UpdatedAt =
+                now;
+        }
+
+        return changed;
+    }
+
+    private static void SynchronizeAliases(
+        AcademicUniversity university,
+        AcademicCatalogUniversity catalog,
+        AcademicCatalogImportResult result)
+    {
+        var desiredAliases =
+            catalog.Aliases
+                .Where(
+                    x =>
+                        !string.IsNullOrWhiteSpace(x))
+                .Select(
+                    x => x.Trim())
+                .Select(
+                    x =>
+                        new
+                        {
+                            Alias = x,
+                            Normalized =
+                                NormalizeText(x)
+                        })
+                .Where(
+                    x =>
+                        x.Normalized !=
+                        university.NormalizedName)
+                .GroupBy(
+                    x => x.Normalized,
+                    StringComparer.Ordinal)
+                .Select(
+                    x => x.First())
+                .ToDictionary(
+                    x => x.Normalized,
+                    x => x.Alias,
+                    StringComparer.Ordinal);
+
+        foreach (
+            var existing
+            in university.Aliases.ToList())
+        {
+            if (
+                desiredAliases.ContainsKey(
+                    existing.NormalizedAlias)
+            )
+            {
+                continue;
+            }
+
+            university.Aliases.Remove(
+                existing);
+
+            result.AliasesRemoved++;
+        }
+
+        foreach (
+            var desired
+            in desiredAliases)
+        {
+            var existing =
+                university.Aliases.FirstOrDefault(
+                    x =>
+                        x.NormalizedAlias ==
+                        desired.Key);
+
+            if (existing is null)
+            {
+                university.Aliases.Add(
+                    new AcademicUniversityAlias
+                    {
+                        Alias =
+                            desired.Value,
+
+                        NormalizedAlias =
+                            desired.Key
+                    });
+
+                result.AliasesAdded++;
+
+                continue;
+            }
+
+            if (
+                existing.Alias !=
+                desired.Value
+            )
+            {
+                existing.Alias =
+                    desired.Value;
+
+                result.AliasesUpdated++;
+            }
+        }
+    }
+
+    private static void SynchronizeUnits(
+        AcademicUniversity university,
+        AcademicCatalogUniversity catalog,
+        string catalogVersion,
+        DateTimeOffset now,
+        AcademicCatalogImportResult result)
+    {
+        var desiredUnitIds =
+            new HashSet<Guid>();
+
+        foreach (
+            var catalogUnit
+            in catalog.Units)
+        {
+            var catalogKey =
+                NormalizeCatalogKey(
+                    catalogUnit.CatalogKey);
+
+            var normalizedName =
+                NormalizeText(
+                    catalogUnit.Name);
+
+            var unit =
+                university.AcademicUnits
+                    .FirstOrDefault(
+                        x =>
+                            string.Equals(
+                                x.CatalogKey,
+                                catalogKey,
+                                StringComparison.OrdinalIgnoreCase));
+
+            unit ??=
+                university.AcademicUnits
+                    .FirstOrDefault(
+                        x =>
+                            x.NormalizedName ==
+                            normalizedName);
+
+            var isNew =
+                unit is null;
+
+            if (unit is null)
+            {
+                unit =
+                    new AcademicUnit
+                    {
+                        UniversityId =
+                            university.Id,
+
+                        University =
+                            university,
+
+                        CatalogKey =
+                            catalogKey,
+
+                        Name =
+                            catalogUnit.Name.Trim(),
+
+                        NormalizedName =
+                            normalizedName,
+
+                        UnitType =
+                            AcademicUnitType.Faculty,
+
+                        IsActive =
+                            catalogUnit.IsActive
+                    };
+
+                university.AcademicUnits.Add(
+                    unit);
+
+                result.UnitsAdded++;
+            }
+
+            var changed =
+                ApplyUnitMetadata(
+                    unit,
+                    catalogUnit,
+                    catalogVersion,
+                    university.SourceName,
+                    now);
+
+            if (
+                !isNew &&
+                changed
+            )
+            {
+                result.UnitsUpdated++;
+            }
+
+            desiredUnitIds.Add(
+                unit.Id);
+
+            SynchronizePrograms(
+                unit,
+                catalogUnit,
+                catalogVersion,
+                now,
+                result);
+        }
+
+        foreach (
+            var unit
+            in university.AcademicUnits.ToList())
+        {
+            if (
+                desiredUnitIds.Contains(
+                    unit.Id)
+            )
+            {
+                continue;
+            }
+
+            DeactivateUnit(
+                unit,
+                now,
+                result);
+        }
+    }
+
+    private static bool ApplyUnitMetadata(
+        AcademicUnit unit,
+        AcademicCatalogUnit catalog,
+        string catalogVersion,
+        string? parentSourceName,
+        DateTimeOffset now)
+    {
+        var changed =
+            false;
+
+        changed |= SetIfDifferent(
+            unit.CatalogKey,
+            NormalizeCatalogKey(
+                catalog.CatalogKey),
+            value =>
+                unit.CatalogKey = value);
+
+        changed |= SetIfDifferent(
+            unit.Name,
+            catalog.Name.Trim(),
+            value =>
+                unit.Name = value);
+
+        changed |= SetIfDifferent(
+            unit.NormalizedName,
+            NormalizeText(
+                catalog.Name),
+            value =>
+                unit.NormalizedName = value);
+
+        changed |= SetIfDifferent(
+            unit.UnitType,
+            AcademicUnitType.Faculty,
+            value =>
+                unit.UnitType = value);
+
+        changed |= SetIfDifferent(
+            unit.CatalogVersion,
+            catalogVersion,
+            value =>
+                unit.CatalogVersion = value);
+
+        changed |= SetIfDifferent(
+            unit.SourceName,
+            CleanNullable(
+                catalog.SourceName) ??
+            parentSourceName,
+            value =>
+                unit.SourceName = value);
+
+        changed |= SetIfDifferent(
+            unit.LastVerifiedAt,
+            catalog.VerifiedAt,
+            value =>
+                unit.LastVerifiedAt = value);
+
+        changed |= SetIfDifferent(
+            unit.IsActive,
+            catalog.IsActive,
+            value =>
+                unit.IsActive = value);
+
+        if (changed)
+        {
+            unit.UpdatedAt =
+                now;
+        }
+
+        return changed;
+    }
+
+    private static void SynchronizePrograms(
+        AcademicUnit unit,
+        AcademicCatalogUnit catalogUnit,
+        string catalogVersion,
+        DateTimeOffset now,
+        AcademicCatalogImportResult result)
+    {
+        var desiredProgramIds =
+            new HashSet<Guid>();
+
+        foreach (
+            var catalogProgram
+            in catalogUnit.Programs)
+        {
+            var catalogKey =
+                NormalizeCatalogKey(
+                    catalogProgram.CatalogKey);
+
+            var normalizedName =
+                NormalizeText(
+                    catalogProgram.Name);
+
+            var program =
+                unit.Programs.FirstOrDefault(
+                    x =>
+                        string.Equals(
+                            x.CatalogKey,
+                            catalogKey,
+                            StringComparison.OrdinalIgnoreCase));
+
+            program ??=
+                unit.Programs.FirstOrDefault(
+                    x =>
+                        x.NormalizedName ==
+                        normalizedName);
+
+            var isNew =
+                program is null;
+
+            if (program is null)
+            {
+                program =
+                    new AcademicProgram
+                    {
+                        AcademicUnitId =
+                            unit.Id,
+
+                        AcademicUnit =
+                            unit,
+
+                        CatalogKey =
+                            catalogKey,
+
+                        Name =
+                            catalogProgram.Name.Trim(),
+
+                        NormalizedName =
+                            normalizedName,
+
+                        IsActive =
+                            catalogProgram.IsActive,
+
+                        IsSelectable =
+                            catalogProgram.IsSelectable
+                    };
+
+                unit.Programs.Add(
+                    program);
+
+                result.ProgramsAdded++;
+            }
+
+            var changed =
+                ApplyProgramMetadata(
+                    program,
+                    catalogProgram,
+                    catalogVersion,
+                    unit.SourceName,
+                    now);
+
+            if (
+                !isNew &&
+                changed
+            )
+            {
+                result.ProgramsUpdated++;
+            }
+
+            desiredProgramIds.Add(
+                program.Id);
+        }
+
+        foreach (
+            var program
+            in unit.Programs.ToList())
+        {
+            if (
+                desiredProgramIds.Contains(
+                    program.Id)
+            )
+            {
+                continue;
+            }
+
+            DeactivateProgram(
+                program,
+                now,
+                result);
+        }
+    }
+
+    private static bool ApplyProgramMetadata(
+        AcademicProgram program,
+        AcademicCatalogProgram catalog,
+        string catalogVersion,
+        string? parentSourceName,
+        DateTimeOffset now)
+    {
+        var changed =
+            false;
+
+        changed |= SetIfDifferent(
+            program.CatalogKey,
+            NormalizeCatalogKey(
+                catalog.CatalogKey),
+            value =>
+                program.CatalogKey = value);
+
+        changed |= SetIfDifferent(
+            program.Name,
+            catalog.Name.Trim(),
+            value =>
+                program.Name = value);
+
+        changed |= SetIfDifferent(
+            program.NormalizedName,
+            NormalizeText(
+                catalog.Name),
+            value =>
+                program.NormalizedName = value);
+
+        changed |= SetIfDifferent(
+            program.CatalogVersion,
+            catalogVersion,
+            value =>
+                program.CatalogVersion = value);
+
+        changed |= SetIfDifferent(
+            program.SourceName,
+            CleanNullable(
+                catalog.SourceName) ??
+            parentSourceName,
+            value =>
+                program.SourceName = value);
+
+        changed |= SetIfDifferent(
+            program.DegreeLevel,
+            CleanNullable(
+                catalog.DegreeLevel),
+            value =>
+                program.DegreeLevel = value);
+
+        changed |= SetIfDifferent(
+            program.EducationLanguage,
+            CleanNullable(
+                catalog.EducationLanguage),
+            value =>
+                program.EducationLanguage = value);
+
+        changed |= SetIfDifferent(
+            program.LastVerifiedAt,
+            catalog.VerifiedAt,
+            value =>
+                program.LastVerifiedAt = value);
+
+        changed |= SetIfDifferent(
+            program.IsActive,
+            catalog.IsActive,
+            value =>
+                program.IsActive = value);
+
+        var selectable =
+            catalog.IsActive &&
+            catalog.IsSelectable;
+
+        changed |= SetIfDifferent(
+            program.IsSelectable,
+            selectable,
+            value =>
+                program.IsSelectable = value);
+
+        if (changed)
+        {
+            program.UpdatedAt =
+                now;
+        }
+
+        return changed;
+    }
+
+    private static void DeactivateUniversity(
+        AcademicUniversity university,
+        DateTimeOffset now,
+        AcademicCatalogImportResult result)
+    {
+        if (university.IsActive)
+        {
+            university.IsActive =
+                false;
+
+            university.UpdatedAt =
+                now;
+
+            result.UniversitiesDeactivated++;
+        }
+
+        foreach (
+            var unit
+            in university.AcademicUnits)
+        {
+            DeactivateUnit(
+                unit,
+                now,
+                result);
+        }
+    }
+
+    private static void DeactivateUnit(
+        AcademicUnit unit,
+        DateTimeOffset now,
+        AcademicCatalogImportResult result)
+    {
+        if (unit.IsActive)
+        {
+            unit.IsActive =
+                false;
+
+            unit.UpdatedAt =
+                now;
+
+            result.UnitsDeactivated++;
+        }
+
+        foreach (
+            var program
+            in unit.Programs)
+        {
+            DeactivateProgram(
+                program,
+                now,
+                result);
+        }
+    }
+
+    private static void DeactivateProgram(
+        AcademicProgram program,
+        DateTimeOffset now,
+        AcademicCatalogImportResult result)
+    {
+        var wasActive =
+            program.IsActive;
+
+        var changed =
+            false;
+
+        if (program.IsActive)
+        {
+            program.IsActive =
+                false;
+
+            changed =
+                true;
+        }
+
+        if (program.IsSelectable)
+        {
+            program.IsSelectable =
+                false;
+
+            changed =
+                true;
+        }
+
+        if (changed)
+        {
+            program.UpdatedAt =
+                now;
+        }
+
+        if (wasActive)
+        {
+            result.ProgramsDeactivated++;
+        }
+    }
+
+    private static string NormalizeCatalogKey(
+        string value)
+    {
+        return value
+            .Trim()
+            .ToUpperInvariant();
+    }
+
+    private static string NormalizeText(
+        string value)
+    {
+        return AcademicTextNormalizer.Normalize(
+            value);
+    }
+
+    private static string? CleanNullable(
+        string? value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            return null;
+        }
+
+        return value.Trim();
+    }
+
+    private static bool SetIfDifferent<T>(
+        T currentValue,
+        T newValue,
+        Action<T> setter)
+    {
+        if (
+            EqualityComparer<T>
+                .Default
+                .Equals(
+                    currentValue,
+                    newValue)
+        )
+        {
+            return false;
+        }
+
+        setter(newValue);
+
+        return true;
+    }
+}

@@ -102,3 +102,17 @@ export type AcademicUniversity = {
   id: string;
   name: string;
 };
+
+export type AcademicUnit = {
+  id: string;
+  universityId: string;
+  name: string;
+  unitType: string;
+};
+
+export type AcademicProgram = {
+  id: string;
+  academicUnitId: string;
+  name: string;
+};
+

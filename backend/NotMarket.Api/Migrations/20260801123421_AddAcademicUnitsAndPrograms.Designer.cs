@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NotMarket.Api.Data;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace NotMarket.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260801123421_AddAcademicUnitsAndPrograms")]
+    partial class AddAcademicUnitsAndPrograms
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,35 +34,11 @@ namespace NotMarket.Api.Migrations
                     b.Property<Guid>("AcademicUnitId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("CatalogKey")
-                        .HasMaxLength(200)
-                        .HasColumnType("character varying(200)");
-
-                    b.Property<string>("CatalogVersion")
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
-
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("DegreeLevel")
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
-
-                    b.Property<string>("EducationLanguage")
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
-
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");
-
-                    b.Property<bool>("IsSelectable")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("boolean")
-                        .HasDefaultValue(true);
-
-                    b.Property<DateTimeOffset?>("LastVerifiedAt")
-                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -71,24 +50,15 @@ namespace NotMarket.Api.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("character varying(250)");
 
-                    b.Property<string>("SourceName")
-                        .HasMaxLength(200)
-                        .HasColumnType("character varying(200)");
-
                     b.Property<DateTimeOffset?>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CatalogKey")
-                        .IsUnique();
-
                     b.HasIndex("AcademicUnitId", "IsActive");
 
                     b.HasIndex("AcademicUnitId", "NormalizedName")
                         .IsUnique();
-
-                    b.HasIndex("AcademicUnitId", "IsActive", "IsSelectable");
 
                     b.ToTable("AcademicPrograms", (string)null);
                 });
@@ -99,22 +69,11 @@ namespace NotMarket.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("CatalogKey")
-                        .HasMaxLength(150)
-                        .HasColumnType("character varying(150)");
-
-                    b.Property<string>("CatalogVersion")
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
-
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");
-
-                    b.Property<DateTimeOffset?>("LastVerifiedAt")
-                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -125,10 +84,6 @@ namespace NotMarket.Api.Migrations
                         .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("character varying(250)");
-
-                    b.Property<string>("SourceName")
-                        .HasMaxLength(200)
-                        .HasColumnType("character varying(200)");
 
                     b.Property<string>("UnitType")
                         .IsRequired()
@@ -141,9 +96,6 @@ namespace NotMarket.Api.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CatalogKey")
-                        .IsUnique();
 
                     b.HasIndex("UniversityId", "IsActive");
 
@@ -159,18 +111,6 @@ namespace NotMarket.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("CatalogKey")
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
-
-                    b.Property<string>("CatalogVersion")
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
-
-                    b.Property<string>("City")
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
-
                     b.Property<string>("CountryCode")
                         .IsRequired()
                         .HasMaxLength(2)
@@ -182,9 +122,6 @@ namespace NotMarket.Api.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");
 
-                    b.Property<DateTimeOffset?>("LastVerifiedAt")
-                        .HasColumnType("timestamp with time zone");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(250)
@@ -195,17 +132,10 @@ namespace NotMarket.Api.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("character varying(250)");
 
-                    b.Property<string>("SourceName")
-                        .HasMaxLength(200)
-                        .HasColumnType("character varying(200)");
-
                     b.Property<DateTimeOffset?>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CatalogKey")
-                        .IsUnique();
 
                     b.HasIndex("CountryCode", "IsActive");
 
@@ -213,38 +143,6 @@ namespace NotMarket.Api.Migrations
                         .IsUnique();
 
                     b.ToTable("AcademicUniversities", (string)null);
-                });
-
-            modelBuilder.Entity("NotMarket.Api.Domain.AcademicUniversityAlias", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Alias")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("character varying(250)");
-
-                    b.Property<DateTimeOffset>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("NormalizedAlias")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("character varying(250)");
-
-                    b.Property<Guid>("UniversityId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedAlias")
-                        .IsUnique();
-
-                    b.HasIndex("UniversityId");
-
-                    b.ToTable("AcademicUniversityAliases", (string)null);
                 });
 
             modelBuilder.Entity("NotMarket.Api.Domain.ApplicationUser", b =>
@@ -538,17 +436,6 @@ namespace NotMarket.Api.Migrations
                     b.Navigation("University");
                 });
 
-            modelBuilder.Entity("NotMarket.Api.Domain.AcademicUniversityAlias", b =>
-                {
-                    b.HasOne("NotMarket.Api.Domain.AcademicUniversity", "University")
-                        .WithMany("Aliases")
-                        .HasForeignKey("UniversityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("University");
-                });
-
             modelBuilder.Entity("NotMarket.Api.Domain.NoteSubmission", b =>
                 {
                     b.HasOne("NotMarket.Api.Domain.NoteRequest", "Request")
@@ -615,8 +502,6 @@ namespace NotMarket.Api.Migrations
             modelBuilder.Entity("NotMarket.Api.Domain.AcademicUniversity", b =>
                 {
                     b.Navigation("AcademicUnits");
-
-                    b.Navigation("Aliases");
 
                     b.Navigation("StudentVerifications");
                 });

@@ -1,0 +1,30 @@
+{
+  "version": "2026.1-selected-10",
+  "countryCode": "TR",
+  "referenceYear": 2026,
+  "scopeMode": "SelectedUniversities",
+  "departmentDefinition": "StudentFacingAcademicProgram",
+  "includeFaculties": true,
+  "includeUndergraduatePrograms": true,
+  "includeOpenEducationFaculties": true,
+  "includeVocationalSchools": false,
+  "includeSchools": false,
+  "includeConservatories": false,
+  "includeGraduateInstitutes": false,
+  "includeGraduatePrograms": false,
+  "includeResearchCenters": false,
+  "includeDoubleMajorPrograms": false,
+  "deactivateUniversitiesOutsideSelection": true,
+  "universityFiles": [
+    "marmara.json",
+    "yildiz-teknik.json",
+    "istanbul-teknik.json",
+    "hacettepe.json",
+    "eskisehir-teknik.json",
+    "bogazici.json",
+    "orta-dogu-teknik.json",
+    "anadolu.json",
+    "selcuk.json",
+    "istanbul.json"
+  ]
+}
