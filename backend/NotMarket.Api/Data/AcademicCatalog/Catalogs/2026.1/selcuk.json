@@ -1,0 +1,2188 @@
+{
+  "catalogKey": "SELCUK",
+  "officialName": "Selçuk Üniversitesi",
+  "aliases": [
+    "Konya Selçuk Üniversitesi"
+  ],
+  "countryCode": "TR",
+  "city": "Konya",
+  "sourceName": "Selçuk Üniversitesi Resmi Kaynakları",
+  "sourceUrls": [
+    "https://selcuk.edu.tr/",
+    "https://selcuk.edu.tr/anasayfa/aday",
+    "https://bologna.selcuk.edu.tr/",
+    "https://eski.selcuk.edu.tr/"
+  ],
+  "verifiedAt": "2026-08-13T00:00:00+03:00",
+  "isActive": true,
+  "units": [
+    {
+      "catalogKey": "SELCUK-AKSEHIR-IKTISADI-VE-IDARI-BILIMLER",
+      "name": "Akşehir İktisadi ve İdari Bilimler Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-AKSEHIR-IKTISADI-VE-IDARI-BILIMLER-ISLETME",
+          "name": "İşletme",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-AKSEHIR-IKTISADI-VE-IDARI-BILIMLER-MALIYE",
+          "name": "Maliye",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-AKSEHIR-MUHENDISLIK-VE-MIMARLIK",
+      "name": "Akşehir Mühendislik ve Mimarlık Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-AKSEHIR-MUHENDISLIK-VE-MIMARLIK-GIDA-MUHENDISLIGI",
+          "name": "Gıda Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-AKSEHIR-MUHENDISLIK-VE-MIMARLIK-MAKINE-MUHENDISLIGI",
+          "name": "Makine Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-BEYSEHIR-ALI-AKKANAT-ISLETME",
+      "name": "Beyşehir Ali Akkanat İşletme Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-BEYSEHIR-ALI-AKKANAT-ISLETME-ISLETME",
+          "name": "İşletme",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-BEYSEHIR-ALI-AKKANAT-ISLETME-ULUSLARARASI-TICARET-VE-ISLETMECILIK",
+          "name": "Uluslararası Ticaret ve İşletmecilik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-BEYSEHIR-ALI-AKKANAT-ISLETME-YONETIM-BILISIM-SISTEMLERI",
+          "name": "Yönetim Bilişim Sistemleri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-BEYSEHIR-ALI-AKKANAT-TURIZM",
+      "name": "Beyşehir Ali Akkanat Turizm Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-BEYSEHIR-ALI-AKKANAT-TURIZM-GASTRONOMI-VE-MUTFAK-SANATLARI",
+          "name": "Gastronomi ve Mutfak Sanatları",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-BEYSEHIR-ALI-AKKANAT-TURIZM-TURIZM-ISLETMECILIGI",
+          "name": "Turizm İşletmeciliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-BEYSEHIR-ALI-AKKANAT-TURIZM-TURIZM-REHBERLIGI",
+          "name": "Turizm Rehberliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-DIS-HEKIMLIGI",
+      "name": "Diş Hekimliği Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-DIS-HEKIMLIGI-DIS-HEKIMLIGI",
+          "name": "Diş Hekimliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-ECZACILIK",
+      "name": "Eczacılık Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-ECZACILIK-ECZACILIK",
+          "name": "Eczacılık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-EDEBIYAT",
+      "name": "Edebiyat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-ALMAN-DILI-VE-EDEBIYATI",
+          "name": "Alman Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-ARAP-DILI-VE-EDEBIYATI",
+          "name": "Arap Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-ARKEOLOJI",
+          "name": "Arkeoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-FARS-DILI-VE-EDEBIYATI",
+          "name": "Fars Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-FELSEFE",
+          "name": "Felsefe",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-FRANSIZ-DILI-VE-EDEBIYATI",
+          "name": "Fransız Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-INGILIZ-DILI-VE-EDEBIYATI",
+          "name": "İngiliz Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-JAPON-DILI-VE-EDEBIYATI",
+          "name": "Japon Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-KARSILASTIRMALI-EDEBIYAT",
+          "name": "Karşılaştırmalı Edebiyat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-KULTUR-VARLIKLARINI-KORUMA-VE-ONARIM",
+          "name": "Kültür Varlıklarını Koruma ve Onarım",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-MUTERCIM-TERCUMANLIK",
+          "name": "Mütercim Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-PSIKOLOJI",
+          "name": "Psikoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-RUS-DILI-VE-EDEBIYATI",
+          "name": "Rus Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-SANAT-TARIHI",
+          "name": "Sanat Tarihi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-SOSYOLOJI",
+          "name": "Sosyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-TARIH",
+          "name": "Tarih",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-TURK-DILI-VE-EDEBIYATI",
+          "name": "Türk Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EDEBIYAT-URDU-DILI-VE-EDEBIYATI",
+          "name": "Urdu Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-EGITIM",
+      "name": "Eğitim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/",
+        "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-matematik_ve_fen_bilimleri_egitimi-ilk_ogretim_matematik_ogretmenligi-lisans",
+        "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-turkce_ogretmenligi-turkce_ogretmenligi-lisans",
+        "https://bologna.selcuk.edu.tr/tr/ProgramCikti/egitim_fakultesi-egitim_bilimleri-rehberlik_ve_psikolojik_danismanlik-lisans",
+        "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-sinif_ogretmenligi-fakulte_bolum-sinif_ogretmenligi-lisans"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-EGITIM-ILKOGRETIM-MATEMATIK-OGRETMENLIGI",
+          "name": "İlköğretim Matematik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-matematik_ve_fen_bilimleri_egitimi-ilk_ogretim_matematik_ogretmenligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-turkce_ogretmenligi-turkce_ogretmenligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/ProgramCikti/egitim_fakultesi-egitim_bilimleri-rehberlik_ve_psikolojik_danismanlik-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-sinif_ogretmenligi-fakulte_bolum-sinif_ogretmenligi-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EGITIM-INGILIZCE-OGRETMENLIGI",
+          "name": "İngilizce Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-matematik_ve_fen_bilimleri_egitimi-ilk_ogretim_matematik_ogretmenligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-turkce_ogretmenligi-turkce_ogretmenligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/ProgramCikti/egitim_fakultesi-egitim_bilimleri-rehberlik_ve_psikolojik_danismanlik-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-sinif_ogretmenligi-fakulte_bolum-sinif_ogretmenligi-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EGITIM-OKUL-ONCESI-OGRETMENLIGI",
+          "name": "Okul Öncesi Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-matematik_ve_fen_bilimleri_egitimi-ilk_ogretim_matematik_ogretmenligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-turkce_ogretmenligi-turkce_ogretmenligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/ProgramCikti/egitim_fakultesi-egitim_bilimleri-rehberlik_ve_psikolojik_danismanlik-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-sinif_ogretmenligi-fakulte_bolum-sinif_ogretmenligi-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EGITIM-REHBERLIK-VE-PSIKOLOJIK-DANISMANLIK",
+          "name": "Rehberlik ve Psikolojik Danışmanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-matematik_ve_fen_bilimleri_egitimi-ilk_ogretim_matematik_ogretmenligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-turkce_ogretmenligi-turkce_ogretmenligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/ProgramCikti/egitim_fakultesi-egitim_bilimleri-rehberlik_ve_psikolojik_danismanlik-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-sinif_ogretmenligi-fakulte_bolum-sinif_ogretmenligi-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EGITIM-SINIF-OGRETMENLIGI",
+          "name": "Sınıf Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-matematik_ve_fen_bilimleri_egitimi-ilk_ogretim_matematik_ogretmenligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-turkce_ogretmenligi-turkce_ogretmenligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/ProgramCikti/egitim_fakultesi-egitim_bilimleri-rehberlik_ve_psikolojik_danismanlik-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-sinif_ogretmenligi-fakulte_bolum-sinif_ogretmenligi-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-EGITIM-TURKCE-OGRETMENLIGI",
+          "name": "Türkçe Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-matematik_ve_fen_bilimleri_egitimi-ilk_ogretim_matematik_ogretmenligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-turkce_ogretmenligi-turkce_ogretmenligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/ProgramCikti/egitim_fakultesi-egitim_bilimleri-rehberlik_ve_psikolojik_danismanlik-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/egitim_fakultesi-sinif_ogretmenligi-fakulte_bolum-sinif_ogretmenligi-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-FEN",
+      "name": "Fen Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-FEN-AKTUERYA-BILIMLERI",
+          "name": "Aktüerya Bilimleri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-FEN-BIYOKIMYA",
+          "name": "Biyokimya",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-FEN-BIYOLOJI",
+          "name": "Biyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-FEN-BIYOTEKNOLOJI",
+          "name": "Biyoteknoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-FEN-FIZIK",
+          "name": "Fizik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-FEN-ISTATISTIK",
+          "name": "İstatistik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-FEN-KIMYA",
+          "name": "Kimya",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-FEN-MATEMATIK",
+          "name": "Matematik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-GUZEL-SANATLAR",
+      "name": "Güzel Sanatlar Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-GUZEL-SANATLAR-CIZGI-FILM-VE-ANIMASYON",
+          "name": "Çizgi Film ve Animasyon",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-GUZEL-SANATLAR-ENDUSTRIYEL-TASARIM",
+          "name": "Endüstriyel Tasarım",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-GUZEL-SANATLAR-GELENEKSEL-TURK-SANATLARI",
+          "name": "Geleneksel Türk Sanatları",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-GUZEL-SANATLAR-GRAFIK",
+          "name": "Grafik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-GUZEL-SANATLAR-HEYKEL",
+          "name": "Heykel",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-GUZEL-SANATLAR-RESIM",
+          "name": "Resim",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-GUZEL-SANATLAR-SERAMIK",
+          "name": "Seramik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-HEMSIRELIK",
+      "name": "Hemşirelik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-HEMSIRELIK-HEMSIRELIK",
+          "name": "Hemşirelik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-HUKUK",
+      "name": "Hukuk Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-HUKUK-HUKUK",
+          "name": "Hukuk",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-IKTISADI-VE-IDARI-BILIMLER",
+      "name": "İktisadi ve İdari Bilimler Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-IKTISADI-VE-IDARI-BILIMLER-IKTISAT",
+          "name": "İktisat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-IKTISADI-VE-IDARI-BILIMLER-ISLETME",
+          "name": "İşletme",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-IKTISADI-VE-IDARI-BILIMLER-ISLETME-INGILIZCE",
+          "name": "İşletme (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-IKTISADI-VE-IDARI-BILIMLER-SIYASET-BILIMI-VE-KAMU-YONETIMI",
+          "name": "Siyaset Bilimi ve Kamu Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-IKTISADI-VE-IDARI-BILIMLER-ULUSLARARASI-ILISKILER",
+          "name": "Uluslararası İlişkiler",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-IKTISADI-VE-IDARI-BILIMLER-ULUSLARARASI-ILISKILER-INGILIZCE",
+          "name": "Uluslararası İlişkiler (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-IKTISADI-VE-IDARI-BILIMLER-ULUSLARARASI-TICARET-VE-FINANSMAN",
+          "name": "Uluslararası Ticaret ve Finansman",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-ILETISIM",
+      "name": "İletişim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/",
+        "https://digitalmedia.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-ILETISIM-GAZETECILIK",
+          "name": "Gazetecilik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://digitalmedia.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-ILETISIM-HALKLA-ILISKILER-VE-TANITIM",
+          "name": "Halkla İlişkiler ve Tanıtım",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://digitalmedia.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-ILETISIM-RADYO-TELEVIZYON-VE-SINEMA",
+          "name": "Radyo, Televizyon ve Sinema",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://digitalmedia.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-ILETISIM-REKLAMCILIK",
+          "name": "Reklamcılık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://digitalmedia.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-ILAHIYAT",
+      "name": "İlahiyat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-ILAHIYAT-ILAHIYAT",
+          "name": "İlahiyat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-ILAHIYAT-ISLAMI-ILIMLER",
+          "name": "İslami İlimler",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-KULU-SAGLIK-BILIMLERI",
+      "name": "Kulu Sağlık Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-KULU-SAGLIK-BILIMLERI-BESLENME-VE-DIYETETIK",
+          "name": "Beslenme ve Diyetetik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-KULU-SAGLIK-BILIMLERI-FIZYOTERAPI-VE-REHABILITASYON",
+          "name": "Fizyoterapi ve Rehabilitasyon",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-KULU-SAGLIK-BILIMLERI-HEMSIRELIK",
+          "name": "Hemşirelik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-MIMARLIK-VE-TASARIM",
+      "name": "Mimarlık ve Tasarım Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-MIMARLIK-VE-TASARIM-AYAKKABI-TASARIMI-VE-URETIMI",
+          "name": "Ayakkabı Tasarımı ve Üretimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-MIMARLIK-VE-TASARIM-EL-SANATLARI",
+          "name": "El Sanatları",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-MIMARLIK-VE-TASARIM-IC-MIMARLIK",
+          "name": "İç Mimarlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-MIMARLIK-VE-TASARIM-MIMARLIK",
+          "name": "Mimarlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-MIMARLIK-VE-TASARIM-MODA-TASARIMI",
+          "name": "Moda Tasarımı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-MIMARLIK-VE-TASARIM-PEYZAJ-MIMARLIGI",
+          "name": "Peyzaj Mimarlığı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-SAGLIK-BILIMLERI",
+      "name": "Sağlık Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-SAGLIK-BILIMLERI-ACIL-YARDIM-VE-AFET-YONETIMI",
+          "name": "Acil Yardım ve Afet Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-SAGLIK-BILIMLERI-BESLENME-VE-DIYETETIK",
+          "name": "Beslenme ve Diyetetik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-SAGLIK-BILIMLERI-COCUK-GELISIMI",
+          "name": "Çocuk Gelişimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-SAGLIK-BILIMLERI-DIL-VE-KONUSMA-TERAPISI",
+          "name": "Dil ve Konuşma Terapisi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-SAGLIK-BILIMLERI-EBELIK",
+          "name": "Ebelik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-SAGLIK-BILIMLERI-FIZYOTERAPI-VE-REHABILITASYON",
+          "name": "Fizyoterapi ve Rehabilitasyon",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-SAGLIK-BILIMLERI-GERONTOLOJI",
+          "name": "Gerontoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-SAGLIK-BILIMLERI-ODYOLOJI",
+          "name": "Odyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-SAGLIK-BILIMLERI-SAGLIK-YONETIMI",
+          "name": "Sağlık Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-SAGLIK-BILIMLERI-SOSYAL-HIZMET",
+          "name": "Sosyal Hizmet",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-SPOR-BILIMLERI",
+      "name": "Spor Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-SPOR-BILIMLERI-ANTRENORLUK-EGITIMI",
+          "name": "Antrenörlük Eğitimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-SPOR-BILIMLERI-BEDEN-EGITIMI-VE-SPOR-OGRETMENLIGI",
+          "name": "Beden Eğitimi ve Spor Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-SPOR-BILIMLERI-REKREASYON",
+          "name": "Rekreasyon",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-SPOR-BILIMLERI-SPOR-YONETICILIGI",
+          "name": "Spor Yöneticiliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-TEKNOLOJI",
+      "name": "Teknoloji Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/",
+        "https://bologna.selcuk.edu.tr/tr/hakkinda/teknoloji-elektrik_elektronik_muhendisligi-elektrik_elektronik_muhendisligi-lisans"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-TEKNOLOJI-BILGISAYAR-MUHENDISLIGI",
+          "name": "Bilgisayar Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/hakkinda/teknoloji-elektrik_elektronik_muhendisligi-elektrik_elektronik_muhendisligi-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-TEKNOLOJI-ELEKTRIK-ELEKTRONIK-MUHENDISLIGI",
+          "name": "Elektrik-Elektronik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/hakkinda/teknoloji-elektrik_elektronik_muhendisligi-elektrik_elektronik_muhendisligi-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-TEKNOLOJI-MAKINE-MUHENDISLIGI",
+          "name": "Makine Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/hakkinda/teknoloji-elektrik_elektronik_muhendisligi-elektrik_elektronik_muhendisligi-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-TEKNOLOJI-MEKATRONIK-MUHENDISLIGI",
+          "name": "Mekatronik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/hakkinda/teknoloji-elektrik_elektronik_muhendisligi-elektrik_elektronik_muhendisligi-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-TEKNOLOJI-METALURJI-VE-MALZEME-MUHENDISLIGI",
+          "name": "Metalurji ve Malzeme Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/hakkinda/teknoloji-elektrik_elektronik_muhendisligi-elektrik_elektronik_muhendisligi-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-TIP",
+      "name": "Tıp Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-TIP-TIP",
+          "name": "Tıp",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-TURIZM",
+      "name": "Turizm Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/",
+        "https://bologna.selcuk.edu.tr/tr/Hakkinda/turizm-turizm_isletmeciligi-turizm_isletmeciligi-lisans",
+        "https://bologna.selcuk.edu.tr/tr/Hakkinda/turizm-turizm_rehberligi-turizm_rehberligi",
+        "https://bologna.selcuk.edu.tr/tr/hakkinda/turizm-gastronomi_ve_mutfak_sanatlari-gastronomi_ve_mutfak_sanatlari-lisans"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-TURIZM-GASTRONOMI-VE-MUTFAK-SANATLARI",
+          "name": "Gastronomi ve Mutfak Sanatları",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/turizm-turizm_isletmeciligi-turizm_isletmeciligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/turizm-turizm_rehberligi-turizm_rehberligi",
+            "https://bologna.selcuk.edu.tr/tr/hakkinda/turizm-gastronomi_ve_mutfak_sanatlari-gastronomi_ve_mutfak_sanatlari-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-TURIZM-REKREASYON-YONETIMI",
+          "name": "Rekreasyon Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/turizm-turizm_isletmeciligi-turizm_isletmeciligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/turizm-turizm_rehberligi-turizm_rehberligi",
+            "https://bologna.selcuk.edu.tr/tr/hakkinda/turizm-gastronomi_ve_mutfak_sanatlari-gastronomi_ve_mutfak_sanatlari-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-TURIZM-TURIZM-ISLETMECILIGI",
+          "name": "Turizm İşletmeciliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/turizm-turizm_isletmeciligi-turizm_isletmeciligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/turizm-turizm_rehberligi-turizm_rehberligi",
+            "https://bologna.selcuk.edu.tr/tr/hakkinda/turizm-gastronomi_ve_mutfak_sanatlari-gastronomi_ve_mutfak_sanatlari-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-TURIZM-TURIZM-REHBERLIGI",
+          "name": "Turizm Rehberliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/turizm-turizm_isletmeciligi-turizm_isletmeciligi-lisans",
+            "https://bologna.selcuk.edu.tr/tr/Hakkinda/turizm-turizm_rehberligi-turizm_rehberligi",
+            "https://bologna.selcuk.edu.tr/tr/hakkinda/turizm-gastronomi_ve_mutfak_sanatlari-gastronomi_ve_mutfak_sanatlari-lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-VETERINER",
+      "name": "Veteriner Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-VETERINER-VETERINER-HEKIMLIGI",
+          "name": "Veteriner Hekimliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "SELCUK-ZIRAAT",
+      "name": "Ziraat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Selçuk Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://selcuk.edu.tr/",
+        "https://selcuk.edu.tr/anasayfa/aday",
+        "https://bologna.selcuk.edu.tr/",
+        "https://www.selcuk.edu.tr/birim/sayfa/5340/aday-ogrenci-1593"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "SELCUK-ZIRAAT-BAHCE-BITKILERI",
+          "name": "Bahçe Bitkileri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://www.selcuk.edu.tr/birim/sayfa/5340/aday-ogrenci-1593"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-ZIRAAT-BITKI-KORUMA",
+          "name": "Bitki Koruma",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://www.selcuk.edu.tr/birim/sayfa/5340/aday-ogrenci-1593"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-ZIRAAT-GIDA-MUHENDISLIGI",
+          "name": "Gıda Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://www.selcuk.edu.tr/birim/sayfa/5340/aday-ogrenci-1593"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-ZIRAAT-TARIM-EKONOMISI",
+          "name": "Tarım Ekonomisi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://www.selcuk.edu.tr/birim/sayfa/5340/aday-ogrenci-1593"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-ZIRAAT-TARIM-MAKINALARI-VE-TEKNOLOJILERI-MUHENDISLIGI",
+          "name": "Tarım Makinaları ve Teknolojileri Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://www.selcuk.edu.tr/birim/sayfa/5340/aday-ogrenci-1593"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-ZIRAAT-TARIMSAL-YAPILAR-VE-SULAMA",
+          "name": "Tarımsal Yapılar ve Sulama",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://www.selcuk.edu.tr/birim/sayfa/5340/aday-ogrenci-1593"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-ZIRAAT-TARLA-BITKILERI",
+          "name": "Tarla Bitkileri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://www.selcuk.edu.tr/birim/sayfa/5340/aday-ogrenci-1593"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-ZIRAAT-TOPRAK-BILIMI-VE-BITKI-BESLEME",
+          "name": "Toprak Bilimi ve Bitki Besleme",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://www.selcuk.edu.tr/birim/sayfa/5340/aday-ogrenci-1593"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "SELCUK-ZIRAAT-ZOOTEKNI",
+          "name": "Zootekni",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Selçuk Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://selcuk.edu.tr/",
+            "https://selcuk.edu.tr/anasayfa/aday",
+            "https://bologna.selcuk.edu.tr/",
+            "https://www.selcuk.edu.tr/birim/sayfa/5340/aday-ogrenci-1593"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    }
+  ]
+}

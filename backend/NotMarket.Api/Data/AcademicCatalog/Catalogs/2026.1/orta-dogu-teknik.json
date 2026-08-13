@@ -1,0 +1,768 @@
+{
+  "catalogKey": "METU",
+  "officialName": "Orta Doğu Teknik Üniversitesi",
+  "aliases": [
+    "ODTÜ",
+    "ODTU",
+    "METU",
+    "Ortadoğu Teknik Üniversitesi",
+    "Ortadoğu Teknik"
+  ],
+  "countryCode": "TR",
+  "city": "Ankara",
+  "sourceName": "Orta Doğu Teknik Üniversitesi Resmi Kaynakları",
+  "sourceUrls": [
+    "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+    "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+    "https://www.metu.edu.tr/faculties-institutes-schools",
+    "https://catalog2.metu.edu.tr/",
+    "https://oidb.metu.edu.tr/en/general-information"
+  ],
+  "verifiedAt": "2026-08-13T00:00:00+03:00",
+  "isActive": true,
+  "units": [
+    {
+      "catalogKey": "METU-MIMARLIK",
+      "name": "Mimarlık Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Orta Doğu Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+        "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+        "https://www.metu.edu.tr/faculties-institutes-schools",
+        "https://catalog2.metu.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "METU-MIMARLIK-ENDUSTRIYEL-TASARIM",
+          "name": "Endüstriyel Tasarım",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MIMARLIK-MIMARLIK",
+          "name": "Mimarlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MIMARLIK-SEHIR-VE-BOLGE-PLANLAMA",
+          "name": "Şehir ve Bölge Planlama",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "METU-FEN-EDEBIYAT",
+      "name": "Fen Edebiyat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Orta Doğu Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+        "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+        "https://www.metu.edu.tr/faculties-institutes-schools",
+        "https://catalog2.metu.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "METU-FEN-EDEBIYAT-BIYOLOJI",
+          "name": "Biyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-FEN-EDEBIYAT-FELSEFE",
+          "name": "Felsefe",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-FEN-EDEBIYAT-FIZIK",
+          "name": "Fizik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-FEN-EDEBIYAT-ISTATISTIK",
+          "name": "İstatistik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-FEN-EDEBIYAT-KIMYA",
+          "name": "Kimya",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-FEN-EDEBIYAT-MATEMATIK",
+          "name": "Matematik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-FEN-EDEBIYAT-MOLEKULER-BIYOLOJI-VE-GENETIK",
+          "name": "Moleküler Biyoloji ve Genetik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-FEN-EDEBIYAT-PSIKOLOJI",
+          "name": "Psikoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-FEN-EDEBIYAT-SOSYOLOJI",
+          "name": "Sosyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-FEN-EDEBIYAT-TARIH",
+          "name": "Tarih",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "METU-IKTISADI-VE-IDARI-BILIMLER",
+      "name": "İktisadi ve İdari Bilimler Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Orta Doğu Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+        "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+        "https://www.metu.edu.tr/faculties-institutes-schools",
+        "https://catalog2.metu.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "METU-IKTISADI-VE-IDARI-BILIMLER-IKTISAT",
+          "name": "İktisat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-IKTISADI-VE-IDARI-BILIMLER-ISLETME",
+          "name": "İşletme",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-IKTISADI-VE-IDARI-BILIMLER-SIYASET-BILIMI-VE-KAMU-YONETIMI",
+          "name": "Siyaset Bilimi ve Kamu Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-IKTISADI-VE-IDARI-BILIMLER-ULUSLARARASI-ILISKILER",
+          "name": "Uluslararası İlişkiler",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "METU-EGITIM",
+      "name": "Eğitim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Orta Doğu Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+        "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+        "https://www.metu.edu.tr/faculties-institutes-schools",
+        "https://catalog2.metu.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "METU-EGITIM-BEDEN-EGITIMI-VE-SPOR",
+          "name": "Beden Eğitimi ve Spor",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-EGITIM-BILGISAYAR-VE-OGRETIM-TEKNOLOJILERI-EGITIMI",
+          "name": "Bilgisayar ve Öğretim Teknolojileri Eğitimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-EGITIM-FIZIK-OGRETMENLIGI",
+          "name": "Fizik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-EGITIM-FEN-BILGISI-OGRETMENLIGI",
+          "name": "Fen Bilgisi Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-EGITIM-ILKOGRETIM-MATEMATIK-OGRETMENLIGI",
+          "name": "İlköğretim Matematik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-EGITIM-INGILIZCE-OGRETMENLIGI",
+          "name": "İngilizce Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-EGITIM-KIMYA-OGRETMENLIGI",
+          "name": "Kimya Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-EGITIM-MATEMATIK-OGRETMENLIGI",
+          "name": "Matematik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-EGITIM-OKUL-ONCESI-OGRETMENLIGI",
+          "name": "Okul Öncesi Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "METU-MUHENDISLIK",
+      "name": "Mühendislik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Orta Doğu Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+        "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+        "https://www.metu.edu.tr/faculties-institutes-schools",
+        "https://catalog2.metu.edu.tr/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "METU-MUHENDISLIK-BILGISAYAR-MUHENDISLIGI",
+          "name": "Bilgisayar Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MUHENDISLIK-CEVRE-MUHENDISLIGI",
+          "name": "Çevre Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MUHENDISLIK-ELEKTRIK-VE-ELEKTRONIK-MUHENDISLIGI",
+          "name": "Elektrik ve Elektronik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MUHENDISLIK-ENDUSTRI-MUHENDISLIGI",
+          "name": "Endüstri Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MUHENDISLIK-GIDA-MUHENDISLIGI",
+          "name": "Gıda Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MUHENDISLIK-HAVACILIK-VE-UZAY-MUHENDISLIGI",
+          "name": "Havacılık ve Uzay Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MUHENDISLIK-INSAAT-MUHENDISLIGI",
+          "name": "İnşaat Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MUHENDISLIK-JEOLOJI-MUHENDISLIGI",
+          "name": "Jeoloji Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MUHENDISLIK-KIMYA-MUHENDISLIGI",
+          "name": "Kimya Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MUHENDISLIK-MADEN-MUHENDISLIGI",
+          "name": "Maden Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MUHENDISLIK-MAKINA-MUHENDISLIGI",
+          "name": "Makina Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MUHENDISLIK-METALURJI-VE-MALZEME-MUHENDISLIGI",
+          "name": "Metalurji ve Malzeme Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "METU-MUHENDISLIK-PETROL-VE-DOGAL-GAZ-MUHENDISLIGI",
+          "name": "Petrol ve Doğal Gaz Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "ODTÜ 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://oidb.metu.edu.tr/en/quotas-for-transfer-applications",
+            "https://www.metu.edu.tr/undergraduate-programs-and-degrees",
+            "https://catalog2.metu.edu.tr/",
+            "https://oidb.metu.edu.tr/en/general-information"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    }
+  ]
+}

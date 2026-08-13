@@ -1,9 +1,9 @@
 {
-  "version": "2026.1-selected-10",
+  "version": "2026.1",
   "countryCode": "TR",
   "referenceYear": 2026,
   "scopeMode": "SelectedUniversities",
-  "departmentDefinition": "StudentFacingAcademicProgram",
+  "departmentDefinition": "StudentFacingUndergraduateDegreeProgram",
   "includeFaculties": true,
   "includeUndergraduatePrograms": true,
   "includeOpenEducationFaculties": true,

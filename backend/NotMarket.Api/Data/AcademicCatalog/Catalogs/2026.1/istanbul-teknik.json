@@ -1,0 +1,949 @@
+{
+  "catalogKey": "ITU",
+  "officialName": "İstanbul Teknik Üniversitesi",
+  "aliases": [
+    "ITU"
+  ],
+  "countryCode": "TR",
+  "city": "İstanbul",
+  "sourceName": "İstanbul Teknik Üniversitesi Resmi Kaynakları",
+  "sourceUrls": [
+    "https://www.itu.edu.tr/fakulte-listesi",
+    "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+    "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+  ],
+  "verifiedAt": "2026-08-13T00:00:00+03:00",
+  "isActive": true,
+  "units": [
+    {
+      "catalogKey": "ITU-INSAAT",
+      "name": "İnşaat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-INSAAT-INSAAT-MUHENDISLIGI-30-INGILIZCE",
+          "name": "İnşaat Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-INSAAT-INSAAT-MUHENDISLIGI-100-INGILIZCE",
+          "name": "İnşaat Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-INSAAT-HARITA-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Harita Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-INSAAT-HARITA-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Harita Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-INSAAT-CEVRE-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Çevre Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-INSAAT-CEVRE-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Çevre Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ITU-MIMARLIK",
+      "name": "Mimarlık Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-MIMARLIK-MIMARLIK-30-INGILIZCE",
+          "name": "Mimarlık (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-MIMARLIK-MIMARLIK-100-INGILIZCE",
+          "name": "Mimarlık (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-MIMARLIK-SEHIR-VE-BOLGE-PLANLAMA-30-INGILIZCE",
+          "name": "Şehir ve Bölge Planlama (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-MIMARLIK-SEHIR-VE-BOLGE-PLANLAMA-100-INGILIZCE",
+          "name": "Şehir ve Bölge Planlama (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-MIMARLIK-ENDUSTRIYEL-TASARIM-100-INGILIZCE",
+          "name": "Endüstriyel Tasarım (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-MIMARLIK-IC-MIMARLIK-30-INGILIZCE",
+          "name": "İç Mimarlık (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-MIMARLIK-PEYZAJ-MIMARLIGI-100-INGILIZCE",
+          "name": "Peyzaj Mimarlığı (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ITU-MAKINA",
+      "name": "Makina Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-MAKINA-MAKINA-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Makina Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ITU-ELEKTRIK-ELEKTRONIK",
+      "name": "Elektrik-Elektronik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-ELEKTRIK-ELEKTRONIK-ELEKTRONIK-VE-HABERLESME-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Elektronik ve Haberleşme Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-ELEKTRIK-ELEKTRONIK-ELEKTRONIK-VE-HABERLESME-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Elektronik ve Haberleşme Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-ELEKTRIK-ELEKTRONIK-ELEKTRIK-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Elektrik Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-ELEKTRIK-ELEKTRONIK-ELEKTRIK-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Elektrik Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-ELEKTRIK-ELEKTRONIK-KONTROL-VE-OTOMASYON-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Kontrol ve Otomasyon Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-ELEKTRIK-ELEKTRONIK-KONTROL-VE-OTOMASYON-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Kontrol ve Otomasyon Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ITU-MADEN",
+      "name": "Maden Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-MADEN-MADEN-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Maden Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-MADEN-JEOLOJI-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Jeoloji Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-MADEN-JEOFIZIK-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Jeofizik Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-MADEN-PETROL-VE-DOGAL-GAZ-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Petrol ve Doğal Gaz Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-MADEN-CEVHER-HAZIRLAMA-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Cevher Hazırlama Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ITU-KIMYA-METALURJI",
+      "name": "Kimya-Metalurji Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-KIMYA-METALURJI-KIMYA-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Kimya Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-KIMYA-METALURJI-METALURJI-VE-MALZEME-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Metalurji ve Malzeme Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-KIMYA-METALURJI-METALURJI-VE-MALZEME-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Metalurji ve Malzeme Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-KIMYA-METALURJI-GIDA-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Gıda Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ITU-ISLETME",
+      "name": "İşletme Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-ISLETME-ISLETME-MUHENDISLIGI-100-INGILIZCE",
+          "name": "İşletme Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-ISLETME-ENDUSTRI-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Endüstri Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-ISLETME-ENDUSTRI-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Endüstri Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-ISLETME-EKONOMI-100-INGILIZCE",
+          "name": "Ekonomi (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-ISLETME-VERI-BILIMI-VE-ANALITIGI-100-INGILIZCE",
+          "name": "Veri Bilimi ve Analitiği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ITU-GEMI-INSAATI-VE-DENIZ-BILIMLERI",
+      "name": "Gemi İnşaatı ve Deniz Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-GEMI-INSAATI-VE-DENIZ-BILIMLERI-GEMI-INSAATI-VE-GEMI-MAKINALARI-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Gemi İnşaatı ve Gemi Makinaları Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-GEMI-INSAATI-VE-DENIZ-BILIMLERI-GEMI-VE-DENIZ-TEKNOLOJISI-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Gemi ve Deniz Teknolojisi Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ITU-FEN-EDEBIYAT",
+      "name": "Fen-Edebiyat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-FEN-EDEBIYAT-MATEMATIK-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Matematik Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-FEN-EDEBIYAT-FIZIK-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Fizik Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-FEN-EDEBIYAT-KIMYA-30-INGILIZCE",
+          "name": "Kimya (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-FEN-EDEBIYAT-MOLEKULER-BIYOLOJI-VE-GENETIK-100-INGILIZCE",
+          "name": "Moleküler Biyoloji ve Genetik (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ITU-UCAK-VE-UZAY-BILIMLERI",
+      "name": "Uçak ve Uzay Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-UCAK-VE-UZAY-BILIMLERI-UCAK-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Uçak Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-UCAK-VE-UZAY-BILIMLERI-UZAY-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Uzay Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-UCAK-VE-UZAY-BILIMLERI-IKLIM-BILIMI-VE-METEOROLOJI-MUHENDISLIGI-30-INGILIZCE",
+          "name": "İklim Bilimi ve Meteoroloji Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ITU-DENIZCILIK",
+      "name": "Denizcilik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-DENIZCILIK-GEMI-MAKINALARI-ISLETME-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Gemi Makinaları İşletme Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-DENIZCILIK-DENIZ-ULASTIRMA-ISLETME-MUHENDISLIGI-30-INGILIZCE",
+          "name": "Deniz Ulaştırma İşletme Mühendisliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ITU-TEKSTIL-TEKNOLOJILERI-VE-TASARIM",
+      "name": "Tekstil Teknolojileri ve Tasarım Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-TEKSTIL-TEKNOLOJILERI-VE-TASARIM-TEKSTIL-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Tekstil Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ITU-BILGISAYAR-VE-BILISIM",
+      "name": "Bilgisayar ve Bilişim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Teknik Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.itu.edu.tr/fakulte-listesi",
+        "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+        "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ITU-BILGISAYAR-VE-BILISIM-BILGISAYAR-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Bilgisayar Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-BILGISAYAR-VE-BILISIM-YAPAY-ZEKA-VE-VERI-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Yapay Zeka ve Veri Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ITU-BILGISAYAR-VE-BILISIM-SIBER-GUVENLIK-MUHENDISLIGI-100-INGILIZCE",
+          "name": "Siber Güvenlik Mühendisliği (%100 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İTÜ 2026-2027 Lisans Programları ve Program Kodları",
+          "sourceUrls": [
+            "https://www.sis.itu.edu.tr/duyuru_ekler/cap_yandal_yatay202710/ituici_cap_yandal_yatay/TR/itu_ici_yatay.php",
+            "https://www.sis.itu.edu.tr/TR/obs-hakkinda/lisans-program-kodlari.php"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    }
+  ]
+}

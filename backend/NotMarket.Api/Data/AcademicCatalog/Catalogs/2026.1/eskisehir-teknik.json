@@ -1,0 +1,556 @@
+{
+  "catalogKey": "ESTU",
+  "officialName": "Eskişehir Teknik Üniversitesi",
+  "aliases": [
+    "ESTU"
+  ],
+  "countryCode": "TR",
+  "city": "Eskişehir",
+  "sourceName": "Eskişehir Teknik Üniversitesi Resmi Kaynakları",
+  "sourceUrls": [
+    "https://eskisehir.edu.tr/tr/Icerik/Detay/fakulteler-2",
+    "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+    "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu",
+    "https://www.eskisehir.edu.tr/tr/Icerik/Detay/ogrenci-sayilari-5",
+    "https://bbbf.eskisehir.edu.tr/tr/Icerik/Detay/akademik-kadro",
+    "https://bbbf.eskisehir.edu.tr/tr/Duyuru/Detay/2026-2027-akademik-yili-guz-ve-bahar-donemi-ders-programlari-2-taslak",
+    "https://bbbf.eskisehir.edu.tr/tr/Duyuru/Detay/ogrencilerimize-onemli-duyuru"
+  ],
+  "verifiedAt": "2026-08-13T00:00:00+03:00",
+  "isActive": true,
+  "units": [
+    {
+      "catalogKey": "ESTU-BILGISAYAR-VE-BILISIM-BILIMLERI",
+      "name": "Bilgisayar ve Bilişim Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Eskişehir Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://eskisehir.edu.tr/tr/Icerik/Detay/fakulteler-2",
+        "https://bbbf.eskisehir.edu.tr/tr/Icerik/Detay/akademik-kadro",
+        "https://bbbf.eskisehir.edu.tr/tr/Duyuru/Detay/2026-2027-akademik-yili-guz-ve-bahar-donemi-ders-programlari-2-taslak",
+        "https://bbbf.eskisehir.edu.tr/tr/Duyuru/Detay/ogrencilerimize-onemli-duyuru",
+        "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ESTU-BILGISAYAR-VE-BILISIM-BILIMLERI-BILGI-GUVENLIGI-TEKNOLOJISI",
+          "name": "Bilgi Güvenliği Teknolojisi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://bbbf.eskisehir.edu.tr/tr/Icerik/Detay/akademik-kadro",
+            "https://bbbf.eskisehir.edu.tr/tr/Duyuru/Detay/2026-2027-akademik-yili-guz-ve-bahar-donemi-ders-programlari-2-taslak",
+            "https://bbbf.eskisehir.edu.tr/tr/Duyuru/Detay/ogrencilerimize-onemli-duyuru",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-BILGISAYAR-VE-BILISIM-BILIMLERI-BILISIM-SISTEMLERI-VE-TEKNOLOJILERI",
+          "name": "Bilişim Sistemleri ve Teknolojileri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://bbbf.eskisehir.edu.tr/tr/Icerik/Detay/akademik-kadro",
+            "https://bbbf.eskisehir.edu.tr/tr/Duyuru/Detay/2026-2027-akademik-yili-guz-ve-bahar-donemi-ders-programlari-2-taslak",
+            "https://bbbf.eskisehir.edu.tr/tr/Duyuru/Detay/ogrencilerimize-onemli-duyuru",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-BILGISAYAR-VE-BILISIM-BILIMLERI-YAPAY-ZEKA-VE-MAKINE-OGRENMESI",
+          "name": "Yapay Zeka ve Makine Öğrenmesi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://bbbf.eskisehir.edu.tr/tr/Icerik/Detay/akademik-kadro",
+            "https://bbbf.eskisehir.edu.tr/tr/Duyuru/Detay/2026-2027-akademik-yili-guz-ve-bahar-donemi-ders-programlari-2-taslak",
+            "https://bbbf.eskisehir.edu.tr/tr/Duyuru/Detay/ogrencilerimize-onemli-duyuru",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ESTU-FEN",
+      "name": "Fen Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Eskişehir Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://eskisehir.edu.tr/tr/Icerik/Detay/fakulteler-2",
+        "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+        "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ESTU-FEN-BIYOLOJI",
+          "name": "Biyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-FEN-FIZIK",
+          "name": "Fizik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-FEN-ISTATISTIK",
+          "name": "İstatistik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-FEN-KIMYA",
+          "name": "Kimya",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-FEN-MATEMATIK",
+          "name": "Matematik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ESTU-HAVACILIK-VE-UZAY-BILIMLERI",
+      "name": "Havacılık ve Uzay Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Eskişehir Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://eskisehir.edu.tr/tr/Icerik/Detay/fakulteler-2",
+        "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+        "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ESTU-HAVACILIK-VE-UZAY-BILIMLERI-HAVA-TRAFIK-KONTROL",
+          "name": "Hava Trafik Kontrol",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-HAVACILIK-VE-UZAY-BILIMLERI-HAVACILIK-ELEKTRIK-VE-ELEKTRONIGI",
+          "name": "Havacılık Elektrik ve Elektroniği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-HAVACILIK-VE-UZAY-BILIMLERI-HAVACILIK-YONETIMI",
+          "name": "Havacılık Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-HAVACILIK-VE-UZAY-BILIMLERI-PILOTAJ",
+          "name": "Pilotaj",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-HAVACILIK-VE-UZAY-BILIMLERI-UCAK-GOVDE-MOTOR-BAKIM",
+          "name": "Uçak Gövde Motor Bakım",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ESTU-MIMARLIK-VE-TASARIM",
+      "name": "Mimarlık ve Tasarım Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Eskişehir Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://eskisehir.edu.tr/tr/Icerik/Detay/fakulteler-2",
+        "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+        "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ESTU-MIMARLIK-VE-TASARIM-ENDUSTRIYEL-TASARIM",
+          "name": "Endüstriyel Tasarım",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-MIMARLIK-VE-TASARIM-ICMIMARLIK",
+          "name": "İçmimarlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-MIMARLIK-VE-TASARIM-MIMARLIK",
+          "name": "Mimarlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-MIMARLIK-VE-TASARIM-MODA-VE-TEKSTIL-TASARIMI",
+          "name": "Moda ve Tekstil Tasarımı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ESTU-MUHENDISLIK",
+      "name": "Mühendislik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Eskişehir Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://eskisehir.edu.tr/tr/Icerik/Detay/fakulteler-2",
+        "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+        "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ESTU-MUHENDISLIK-BILGISAYAR-MUHENDISLIGI",
+          "name": "Bilgisayar Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-MUHENDISLIK-CEVRE-MUHENDISLIGI",
+          "name": "Çevre Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-MUHENDISLIK-ELEKTRIK-ELEKTRONIK-MUHENDISLIGI",
+          "name": "Elektrik-Elektronik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-MUHENDISLIK-ENDUSTRI-MUHENDISLIGI",
+          "name": "Endüstri Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-MUHENDISLIK-INSAAT-MUHENDISLIGI",
+          "name": "İnşaat Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-MUHENDISLIK-KIMYA-MUHENDISLIGI",
+          "name": "Kimya Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-MUHENDISLIK-MAKINE-MUHENDISLIGI",
+          "name": "Makine Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-MUHENDISLIK-MALZEME-BILIMI-VE-MUHENDISLIGI",
+          "name": "Malzeme Bilimi ve Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ESTU-SPOR-BILIMLERI",
+      "name": "Spor Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Eskişehir Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://eskisehir.edu.tr/tr/Icerik/Detay/fakulteler-2",
+        "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+        "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ESTU-SPOR-BILIMLERI-ANTRENORLUK-EGITIMI",
+          "name": "Antrenörlük Eğitimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-SPOR-BILIMLERI-BEDEN-EGITIMI-VE-SPOR-OGRETMENLIGI",
+          "name": "Beden Eğitimi ve Spor Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-SPOR-BILIMLERI-REKREASYON",
+          "name": "Rekreasyon",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ESTU-SPOR-BILIMLERI-SPOR-YONETICILIGI",
+          "name": "Spor Yöneticiliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Eskişehir Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://adayogrenci.eskisehir.edu.tr/tr/Icerik/Detay/lisans-programlari-2",
+            "https://eskisehir.edu.tr/tr/Icerik/Detay/universite-ders-katalogu"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    }
+  ]
+}
