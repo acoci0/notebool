@@ -1,0 +1,1126 @@
+{
+  "catalogKey": "YTU",
+  "officialName": "Yıldız Teknik Üniversitesi",
+  "aliases": [
+    "YTU"
+  ],
+  "countryCode": "TR",
+  "city": "İstanbul",
+  "sourceName": "Yıldız Teknik Üniversitesi Resmi Kaynakları",
+  "sourceUrls": [
+    "https://www.yildiz.edu.tr/",
+    "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html",
+    "https://ogi.yildiz.edu.tr/node/16119",
+    "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+    "https://ogi.yildiz.edu.tr/node/16737"
+  ],
+  "verifiedAt": "2026-08-13T00:00:00+03:00",
+  "isActive": true,
+  "units": [
+    {
+      "catalogKey": "YTU-EGITIM",
+      "name": "Eğitim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Yıldız Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html",
+        "https://ogi.yildiz.edu.tr/node/16119",
+        "https://ogi.yildiz.edu.tr/node/16737"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "YTU-EGITIM-BILGISAYAR-VE-OGRETIM-TEKNOLOJILERI-OGRETMENLIGI",
+          "name": "Bilgisayar ve Öğretim Teknolojileri Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-EGITIM-FEN-BILGISI-OGRETMENLIGI",
+          "name": "Fen Bilgisi Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-EGITIM-ILKOGRETIM-MATEMATIK-OGRETMENLIGI",
+          "name": "İlköğretim Matematik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-EGITIM-INGILIZCE-OGRETMENLIGI",
+          "name": "İngilizce Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-EGITIM-OKUL-ONCESI-OGRETMENLIGI",
+          "name": "Okul Öncesi Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-EGITIM-REHBERLIK-VE-PSIKOLOJIK-DANISMANLIK",
+          "name": "Rehberlik ve Psikolojik Danışmanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-EGITIM-SINIF-OGRETMENLIGI",
+          "name": "Sınıf Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-EGITIM-SOSYAL-BILGILER-OGRETMENLIGI",
+          "name": "Sosyal Bilgiler Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-EGITIM-TURKCE-OGRETMENLIGI",
+          "name": "Türkçe Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "YTU-ELEKTRIK-ELEKTRONIK",
+      "name": "Elektrik-Elektronik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Yıldız Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html",
+        "https://ogi.yildiz.edu.tr/node/16119",
+        "https://ogi.yildiz.edu.tr/node/16737"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "YTU-ELEKTRIK-ELEKTRONIK-BILGISAYAR-MUHENDISLIGI",
+          "name": "Bilgisayar Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-ELEKTRIK-ELEKTRONIK-BIYOMEDIKAL-MUHENDISLIGI-INGILIZCE",
+          "name": "Biyomedikal Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-ELEKTRIK-ELEKTRONIK-ELEKTRIK-MUHENDISLIGI",
+          "name": "Elektrik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-ELEKTRIK-ELEKTRONIK-ELEKTRONIK-VE-HABERLESME-MUHENDISLIGI",
+          "name": "Elektronik ve Haberleşme Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-ELEKTRIK-ELEKTRONIK-KONTROL-VE-OTOMASYON-MUHENDISLIGI",
+          "name": "Kontrol ve Otomasyon Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-ELEKTRIK-ELEKTRONIK-KONTROL-VE-OTOMASYON-MUHENDISLIGI-INGILIZCE",
+          "name": "Kontrol ve Otomasyon Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-ELEKTRIK-ELEKTRONIK-YAPAY-ZEKA-VE-VERI-MUHENDISLIGI-INGILIZCE",
+          "name": "Yapay Zeka ve Veri Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "YTU-FEN-EDEBIYAT",
+      "name": "Fen-Edebiyat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Yıldız Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html",
+        "https://ogi.yildiz.edu.tr/node/16119",
+        "https://ogi.yildiz.edu.tr/node/16737"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "YTU-FEN-EDEBIYAT-FIZIK",
+          "name": "Fizik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-FEN-EDEBIYAT-FRANSIZCA-MUTERCIM-VE-TERCUMANLIK",
+          "name": "Fransızca Mütercim ve Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Fransızca",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-FEN-EDEBIYAT-ISTATISTIK",
+          "name": "İstatistik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-FEN-EDEBIYAT-KIMYA",
+          "name": "Kimya",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-FEN-EDEBIYAT-KIMYA-INGILIZCE",
+          "name": "Kimya (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-FEN-EDEBIYAT-MATEMATIK",
+          "name": "Matematik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-FEN-EDEBIYAT-MOLEKULER-BIYOLOJI-VE-GENETIK",
+          "name": "Moleküler Biyoloji ve Genetik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-FEN-EDEBIYAT-TURK-DILI-VE-EDEBIYATI",
+          "name": "Türk Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "YTU-GEMI-INSAATI-VE-DENIZCILIK",
+      "name": "Gemi İnşaatı ve Denizcilik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Yıldız Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html",
+        "https://ogi.yildiz.edu.tr/node/16119",
+        "https://ogi.yildiz.edu.tr/node/16737"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "YTU-GEMI-INSAATI-VE-DENIZCILIK-GEMI-INSAATI-VE-GEMI-MAKINELERI-MUHENDISLIGI",
+          "name": "Gemi İnşaatı ve Gemi Makineleri Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-GEMI-INSAATI-VE-DENIZCILIK-GEMI-MAKINELERI-ISLETME-MUHENDISLIGI",
+          "name": "Gemi Makineleri İşletme Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "YTU-IKTISADI-VE-IDARI-BILIMLER",
+      "name": "İktisadi ve İdari Bilimler Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Yıldız Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html",
+        "https://ogi.yildiz.edu.tr/node/16119",
+        "https://ogi.yildiz.edu.tr/node/16737"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "YTU-IKTISADI-VE-IDARI-BILIMLER-IKTISAT",
+          "name": "İktisat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-IKTISADI-VE-IDARI-BILIMLER-IKTISAT-INGILIZCE",
+          "name": "İktisat (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-IKTISADI-VE-IDARI-BILIMLER-ISLETME",
+          "name": "İşletme",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-IKTISADI-VE-IDARI-BILIMLER-ISLETME-INGILIZCE",
+          "name": "İşletme (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-IKTISADI-VE-IDARI-BILIMLER-SIYASET-BILIMI-VE-ULUSLARARASI-ILISKILER",
+          "name": "Siyaset Bilimi ve Uluslararası İlişkiler",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "YTU-INSAAT",
+      "name": "İnşaat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Yıldız Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html",
+        "https://ogi.yildiz.edu.tr/node/16119",
+        "https://ogi.yildiz.edu.tr/node/16737"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "YTU-INSAAT-CEVRE-MUHENDISLIGI",
+          "name": "Çevre Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-INSAAT-HARITA-MUHENDISLIGI",
+          "name": "Harita Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-INSAAT-INSAAT-MUHENDISLIGI",
+          "name": "İnşaat Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-INSAAT-INSAAT-MUHENDISLIGI-INGILIZCE",
+          "name": "İnşaat Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "YTU-KIMYA-METALURJI",
+      "name": "Kimya-Metalurji Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Yıldız Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html",
+        "https://ogi.yildiz.edu.tr/node/16119",
+        "https://ogi.yildiz.edu.tr/node/16737"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "YTU-KIMYA-METALURJI-BIYOMUHENDISLIK",
+          "name": "Biyomühendislik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-KIMYA-METALURJI-BIYOMUHENDISLIK-INGILIZCE",
+          "name": "Biyomühendislik (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-KIMYA-METALURJI-GIDA-MUHENDISLIGI",
+          "name": "Gıda Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-KIMYA-METALURJI-KIMYA-MUHENDISLIGI",
+          "name": "Kimya Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-KIMYA-METALURJI-KIMYA-MUHENDISLIGI-INGILIZCE",
+          "name": "Kimya Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-KIMYA-METALURJI-MATEMATIK-MUHENDISLIGI",
+          "name": "Matematik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-KIMYA-METALURJI-MATEMATIK-MUHENDISLIGI-INGILIZCE",
+          "name": "Matematik Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-KIMYA-METALURJI-METALURJI-VE-MALZEME-MUHENDISLIGI",
+          "name": "Metalurji ve Malzeme Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-KIMYA-METALURJI-METALURJI-VE-MALZEME-MUHENDISLIGI-INGILIZCE",
+          "name": "Metalurji ve Malzeme Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "YTU-MAKINE",
+      "name": "Makine Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Yıldız Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html",
+        "https://ogi.yildiz.edu.tr/node/16119",
+        "https://ogi.yildiz.edu.tr/node/16737"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "YTU-MAKINE-ENDUSTRI-MUHENDISLIGI",
+          "name": "Endüstri Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-MAKINE-ENDUSTRI-MUHENDISLIGI-INGILIZCE",
+          "name": "Endüstri Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-MAKINE-MAKINE-MUHENDISLIGI",
+          "name": "Makine Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-MAKINE-MEKATRONIK-MUHENDISLIGI",
+          "name": "Mekatronik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-MAKINE-MEKATRONIK-MUHENDISLIGI-INGILIZCE",
+          "name": "Mekatronik Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "YTU-MIMARLIK",
+      "name": "Mimarlık Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Yıldız Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html",
+        "https://ogi.yildiz.edu.tr/node/16119",
+        "https://ogi.yildiz.edu.tr/node/16737"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "YTU-MIMARLIK-KULTUR-VARLIKLARINI-KORUMA-VE-ONARIM",
+          "name": "Kültür Varlıklarını Koruma ve Onarım",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-MIMARLIK-MIMARLIK",
+          "name": "Mimarlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-MIMARLIK-MIMARLIK-INGILIZCE",
+          "name": "Mimarlık (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-MIMARLIK-SEHIR-VE-BOLGE-PLANLAMA",
+          "name": "Şehir ve Bölge Planlama",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "YTU-SANAT-VE-TASARIM",
+      "name": "Sanat ve Tasarım Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Yıldız Teknik Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html",
+        "https://ogi.yildiz.edu.tr/node/16119",
+        "https://ogi.yildiz.edu.tr/node/16737"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "YTU-SANAT-VE-TASARIM-FOTOGRAF-VE-VIDEO",
+          "name": "Fotoğraf ve Video",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-SANAT-VE-TASARIM-SANAT-VE-KULTUR-YONETIMI",
+          "name": "Sanat ve Kültür Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-SANAT-VE-TASARIM-GRAFIK-TASARIMI",
+          "name": "Grafik Tasarımı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-SANAT-VE-TASARIM-BILESIK-SANATLAR",
+          "name": "Bileşik Sanatlar",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-SANAT-VE-TASARIM-ILETISIM-VE-TASARIMI",
+          "name": "İletişim ve Tasarımı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/sites/ogi.yildiz.edu.tr/files/ytu-2026-2027-yurt-disindan-lisans-programlarina-ogrenci-kabulu-kontenjanlari.pdf",
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-SANAT-VE-TASARIM-MUZIK-TOPLULUKLARI",
+          "name": "Müzik Toplulukları",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "YTU-SANAT-VE-TASARIM-SES-SANATLARI-TASARIMI",
+          "name": "Ses Sanatları Tasarımı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Yıldız Teknik Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://ogi.yildiz.edu.tr/node/16119",
+            "https://tanitim.yildiz.edu.tr/sayfa/fakulteler.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    }
+  ]
+}

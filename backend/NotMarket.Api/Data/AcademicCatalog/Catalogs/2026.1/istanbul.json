@@ -1,0 +1,1882 @@
+{
+  "catalogKey": "ISTANBUL",
+  "officialName": "İstanbul Üniversitesi",
+  "aliases": [
+    "İÜ",
+    "IU"
+  ],
+  "countryCode": "TR",
+  "city": "İstanbul",
+  "sourceName": "İstanbul Üniversitesi Resmi Kaynakları",
+  "sourceUrls": [
+    "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+    "https://tercihim.istanbul.edu.tr/index.php/academics/",
+    "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000"
+  ],
+  "verifiedAt": "2026-08-13T00:00:00+03:00",
+  "isActive": true,
+  "units": [
+    {
+      "catalogKey": "ISTANBUL-TIP",
+      "name": "İstanbul Tıp Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://istanbultip.istanbul.edu.tr/tr/content/mezuniyet-oncesi/ders-programlari"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-TIP-TIP",
+          "name": "Tıp",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://istanbultip.istanbul.edu.tr/tr/content/mezuniyet-oncesi/ders-programlari"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-TIP-TIP-INGILIZCE",
+          "name": "Tıp (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://istanbultip.istanbul.edu.tr/tr/content/mezuniyet-oncesi/ders-programlari"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-HUKUK",
+      "name": "Hukuk Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/hukuk-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-HUKUK-HUKUK",
+          "name": "Hukuk",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/hukuk-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-EDEBIYAT",
+      "name": "Edebiyat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-ALMAN-DILI-VE-EDEBIYATI",
+          "name": "Alman Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-ALMANCA-MUTERCIM-VE-TERCUMANLIK",
+          "name": "Almanca Mütercim ve Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-AMERIKAN-KULTURU-VE-EDEBIYATI",
+          "name": "Amerikan Kültürü ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-ANTROPOLOJI",
+          "name": "Antropoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-ARAP-DILI-VE-EDEBIYATI",
+          "name": "Arap Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-ARAPCA-MUTERCIM-VE-TERCUMANLIK",
+          "name": "Arapça Mütercim ve Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-KLASIK-ARKEOLOJI",
+          "name": "Klasik Arkeoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-PROTOHISTORYA-VE-ONASYA-ARKEOLOJISI",
+          "name": "Protohistorya ve Önasya Arkeolojisi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-TARIH-ONCESI-ARKEOLOJISI",
+          "name": "Tarih Öncesi Arkeolojisi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-BILGI-VE-BELGE-YONETIMI",
+          "name": "Bilgi ve Belge Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-BILIM-TARIHI",
+          "name": "Bilim Tarihi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-BOSNAK-DILI-VE-EDEBIYATI",
+          "name": "Boşnak Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Boşnakça",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-COGRAFYA",
+          "name": "Coğrafya",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-CAGDAS-TURK-LEHCELERI-VE-EDEBIYATLARI",
+          "name": "Çağdaş Türk Lehçeleri ve Edebiyatları",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-CAGDAS-YUNAN-DILI-VE-EDEBIYATI",
+          "name": "Çağdaş Yunan Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-CIN-DILI-VE-EDEBIYATI",
+          "name": "Çin Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Çince",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-DILBILIMI",
+          "name": "Dilbilimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-ESKI-YUNAN-DILI-VE-EDEBIYATI",
+          "name": "Eski Yunan Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-FARS-DILI-VE-EDEBIYATI",
+          "name": "Fars Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-FELSEFE",
+          "name": "Felsefe",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-FRANSIZ-DILI-VE-EDEBIYATI",
+          "name": "Fransız Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-FRANSIZCA-MUTERCIM-VE-TERCUMANLIK",
+          "name": "Fransızca Mütercim ve Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-HITITOLOJI",
+          "name": "Hititoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-INGILIZ-DILI-VE-EDEBIYATI",
+          "name": "İngiliz Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-INGILIZCE-MUTERCIM-VE-TERCUMANLIK",
+          "name": "İngilizce Mütercim ve Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-ISPANYOL-DILI-VE-EDEBIYATI",
+          "name": "İspanyol Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-ITALYAN-DILI-VE-EDEBIYATI",
+          "name": "İtalyan Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-KORE-DILI-VE-EDEBIYATI",
+          "name": "Kore Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-KULTUR-VARLIKLARINI-KORUMA-VE-ONARIM",
+          "name": "Kültür Varlıklarını Koruma ve Onarım",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-LATIN-DILI-VE-EDEBIYATI",
+          "name": "Latin Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-LEH-DILI-VE-EDEBIYATI",
+          "name": "Leh Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-MUZECILIK",
+          "name": "Müzecilik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-PSIKOLOJI",
+          "name": "Psikoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-RUS-DILI-VE-EDEBIYATI",
+          "name": "Rus Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-SANAT-TARIHI",
+          "name": "Sanat Tarihi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-SOSYOLOJI",
+          "name": "Sosyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-TARIH",
+          "name": "Tarih",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-TIYATRO-ELESTIRMENLIGI-VE-DRAMATURJI",
+          "name": "Tiyatro Eleştirmenliği ve Dramaturji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-TURK-DILI-VE-EDEBIYATI",
+          "name": "Türk Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-UKRAYNA-DILI-VE-EDEBIYATI",
+          "name": "Ukrayna Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-EDEBIYAT-URDU-DILI-VE-EDEBIYATI",
+          "name": "Urdu Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/edebiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-FEN",
+      "name": "Fen Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/fen-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-FEN-ASTRONOMI-VE-UZAY-BILIMLERI",
+          "name": "Astronomi ve Uzay Bilimleri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/fen-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-FEN-BILGISAYAR-BILIMLERI",
+          "name": "Bilgisayar Bilimleri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/fen-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-FEN-BIYOLOJI",
+          "name": "Biyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/fen-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-FEN-FIZIK",
+          "name": "Fizik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/fen-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-FEN-FIZIK-INGILIZCE",
+          "name": "Fizik (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/fen-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-FEN-KIMYA",
+          "name": "Kimya",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/fen-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-FEN-MATEMATIK",
+          "name": "Matematik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/fen-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-FEN-MOLEKULER-BIYOLOJI-VE-GENETIK",
+          "name": "Moleküler Biyoloji ve Genetik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/fen-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-IKTISAT",
+      "name": "İktisat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/iktisat-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-IKTISAT-IKTISAT",
+          "name": "İktisat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iktisat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-IKTISAT-IKTISAT-INGILIZCE",
+          "name": "İktisat (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iktisat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-IKTISAT-CALISMA-EKONOMISI-VE-ENDUSTRI-ILISKILERI-30-INGILIZCE",
+          "name": "Çalışma Ekonomisi ve Endüstri İlişkileri (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iktisat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-IKTISAT-MALIYE-30-INGILIZCE",
+          "name": "Maliye (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iktisat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-IKTISAT-EKONOMETRI",
+          "name": "Ekonometri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iktisat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-IKTISAT-ISLETME-30-INGILIZCE",
+          "name": "İşletme (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iktisat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-IKTISAT-SIYASET-BILIMI-VE-ULUSLARARASI-ILISKILER-30-INGILIZCE",
+          "name": "Siyaset Bilimi ve Uluslararası İlişkiler (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iktisat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-IKTISAT-SIYASET-BILIMI-VE-ULUSLARARASI-ILISKILER-INGILIZCE",
+          "name": "Siyaset Bilimi ve Uluslararası İlişkiler (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iktisat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-IKTISAT-TURIZM-ISLETMECILIGI-30-INGILIZCE",
+          "name": "Turizm İşletmeciliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iktisat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-IKTISAT-YONETIM-BILISIM-SISTEMLERI-INGILIZCE",
+          "name": "Yönetim Bilişim Sistemleri (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iktisat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-IKTISAT-TURIZM-VE-GASTRONOMI-YONETIMI-INGILIZCE",
+          "name": "Turizm ve Gastronomi Yönetimi (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iktisat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-ECZACILIK",
+      "name": "Eczacılık Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/eczacilik-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-ECZACILIK-ECZACILIK",
+          "name": "Eczacılık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/eczacilik-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ECZACILIK-ECZACILIK-INGILIZCE",
+          "name": "Eczacılık (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/eczacilik-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-DIS-HEKIMLIGI",
+      "name": "Diş Hekimliği Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://ebs.istanbul.edu.tr/home/program?birim=dis_hekimligi__lisans_programi__%28orgun_ogretim%29&id=1103"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-DIS-HEKIMLIGI-DIS-HEKIMLIGI",
+          "name": "Diş Hekimliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://ebs.istanbul.edu.tr/home/program?birim=dis_hekimligi__lisans_programi__%28orgun_ogretim%29&id=1103"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-ISLETME",
+      "name": "İşletme Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/isletme-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-ISLETME-ISLETME",
+          "name": "İşletme",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/isletme-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ISLETME-ISLETME-INGILIZCE",
+          "name": "İşletme (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/isletme-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-SIYASAL-BILGILER",
+      "name": "Siyasal Bilgiler Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/sb-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-SIYASAL-BILGILER-SIYASET-BILIMI-VE-KAMU-YONETIMI-30-INGILIZCE",
+          "name": "Siyaset Bilimi ve Kamu Yönetimi (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/sb-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-SIYASAL-BILGILER-SIYASET-BILIMI-VE-ULUSLARARASI-ILISKILER-30-INGILIZCE",
+          "name": "Siyaset Bilimi ve Uluslararası İlişkiler (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/sb-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-SIYASAL-BILGILER-SIYASET-BILIMI-VE-ULUSLARARASI-ILISKILER-INGILIZCE",
+          "name": "Siyaset Bilimi ve Uluslararası İlişkiler (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/sb-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-SIYASAL-BILGILER-ISLETME-30-INGILIZCE",
+          "name": "İşletme (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/sb-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-ILETISIM",
+      "name": "İletişim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/iletisim-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-ILETISIM-GAZETECILIK",
+          "name": "Gazetecilik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iletisim-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ILETISIM-HALKLA-ILISKILER-VE-TANITIM",
+          "name": "Halkla İlişkiler ve Tanıtım",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iletisim-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ILETISIM-RADYO-TELEVIZYON-VE-SINEMA",
+          "name": "Radyo, Televizyon ve Sinema",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/iletisim-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-SU-BILIMLERI",
+      "name": "Su Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/subilimleri-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-SU-BILIMLERI-SU-BILIMLERI-VE-MUHENDISLIGI",
+          "name": "Su Bilimleri ve Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/subilimleri-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-ILAHIYAT",
+      "name": "İlahiyat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/ilahiyat-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-ILAHIYAT-ILAHIYAT-30-ARAPCA",
+          "name": "İlahiyat (%30 Arapça)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 Arapça",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/ilahiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ILAHIYAT-ILAHIYAT-INGILIZCE",
+          "name": "İlahiyat (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/ilahiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ILAHIYAT-ILAHIYAT-ARAPCA",
+          "name": "İlahiyat (Arapça)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Arapça",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/ilahiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ILAHIYAT-ULUSLARARASI-ILAHIYAT",
+          "name": "Uluslararası İlahiyat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/ilahiyat-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM",
+      "name": "Açık ve Uzaktan Eğitim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+        "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-COGRAFYA-ACIKOGRETIM",
+          "name": "Coğrafya (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-FELSEFE-ACIKOGRETIM",
+          "name": "Felsefe (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-IKTISAT-ACIKOGRETIM",
+          "name": "İktisat (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-INSAN-KAYNAKLARI-YONETIMI-ACIKOGRETIM",
+          "name": "İnsan Kaynakları Yönetimi (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-IS-SAGLIGI-VE-GUVENLIGI-ACIKOGRETIM",
+          "name": "İş Sağlığı ve Güvenliği (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-ISLETME-ACIKOGRETIM",
+          "name": "İşletme (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-REKREASYON-ACIKOGRETIM",
+          "name": "Rekreasyon (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-SIYASET-BILIMI-VE-ULUSLARARASI-ILISKILER-ACIKOGRETIM",
+          "name": "Siyaset Bilimi ve Uluslararası İlişkiler (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-SIYASET-BILIMI-VE-KAMU-YONETIMI-ACIKOGRETIM",
+          "name": "Siyaset Bilimi ve Kamu Yönetimi (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-SOSYOLOJI-ACIKOGRETIM",
+          "name": "Sosyoloji (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-TARIH-ACIKOGRETIM",
+          "name": "Tarih (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-ULUSLARARASI-GIRISIMCILIK-ACIKOGRETIM",
+          "name": "Uluslararası Girişimcilik (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-ULUSLARARASI-TICARET-VE-LOJISTIK-ACIKOGRETIM",
+          "name": "Uluslararası Ticaret ve Lojistik (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-YONETIM-BILISIM-SISTEMLERI-ACIKOGRETIM",
+          "name": "Yönetim Bilişim Sistemleri (Açıköğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-GAZETECILIK-UZAKTAN-OGRETIM",
+          "name": "Gazetecilik (Uzaktan Öğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-HALKLA-ILISKILER-VE-TANITIM-UZAKTAN-OGRETIM",
+          "name": "Halkla İlişkiler ve Tanıtım (Uzaktan Öğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-KAMU-YONETIMI-UZAKTAN-OGRETIM",
+          "name": "Kamu Yönetimi (Uzaktan Öğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ACIK-VE-UZAKTAN-EGITIM-RADYO-TELEVIZYON-VE-SINEMA-UZAKTAN-OGRETIM",
+          "name": "Radyo, Televizyon ve Sinema (Uzaktan Öğretim)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://auzef.istanbul.edu.tr/tr/content/programlar/auzef-acikogretim/1000",
+            "https://auzef.istanbul.edu.tr/tr/content/ikinci-universite/kayit-yapilabilecek-programlar"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-ULASTIRMA-VE-LOJISTIK",
+      "name": "Ulaştırma ve Lojistik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/lojistik-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-ULASTIRMA-VE-LOJISTIK-LOJISTIK-YONETIMI",
+          "name": "Lojistik Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/lojistik-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-ULASTIRMA-VE-LOJISTIK-LOJISTIK-YONETIMI-INGILIZCE",
+          "name": "Lojistik Yönetimi (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/lojistik-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-MIMARLIK",
+      "name": "Mimarlık Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/mimarlik-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-MIMARLIK-MIMARLIK-30-INGILIZCE",
+          "name": "Mimarlık (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/mimarlik-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-MIMARLIK-IC-MIMARLIK-30-INGILIZCE",
+          "name": "İç Mimarlık (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/mimarlik-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-MIMARLIK-SEHIR-VE-BOLGE-PLANLAMA-30-INGILIZCE",
+          "name": "Şehir ve Bölge Planlama (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/mimarlik-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-MIMARLIK-ENDUSTRIYEL-TASARIM-30-INGILIZCE",
+          "name": "Endüstriyel Tasarım (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/mimarlik-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-HEMSIRELIK",
+      "name": "Hemşirelik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/hemsirelik-fakultesi/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-HEMSIRELIK-HEMSIRELIK",
+          "name": "Hemşirelik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/hemsirelik-fakultesi/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ISTANBUL-BILGISAYAR-VE-BILISIM-TEKNOLOJILERI",
+      "name": "Bilgisayar ve Bilişim Teknolojileri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "İstanbul Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+        "https://tercihim.istanbul.edu.tr/index.php/bbtf/"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ISTANBUL-BILGISAYAR-VE-BILISIM-TEKNOLOJILERI-BILGISAYAR-MUHENDISLIGI",
+          "name": "Bilgisayar Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/bbtf/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ISTANBUL-BILGISAYAR-VE-BILISIM-TEKNOLOJILERI-YAPAY-ZEKA-VE-VERI-MUHENDISLIGI",
+          "name": "Yapay Zekâ ve Veri Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "İstanbul Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.istanbul.edu.tr/tr/content/universitemiz/iletisim",
+            "https://tercihim.istanbul.edu.tr/index.php/bbtf/"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    }
+  ]
+}

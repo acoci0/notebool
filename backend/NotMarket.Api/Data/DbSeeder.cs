@@ -141,49 +141,124 @@ public static class DbSeeder
         CancellationToken cancellationToken)
     {
         /*
-         * Geliştirme aşamasında kullanılan
-         * başlangıç üniversite listesi.
-         *
-         * Bu liste eksiksiz üretim kataloğu
-         * olarak değerlendirilmemelidir.
+         * Türkiye üniversiteleri için başlangıç master datası.
          */
-        var universityNames =
+        
+        var selectedUniversities =
             new[]
             {
-                "Akdeniz Üniversitesi",
-                "Anadolu Üniversitesi",
-                "Ankara Üniversitesi",
-                "Ankara Yıldırım Beyazıt Üniversitesi",
-                "Boğaziçi Üniversitesi",
-                "Bursa Uludağ Üniversitesi",
-                "Çukurova Üniversitesi",
-                "Dokuz Eylül Üniversitesi",
-                "Ege Üniversitesi",
-                "Erciyes Üniversitesi",
-                "Eskişehir Osmangazi Üniversitesi",
-                "Galatasaray Üniversitesi",
-                "Gazi Üniversitesi",
-                "Hacettepe Üniversitesi",
-                "İstanbul Medeniyet Üniversitesi",
-                "İstanbul Teknik Üniversitesi",
-                "İstanbul Üniversitesi",
-                "İstanbul Üniversitesi-Cerrahpaşa",
-                "İzmir Yüksek Teknoloji Enstitüsü",
-                "Karadeniz Teknik Üniversitesi",
-                "Kocaeli Üniversitesi",
-                "Mardin Artuklu Üniversitesi",
-                "Marmara Üniversitesi",
-                "Ondokuz Mayıs Üniversitesi",
-                "Orta Doğu Teknik Üniversitesi",
-                "Sağlık Bilimleri Üniversitesi",
-                "Sakarya Üniversitesi",
-                "Selçuk Üniversitesi",
-                "Türk-Alman Üniversitesi",
-                "Yıldız Teknik Üniversitesi"
+                new
+                {
+                    CatalogKey = "MARMARA",
+                    Name = "Marmara Üniversitesi",
+                    Aliases = new[]
+                    {
+                        "Marun",
+                        "MARUN"
+                    }
+                },
+
+                new
+                {
+                    CatalogKey = "YTU",
+                    Name = "Yıldız Teknik Üniversitesi",
+                    Aliases = new[]
+                    {
+                        "YTÜ",
+                        "YTU",
+                    }
+                },
+
+                new
+                {
+                    CatalogKey = "ITU",
+                    Name = "İstanbul Teknik Üniversitesi",
+                    Aliases = new[]
+                    {
+                        "İTÜ",
+                        "ITU",
+                    }
+                },
+
+                new
+                {
+                    CatalogKey = "HACETTEPE",
+                    Name = "Hacettepe Üniversitesi",
+                    Aliases = Array.Empty<string>()
+                },
+
+                new
+                {
+                    CatalogKey = "ESTU",
+                    Name = "Eskişehir Teknik Üniversitesi",
+                    Aliases = new[]
+                    {
+                        "ESTÜ",
+                        "ESTU",
+                        
+                    }
+                },
+
+                new
+                {
+                    CatalogKey = "BOUN",
+                    Name = "Boğaziçi Üniversitesi",
+                    Aliases = new[]
+                    {
+                        "BOUN"
+                    }
+                },
+
+                new
+                {
+                    CatalogKey = "METU",
+                    Name = "Orta Doğu Teknik Üniversitesi",
+                    Aliases = new[]
+                    {
+                        "ODTÜ",
+                        "ODTU",
+                        "METU",
+                        "Ortadoğu Teknik Üniversitesi",
+                        "Ortadoğu Teknik"
+                    }
+                },
+
+                new
+                {
+                    CatalogKey = "ANADOLU",
+                    Name = "Anadolu Üniversitesi",
+                    Aliases = new[]
+                    {
+                        "Eskişehir Anadolu Üniversitesi"
+                    }
+                },
+
+                new
+                {
+                    CatalogKey = "SELCUK",
+                    Name = "Selçuk Üniversitesi",
+                    Aliases = new[]
+                    {
+                        "Konya Selçuk Üniversitesi"
+                    }
+                },
+
+                new
+                {
+                    CatalogKey = "ISTANBUL",
+                    Name = "İstanbul Üniversitesi",
+                    Aliases = new[]
+                    {
+                        "İÜ",
+                        "IU"
+                    }
+                }
             };
 
         var existingUniversities =
             await db.AcademicUniversities
+                .Include(
+                    x => x.Aliases)
                 .Where(
                     x => x.CountryCode == "TR")
                 .ToListAsync(
@@ -194,11 +269,26 @@ public static class DbSeeder
                 x => x.NormalizedName,
                 StringComparer.Ordinal);
 
-        foreach (var universityName in universityNames)
+        var existingAliasesByNormalized =
+            existingUniversities
+                .SelectMany(
+                    x => x.Aliases)
+                .ToDictionary(
+                    x => x.NormalizedAlias,
+                    StringComparer.Ordinal);
+        
+        var selectedNormalizedNames =
+            new HashSet<string>(
+                StringComparer.Ordinal);
+
+        foreach (var item in selectedUniversities)
         {
             var normalizedName =
                 AcademicTextNormalizer.Normalize(
-                    universityName);
+                    item.Name);
+
+            selectedNormalizedNames.Add(
+                normalizedName);
 
             if (
                 existingByNormalizedName.TryGetValue(
@@ -211,11 +301,35 @@ public static class DbSeeder
 
                 if (
                     existingUniversity.Name !=
-                    universityName
+                    item.Name
                 )
                 {
                     existingUniversity.Name =
-                        universityName;
+                        item.Name;
+
+                    changed =
+                        true;
+                }
+
+                if (
+                    existingUniversity.NormalizedName !=
+                    normalizedName
+                )
+                {
+                    existingUniversity.NormalizedName =
+                        normalizedName;
+
+                    changed =
+                        true;
+                }
+
+                if (
+                    existingUniversity.CatalogKey !=
+                    item.CatalogKey
+                )
+                {
+                    existingUniversity.CatalogKey =
+                        item.CatalogKey;
 
                     changed =
                         true;
@@ -248,14 +362,23 @@ public static class DbSeeder
                         DateTimeOffset.UtcNow;
                 }
 
+                SyncUniversityAliases(
+                    db,
+                    existingUniversity,
+                    item.Aliases,
+                    existingAliasesByNormalized);
+
                 continue;
             }
 
             var university =
                 new AcademicUniversity
                 {
+                    CatalogKey =
+                        item.CatalogKey,
+
                     Name =
-                        universityName,
+                        item.Name,
 
                     NormalizedName =
                         normalizedName,
@@ -273,20 +396,179 @@ public static class DbSeeder
             existingByNormalizedName.Add(
                 normalizedName,
                 university);
+
+            SyncUniversityAliases(
+                db,
+                university,
+                item.Aliases,
+                existingAliasesByNormalized);
+        }
+
+        /*
+        * Seçilen 10 üniversitenin dışında kalan
+        * Türkiye üniversiteleri silinmez.
+        *
+        * Eski doğrulama FK'lerini bozmamak için
+        * yalnızca pasif hale getirilir.
+        */
+        foreach (
+            var university
+            in existingUniversities)
+        {
+            if (
+                selectedNormalizedNames.Contains(
+                    university.NormalizedName)
+            )
+            {
+                continue;
+            }
+
+            if (!university.IsActive)
+            {
+                continue;
+            }
+
+            university.IsActive =
+                false;
+
+            university.UpdatedAt =
+                DateTimeOffset.UtcNow;
         }
 
         await db.SaveChangesAsync(
             cancellationToken);
     }
 
-    /*
-     * Geliştirme ve frontend testi için
-     * örnek akademik hiyerarşi oluşturur.
-     *
-     * AcademicUniversity
-     *      └── AcademicUnit
-     *              └── AcademicProgram
-     */
+    private static void SyncUniversityAliases(
+        AppDbContext db,
+        AcademicUniversity university,
+        IEnumerable<string> aliases,
+        IDictionary<string, AcademicUniversityAlias> existingAliasesByNormalized)
+    {
+        var desiredAliases =
+            new Dictionary<string, string>(
+                StringComparer.Ordinal);
+
+        foreach (var aliasValue in aliases)
+        {
+            if (string.IsNullOrWhiteSpace(aliasValue))
+            {
+                continue;
+            }
+
+            var alias = aliasValue.Trim();
+
+            var normalizedAlias =
+                AcademicTextNormalizer.Normalize(
+                    alias);
+
+            if (string.IsNullOrWhiteSpace(normalizedAlias))
+            {
+                continue;
+            }
+
+            /*
+             * Canonical üniversite adıyla aynı normalize
+             * değere sahip bir alias tutulmaz.
+             */
+            if (normalizedAlias == university.NormalizedName)
+            {
+                continue;
+            }
+
+            /*
+             * Aynı alias farklı yazımlarla tekrar girilmişse
+             * ilk tanımı koru. Böylece seed işlemi deterministik
+             * ve idempotent kalır.
+             */
+            desiredAliases.TryAdd(
+                normalizedAlias,
+                alias);
+        }
+
+        /*
+         * Artık katalogda bulunmayan eski alias'ları kaldır.
+         * Üniversite kaydını silmeden yalnızca alias satırları
+         * senkronize edilir.
+         */
+        var obsoleteAliases =
+            university.Aliases
+                .Where(
+                    x =>
+                        !desiredAliases.ContainsKey(
+                            x.NormalizedAlias))
+                .ToList();
+
+        foreach (var obsoleteAlias in obsoleteAliases)
+        {
+            db.AcademicUniversityAliases.Remove(
+                obsoleteAlias);
+
+            university.Aliases.Remove(
+                obsoleteAlias);
+
+            existingAliasesByNormalized.Remove(
+                obsoleteAlias.NormalizedAlias);
+        }
+
+        foreach (var item in desiredAliases)
+        {
+            var normalizedAlias = item.Key;
+            var alias = item.Value;
+
+            if (
+                existingAliasesByNormalized.TryGetValue(
+                    normalizedAlias,
+                    out var existingAlias)
+            )
+            {
+                /*
+                 * Global olarak aynı normalize alias başka bir
+                 * üniversiteye bağlıysa sessizce geçmek yerine
+                 * seed konfigürasyon hatasını açıkça bildir.
+                 */
+                if (existingAlias.UniversityId != university.Id)
+                {
+                    throw new InvalidOperationException(
+                        $"Üniversite alias çakışması: '{alias}' alias'ı " +
+                        $"birden fazla üniversite için kullanılamaz.");
+                }
+
+                if (existingAlias.Alias != alias)
+                {
+                    existingAlias.Alias = alias;
+                }
+
+                continue;
+            }
+
+            var universityAlias =
+                new AcademicUniversityAlias
+                {
+                    UniversityId =
+                        university.Id,
+
+                    University =
+                        university,
+
+                    Alias =
+                        alias,
+
+                    NormalizedAlias =
+                        normalizedAlias
+                };
+
+            db.AcademicUniversityAliases.Add(
+                universityAlias);
+
+            university.Aliases.Add(
+                universityAlias);
+
+            existingAliasesByNormalized.Add(
+                normalizedAlias,
+                universityAlias);
+        }
+    }
     private static async Task SeedAcademicStructureAsync(
         AppDbContext db,
         CancellationToken cancellationToken)

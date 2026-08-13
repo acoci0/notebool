@@ -1,0 +1,655 @@
+{
+  "catalogKey": "BOUN",
+  "officialName": "Boğaziçi Üniversitesi",
+  "aliases": [
+    "BOUN"
+  ],
+  "countryCode": "TR",
+  "city": "İstanbul",
+  "sourceName": "Boğaziçi Üniversitesi Resmi Kaynakları",
+  "sourceUrls": [
+    "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+    "https://bogazici.edu.tr/tr/pages/lisans-programlari/301",
+    "https://bogazici.edu.tr/tr/program",
+    "https://bogazici.edu.tr/tr/pages/faculties/5671",
+    "https://bogazici.edu.tr/en/pages/our-university/194"
+  ],
+  "verifiedAt": "2026-08-13T00:00:00+03:00",
+  "isActive": true,
+  "units": [
+    {
+      "catalogKey": "BOUN-EGITIM",
+      "name": "Eğitim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+        "https://bogazici.edu.tr/tr/pages/lisans-programlari/301",
+        "https://bogazici.edu.tr/tr/pages/faculties/5671"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "BOUN-EGITIM-BILGISAYAR-VE-OGRETIM-TEKNOLOJILERI-OGRETMENLIGI",
+          "name": "Bilgisayar ve Öğretim Teknolojileri Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-EGITIM-FEN-BILGISI-OGRETMENLIGI",
+          "name": "Fen Bilgisi Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-EGITIM-FIZIK-OGRETMENLIGI",
+          "name": "Fizik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-EGITIM-ILKOGRETIM-MATEMATIK-OGRETMENLIGI",
+          "name": "İlköğretim Matematik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-EGITIM-INGILIZCE-OGRETMENLIGI",
+          "name": "İngilizce Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-EGITIM-KIMYA-OGRETMENLIGI",
+          "name": "Kimya Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-EGITIM-MATEMATIK-OGRETMENLIGI",
+          "name": "Matematik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-EGITIM-OKUL-ONCESI-OGRETMENLIGI",
+          "name": "Okul Öncesi Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-EGITIM-REHBERLIK-VE-PSIKOLOJIK-DANISMANLIK",
+          "name": "Rehberlik ve Psikolojik Danışmanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "BOUN-FEN",
+      "name": "Fen Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+        "https://bogazici.edu.tr/tr/pages/lisans-programlari/301",
+        "https://bogazici.edu.tr/tr/pages/faculties/5671"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "BOUN-FEN-FIZIK",
+          "name": "Fizik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-FEN-KIMYA",
+          "name": "Kimya",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-FEN-MATEMATIK",
+          "name": "Matematik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-FEN-MOLEKULER-BIYOLOJI-VE-GENETIK",
+          "name": "Moleküler Biyoloji ve Genetik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "BOUN-HUKUK",
+      "name": "Hukuk Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+        "https://bogazici.edu.tr/tr/pages/lisans-programlari/301",
+        "https://bogazici.edu.tr/tr/pages/faculties/5671"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "BOUN-HUKUK-HUKUK",
+          "name": "Hukuk",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "BOUN-IKTISADI-VE-IDARI-BILIMLER",
+      "name": "İktisadi ve İdari Bilimler Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+        "https://bogazici.edu.tr/tr/pages/lisans-programlari/301",
+        "https://bogazici.edu.tr/tr/pages/faculties/5671"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "BOUN-IKTISADI-VE-IDARI-BILIMLER-IKTISAT",
+          "name": "İktisat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-IKTISADI-VE-IDARI-BILIMLER-ISLETME",
+          "name": "İşletme",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-IKTISADI-VE-IDARI-BILIMLER-SIYASET-BILIMI-VE-ULUSLARARASI-ILISKILER",
+          "name": "Siyaset Bilimi ve Uluslararası İlişkiler",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-IKTISADI-VE-IDARI-BILIMLER-TURIZM-ISLETMECILIGI",
+          "name": "Turizm İşletmeciliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-IKTISADI-VE-IDARI-BILIMLER-ULUSLARARASI-TICARET",
+          "name": "Uluslararası Ticaret",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-IKTISADI-VE-IDARI-BILIMLER-YONETIM-BILISIM-SISTEMLERI",
+          "name": "Yönetim Bilişim Sistemleri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "BOUN-INSAN-VE-TOPLUM-BILIMLERI",
+      "name": "İnsan ve Toplum Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+        "https://bogazici.edu.tr/tr/pages/lisans-programlari/301",
+        "https://bogazici.edu.tr/tr/pages/faculties/5671"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "BOUN-INSAN-VE-TOPLUM-BILIMLERI-BATI-DILLERI-VE-EDEBIYATLARI",
+          "name": "Batı Dilleri ve Edebiyatları",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-INSAN-VE-TOPLUM-BILIMLERI-CEVIRIBILIMI",
+          "name": "Çeviribilimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-INSAN-VE-TOPLUM-BILIMLERI-DILBILIMI",
+          "name": "Dilbilimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-INSAN-VE-TOPLUM-BILIMLERI-FELSEFE",
+          "name": "Felsefe",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-INSAN-VE-TOPLUM-BILIMLERI-PSIKOLOJI",
+          "name": "Psikoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-INSAN-VE-TOPLUM-BILIMLERI-SOSYOLOJI",
+          "name": "Sosyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-INSAN-VE-TOPLUM-BILIMLERI-TARIH",
+          "name": "Tarih",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-INSAN-VE-TOPLUM-BILIMLERI-TURK-DILI-VE-EDEBIYATI",
+          "name": "Türk Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "BOUN-MUHENDISLIK",
+      "name": "Mühendislik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+        "https://bogazici.edu.tr/tr/pages/lisans-programlari/301",
+        "https://bogazici.edu.tr/tr/pages/faculties/5671"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "BOUN-MUHENDISLIK-BILGISAYAR-MUHENDISLIGI",
+          "name": "Bilgisayar Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-MUHENDISLIK-ELEKTRIK-ELEKTRONIK-MUHENDISLIGI",
+          "name": "Elektrik-Elektronik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-MUHENDISLIK-ENDUSTRI-MUHENDISLIGI",
+          "name": "Endüstri Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-MUHENDISLIK-INSAAT-MUHENDISLIGI",
+          "name": "İnşaat Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-MUHENDISLIK-KIMYA-MUHENDISLIGI",
+          "name": "Kimya Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "BOUN-MUHENDISLIK-MAKINA-MUHENDISLIGI",
+          "name": "Makina Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Boğaziçi Üniversitesi 2026-2027 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://mediastore.cc.bogazici.edu.tr/web/userfiles/files/2026%20kontenjanlar%20pdf.pdf",
+            "https://bogazici.edu.tr/tr/program",
+            "https://bogazici.edu.tr/en/pages/our-university/194"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    }
+  ]
+}

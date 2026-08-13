@@ -1,0 +1,1463 @@
+{
+  "catalogKey": "HACETTEPE",
+  "officialName": "Hacettepe Üniversitesi",
+  "aliases": [],
+  "countryCode": "TR",
+  "city": "Ankara",
+  "sourceName": "Hacettepe Üniversitesi Resmi Kaynakları",
+  "sourceUrls": [
+    "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim",
+    "https://www.ai.hacettepe.edu.tr/tr/prospective-students.html",
+    "https://iletisim.hacettepe.edu.tr/pdata/index.php?page_id=603&title=fakulte-bolumler-radyo-tv-ve-sinema-hakkinda",
+    "https://gazete.hacettepe.edu.tr/tr/haber/turkiye%E2%80%99nin_ilk_paramedik_li-949"
+  ],
+  "verifiedAt": "2026-08-13T00:00:00+03:00",
+  "isActive": true,
+  "units": [
+    {
+      "catalogKey": "HACETTEPE-BILGISAYAR-VE-BILISIM-BILIMLERI",
+      "name": "Bilgisayar ve Bilişim Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim",
+        "https://www.ai.hacettepe.edu.tr/tr/prospective-students.html"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-BILGISAYAR-VE-BILISIM-BILIMLERI-BILGISAYAR-MUHENDISLIGI",
+          "name": "Bilgisayar Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-BILGISAYAR-VE-BILISIM-BILIMLERI-YAPAY-ZEKA-VE-VERI-MUHENDISLIGI",
+          "name": "Yapay Zekâ ve Veri Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim",
+            "https://www.ai.hacettepe.edu.tr/tr/prospective-students.html"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-DIS-HEKIMLIGI",
+      "name": "Diş Hekimliği Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-DIS-HEKIMLIGI-DIS-HEKIMLIGI",
+          "name": "Diş Hekimliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-ECZACILIK",
+      "name": "Eczacılık Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-ECZACILIK-ECZACILIK",
+          "name": "Eczacılık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-EDEBIYAT",
+      "name": "Edebiyat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-ALMAN-DILI-VE-EDEBIYATI",
+          "name": "Alman Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-ALMANCA-MUTERCIM-VE-TERCUMANLIK",
+          "name": "Almanca Mütercim ve Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-AMERIKAN-KULTURU-VE-EDEBIYATI",
+          "name": "Amerikan Kültürü ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-ANTROPOLOJI",
+          "name": "Antropoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-ARKEOLOJI",
+          "name": "Arkeoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-BILGI-VE-BELGE-YONETIMI",
+          "name": "Bilgi ve Belge Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-FELSEFE",
+          "name": "Felsefe",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-FRANSIZ-DILI-VE-EDEBIYATI",
+          "name": "Fransız Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-FRANSIZCA-MUTERCIM-VE-TERCUMANLIK",
+          "name": "Fransızca Mütercim ve Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-PSIKOLOJI",
+          "name": "Psikoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-SANAT-TARIHI",
+          "name": "Sanat Tarihi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-SOSYOLOJI",
+          "name": "Sosyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-TARIH",
+          "name": "Tarih",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-TURK-DILI-VE-EDEBIYATI",
+          "name": "Türk Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-TURK-HALKBILIMI",
+          "name": "Türk Halkbilimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-CAGDAS-TURK-LEHCELERI-VE-EDEBIYATLARI",
+          "name": "Çağdaş Türk Lehçeleri ve Edebiyatları",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-INGILIZ-DIL-BILIMI",
+          "name": "İngiliz Dil Bilimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-INGILIZ-DILI-VE-EDEBIYATI",
+          "name": "İngiliz Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EDEBIYAT-INGILIZCE-MUTERCIM-VE-TERCUMANLIK",
+          "name": "İngilizce Mütercim ve Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-EGITIM",
+      "name": "Eğitim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-EGITIM-ALMAN-DILI-OGRETMENLIGI",
+          "name": "Alman Dili Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-BILGISAYAR-VE-OGRETIM-TEKNOLOJILERI-EGITIMI",
+          "name": "Bilgisayar ve Öğretim Teknolojileri Eğitimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-BIYOLOJI-OGRETMENLIGI",
+          "name": "Biyoloji Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-FEN-BILGISI-OGRETMENLIGI",
+          "name": "Fen Bilgisi Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-FIZIK-OGRETMENLIGI",
+          "name": "Fizik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-FRANSIZ-DILI-OGRETMENLIGI",
+          "name": "Fransız Dili Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-KIMYA-OGRETMENLIGI",
+          "name": "Kimya Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-MATEMATIK-OGRETMENLIGI",
+          "name": "Matematik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-OKUL-ONCESI-OGRETMENLIGI",
+          "name": "Okul Öncesi Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-REHBERLIK-VE-PSIKOLOJIK-DANISMANLIK",
+          "name": "Rehberlik ve Psikolojik Danışmanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-SINIF-OGRETMENLIGI",
+          "name": "Sınıf Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-TURKCE-OGRETMENLIGI",
+          "name": "Türkçe Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-OZEL-EGITIM-OGRETMENLIGI",
+          "name": "Özel Eğitim Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-ILKOGRETIM-MATEMATIK-OGRETMENLIGI",
+          "name": "İlköğretim Matematik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-EGITIM-INGILIZ-DILI-OGRETMENLIGI",
+          "name": "İngiliz Dili Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-FEN",
+      "name": "Fen Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-FEN-AKTUERYA-BILIMLERI",
+          "name": "Aktüerya Bilimleri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-FEN-BIYOLOJI",
+          "name": "Biyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-FEN-KIMYA",
+          "name": "Kimya",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-FEN-MATEMATIK",
+          "name": "Matematik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-FEN-ISTATISTIK",
+          "name": "İstatistik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-FIZIK-TEDAVI-VE-REHABILITASYON",
+      "name": "Fizik Tedavi ve Rehabilitasyon Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-FIZIK-TEDAVI-VE-REHABILITASYON-FIZYOTERAPI-VE-REHABILITASYON",
+          "name": "Fizyoterapi ve Rehabilitasyon",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-GUZEL-SANATLAR",
+      "name": "Güzel Sanatlar Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-GUZEL-SANATLAR-GRAFIK",
+          "name": "Grafik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-GUZEL-SANATLAR-HEYKEL",
+          "name": "Heykel",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-GUZEL-SANATLAR-RESIM",
+          "name": "Resim",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-GUZEL-SANATLAR-SERAMIK",
+          "name": "Seramik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-GUZEL-SANATLAR-IC-MIMARLIK-VE-CEVRE-TASARIMI",
+          "name": "İç Mimarlık ve Çevre Tasarımı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-HEMSIRELIK",
+      "name": "Hemşirelik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-HEMSIRELIK-HEMSIRELIK",
+          "name": "Hemşirelik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-HUKUK",
+      "name": "Hukuk Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-HUKUK-HUKUK",
+          "name": "Hukuk",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-IKTISADI-VE-IDARI-BILIMLER",
+      "name": "İktisadi ve İdari Bilimler Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-IKTISADI-VE-IDARI-BILIMLER-AILE-VE-TUKETICI-BILIMLERI",
+          "name": "Aile ve Tüketici Bilimleri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-IKTISADI-VE-IDARI-BILIMLER-MALIYE",
+          "name": "Maliye",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-IKTISADI-VE-IDARI-BILIMLER-SAGLIK-YONETIMI",
+          "name": "Sağlık Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-IKTISADI-VE-IDARI-BILIMLER-SIYASET-BILIMI-VE-KAMU-YONETIMI",
+          "name": "Siyaset Bilimi ve Kamu Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-IKTISADI-VE-IDARI-BILIMLER-SOSYAL-HIZMET",
+          "name": "Sosyal Hizmet",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-IKTISADI-VE-IDARI-BILIMLER-ULUSLARARASI-ILISKILER",
+          "name": "Uluslararası İlişkiler",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-IKTISADI-VE-IDARI-BILIMLER-IKTISAT",
+          "name": "İktisat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-IKTISADI-VE-IDARI-BILIMLER-IKTISAT-INGILIZCE",
+          "name": "İktisat (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-IKTISADI-VE-IDARI-BILIMLER-ISLETME",
+          "name": "İşletme",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-ILETISIM",
+      "name": "İletişim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim",
+        "https://iletisim.hacettepe.edu.tr/pdata/index.php?page_id=603&title=fakulte-bolumler-radyo-tv-ve-sinema-hakkinda"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-ILETISIM-ILETISIM-BILIMLERI",
+          "name": "İletişim Bilimleri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-ILETISIM-RADYO-TELEVIZYON-VE-SINEMA",
+          "name": "Radyo, Televizyon ve Sinema",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim",
+            "https://iletisim.hacettepe.edu.tr/pdata/index.php?page_id=603&title=fakulte-bolumler-radyo-tv-ve-sinema-hakkinda"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-MIMARLIK",
+      "name": "Mimarlık Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-MIMARLIK-MIMARLIK",
+          "name": "Mimarlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-MUHENDISLIK",
+      "name": "Mühendislik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-ELEKTRIK-ELEKTRONIK-MUHENDISLIGI",
+          "name": "Elektrik-Elektronik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-ENDUSTRI-MUHENDISLIGI",
+          "name": "Endüstri Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-FIZIK-MUHENDISLIGI",
+          "name": "Fizik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-GEOMATIK-MUHENDISLIGI",
+          "name": "Geomatik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-GIDA-MUHENDISLIGI",
+          "name": "Gıda Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-JEOLOJI-HIDROJEOLOJI-MUHENDISLIGI",
+          "name": "Jeoloji (Hidrojeoloji) Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-JEOLOJI-MUHENDISLIGI",
+          "name": "Jeoloji Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-KIMYA-MUHENDISLIGI",
+          "name": "Kimya Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-MADEN-MUHENDISLIGI",
+          "name": "Maden Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-MAKINE-MUHENDISLIGI",
+          "name": "Makine Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-NUKLEER-ENERJI-MUHENDISLIGI",
+          "name": "Nükleer Enerji Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-CEVRE-MUHENDISLIGI",
+          "name": "Çevre Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-MUHENDISLIK-INSAAT-MUHENDISLIGI",
+          "name": "İnşaat Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-SAGLIK-BILIMLERI",
+      "name": "Sağlık Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim",
+        "https://gazete.hacettepe.edu.tr/tr/haber/turkiye%E2%80%99nin_ilk_paramedik_li-949"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-SAGLIK-BILIMLERI-BESLENME-VE-DIYETETIK",
+          "name": "Beslenme ve Diyetetik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-SAGLIK-BILIMLERI-DIL-VE-KONUSMA-TERAPISI",
+          "name": "Dil ve Konuşma Terapisi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-SAGLIK-BILIMLERI-ERGOTERAPI",
+          "name": "Ergoterapi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-SAGLIK-BILIMLERI-ODYOLOJI",
+          "name": "Odyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-SAGLIK-BILIMLERI-COCUK-GELISIMI",
+          "name": "Çocuk Gelişimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-SAGLIK-BILIMLERI-PARAMEDIK",
+          "name": "Paramedik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim",
+            "https://gazete.hacettepe.edu.tr/tr/haber/turkiye%E2%80%99nin_ilk_paramedik_li-949"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-SPOR-BILIMLERI",
+      "name": "Spor Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-SPOR-BILIMLERI-ANTRENORLUK-EGITIMI",
+          "name": "Antrenörlük Eğitimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-SPOR-BILIMLERI-BEDEN-EGITIMI-VE-SPOR-OGRETMENLIGI",
+          "name": "Beden Eğitimi ve Spor Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-SPOR-BILIMLERI-REKREASYON",
+          "name": "Rekreasyon",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "HACETTEPE-TIP",
+      "name": "Tıp Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Hacettepe Üniversitesi 2026 Resmi Lisans Programları",
+      "sourceUrls": [
+        "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "HACETTEPE-TIP-TIP-TURKCE",
+          "name": "Tıp (Türkçe)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "HACETTEPE-TIP-TIP-INGILIZCE",
+          "name": "Tıp (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Hacettepe Üniversitesi Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://hacettepe.edu.tr/ogretim/lisansonlisans_ogretim"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    }
+  ]
+}

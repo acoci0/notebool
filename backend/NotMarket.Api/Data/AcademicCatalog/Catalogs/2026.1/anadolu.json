@@ -1,0 +1,1416 @@
+{
+  "catalogKey": "ANADOLU",
+  "officialName": "Anadolu Üniversitesi",
+  "aliases": [
+    "Eskişehir Anadolu Üniversitesi"
+  ],
+  "countryCode": "TR",
+  "city": "Eskişehir",
+  "sourceName": "Anadolu Üniversitesi Resmi Kaynakları",
+  "sourceUrls": [
+    "https://www.anadolu.edu.tr/akademik/fakulteler",
+    "https://www.anadolu.edu.tr/universitemiz/anadolu-hakkinda/yonetim-kurulu",
+    "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+    "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+    "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+  ],
+  "verifiedAt": "2026-08-13T00:00:00+03:00",
+  "isActive": true,
+  "units": [
+    {
+      "catalogKey": "ANADOLU-ACIKOGRETIM",
+      "name": "Açıköğretim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Anadolu Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+        "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-CALISMA-EKONOMISI-VE-ENDUSTRI-ILISKILERI",
+          "name": "Çalışma Ekonomisi ve Endüstri İlişkileri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-FELSEFE",
+          "name": "Felsefe",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-GORSEL-ILETISIM-TASARIMI",
+          "name": "Görsel İletişim Tasarımı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-HAVACILIK-YONETIMI",
+          "name": "Havacılık Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-HALKLA-ILISKILER-VE-REKLAMCILIK",
+          "name": "Halkla İlişkiler ve Reklamcılık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-IKTISAT",
+          "name": "İktisat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-IKTISAT-INGILIZCE",
+          "name": "İktisat (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-ISLETME",
+          "name": "İşletme",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-ISLETME-INGILIZCE",
+          "name": "İşletme (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-MALIYE",
+          "name": "Maliye",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-SAGLIK-YONETIMI",
+          "name": "Sağlık Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-SOSYOLOJI",
+          "name": "Sosyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-SIYASET-BILIMI-VE-KAMU-YONETIMI",
+          "name": "Siyaset Bilimi ve Kamu Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-SIYASET-BILIMI-VE-KAMU-YONETIMI-INGILIZCE",
+          "name": "Siyaset Bilimi ve Kamu Yönetimi (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-TARIH",
+          "name": "Tarih",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-TURK-DILI-VE-EDEBIYATI",
+          "name": "Türk Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-ULUSLARARASI-ILISKILER",
+          "name": "Uluslararası İlişkiler",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-ULUSLARARASI-ILISKILER-INGILIZCE",
+          "name": "Uluslararası İlişkiler (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-ULUSLARARASI-TICARET-VE-LOJISTIK",
+          "name": "Uluslararası Ticaret ve Lojistik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ACIKOGRETIM-YONETIM-BILISIM-SISTEMLERI",
+          "name": "Yönetim Bilişim Sistemleri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/acikogretim/turkiye-programlari/acikogretim-sistemindeki-programlar",
+            "https://www.anadolu.edu.tr/acikogretim/nasil-ogrenci-olabilirim/yeni-kayit"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ANADOLU-BILGISAYAR-VE-BILISIM-BILIMLERI",
+      "name": "Bilgisayar ve Bilişim Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Anadolu Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.anadolu.edu.tr/akademik/fakulteler",
+        "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9",
+        "https://anahaber.anadolu.edu.tr/tr/haber-detay/cj74euxvkgai7comgp89kviq"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ANADOLU-BILGISAYAR-VE-BILISIM-BILIMLERI-VERI-BILIMI-VE-ANALITIGI-INGILIZCE",
+          "name": "Veri Bilimi ve Analitiği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/cj74euxvkgai7comgp89kviq"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ANADOLU-ECZACILIK",
+      "name": "Eczacılık Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Anadolu Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.anadolu.edu.tr/akademik/fakulteler",
+        "https://eczacilik.anadolu.edu.tr/",
+        "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ANADOLU-ECZACILIK-ECZACILIK",
+          "name": "Eczacılık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://eczacilik.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ANADOLU-EDEBIYAT",
+      "name": "Edebiyat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Anadolu Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.anadolu.edu.tr/akademik/fakulteler",
+        "https://edebiyat.anadolu.edu.tr/",
+        "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ANADOLU-EDEBIYAT-ARKEOLOJI",
+          "name": "Arkeoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://edebiyat.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EDEBIYAT-FELSEFE",
+          "name": "Felsefe",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://edebiyat.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EDEBIYAT-ARAPCA-MUTERCIM-VE-TERCUMANLIK",
+          "name": "Arapça Mütercim ve Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Arapça",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://edebiyat.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EDEBIYAT-PSIKOLOJI-30-INGILIZCE",
+          "name": "Psikoloji (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://edebiyat.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EDEBIYAT-RUS-DILI-VE-EDEBIYATI-RUSCA",
+          "name": "Rus Dili ve Edebiyatı (Rusça)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Rusça",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://edebiyat.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EDEBIYAT-SANAT-TARIHI",
+          "name": "Sanat Tarihi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://edebiyat.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EDEBIYAT-SOSYOLOJI",
+          "name": "Sosyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://edebiyat.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EDEBIYAT-TARIH",
+          "name": "Tarih",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://edebiyat.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EDEBIYAT-TURK-DILI-VE-EDEBIYATI",
+          "name": "Türk Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://edebiyat.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ANADOLU-EGITIM",
+      "name": "Eğitim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Anadolu Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.anadolu.edu.tr/akademik/fakulteler",
+        "https://egitim.anadolu.edu.tr/akademik",
+        "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ANADOLU-EGITIM-BILGISAYAR-VE-OGRETIM-TEKNOLOJILERI-EGITIMI",
+          "name": "Bilgisayar ve Öğretim Teknolojileri Eğitimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://egitim.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EGITIM-REHBERLIK-VE-PSIKOLOJIK-DANISMANLIK",
+          "name": "Rehberlik ve Psikolojik Danışmanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://egitim.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EGITIM-RESIM-IS-OGRETMENLIGI",
+          "name": "Resim-İş Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://egitim.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EGITIM-ILKOGRETIM-MATEMATIK-OGRETMENLIGI",
+          "name": "İlköğretim Matematik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://egitim.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EGITIM-OZEL-EGITIM-OGRETMENLIGI",
+          "name": "Özel Eğitim Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://egitim.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EGITIM-OKULONCESI-OGRETMENLIGI",
+          "name": "Okulöncesi Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://egitim.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EGITIM-SINIF-OGRETMENLIGI",
+          "name": "Sınıf Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://egitim.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EGITIM-SOSYAL-BILGILER-OGRETMENLIGI",
+          "name": "Sosyal Bilgiler Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://egitim.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EGITIM-INGILIZCE-OGRETMENLIGI",
+          "name": "İngilizce Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://egitim.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EGITIM-ALMANCA-OGRETMENLIGI",
+          "name": "Almanca Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://egitim.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-EGITIM-FRANSIZCA-OGRETMENLIGI",
+          "name": "Fransızca Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://egitim.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ANADOLU-GUZEL-SANATLAR",
+      "name": "Güzel Sanatlar Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Anadolu Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.anadolu.edu.tr/akademik/fakulteler",
+        "https://gsf.anadolu.edu.tr/",
+        "https://gsf.anadolu.edu.tr/ogrenci/ders-katalogu/2025-2026",
+        "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ANADOLU-GUZEL-SANATLAR-BASKI-SANATLARI",
+          "name": "Baskı Sanatları",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://gsf.anadolu.edu.tr/",
+            "https://gsf.anadolu.edu.tr/ogrenci/ders-katalogu/2025-2026",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-GUZEL-SANATLAR-CAM",
+          "name": "Cam",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://gsf.anadolu.edu.tr/",
+            "https://gsf.anadolu.edu.tr/ogrenci/ders-katalogu/2025-2026",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-GUZEL-SANATLAR-CIZGI-FILM-VE-ANIMASYON",
+          "name": "Çizgi Film ve Animasyon",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://gsf.anadolu.edu.tr/",
+            "https://gsf.anadolu.edu.tr/ogrenci/ders-katalogu/2025-2026",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-GUZEL-SANATLAR-DIJITAL-OYUN-TASARIMI",
+          "name": "Dijital Oyun Tasarımı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://gsf.anadolu.edu.tr/",
+            "https://gsf.anadolu.edu.tr/ogrenci/ders-katalogu/2025-2026",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-GUZEL-SANATLAR-GELENEKSEL-TURK-SANATLARI",
+          "name": "Geleneksel Türk Sanatları",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://gsf.anadolu.edu.tr/",
+            "https://gsf.anadolu.edu.tr/ogrenci/ders-katalogu/2025-2026",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-GUZEL-SANATLAR-GRAFIK-SANATLAR",
+          "name": "Grafik Sanatlar",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://gsf.anadolu.edu.tr/",
+            "https://gsf.anadolu.edu.tr/ogrenci/ders-katalogu/2025-2026",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-GUZEL-SANATLAR-HEYKEL",
+          "name": "Heykel",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://gsf.anadolu.edu.tr/",
+            "https://gsf.anadolu.edu.tr/ogrenci/ders-katalogu/2025-2026",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-GUZEL-SANATLAR-RESIM",
+          "name": "Resim",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://gsf.anadolu.edu.tr/",
+            "https://gsf.anadolu.edu.tr/ogrenci/ders-katalogu/2025-2026",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-GUZEL-SANATLAR-SERAMIK",
+          "name": "Seramik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://gsf.anadolu.edu.tr/",
+            "https://gsf.anadolu.edu.tr/ogrenci/ders-katalogu/2025-2026",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ANADOLU-HUKUK",
+      "name": "Hukuk Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Anadolu Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.anadolu.edu.tr/akademik/fakulteler",
+        "https://hukuk.anadolu.edu.tr/",
+        "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ANADOLU-HUKUK-HUKUK",
+          "name": "Hukuk",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://hukuk.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER",
+      "name": "İktisadi ve İdari Bilimler Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Anadolu Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.anadolu.edu.tr/akademik/fakulteler",
+        "https://iibf.anadolu.edu.tr/akademik",
+        "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+        "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER-CALISMA-EKONOMISI-VE-ENDUSTRI-ILISKILERI",
+          "name": "Çalışma Ekonomisi ve Endüstri İlişkileri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://iibf.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER-IKTISAT",
+          "name": "İktisat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://iibf.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER-IKTISAT-INGILIZCE",
+          "name": "İktisat (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://iibf.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER-ISLETME",
+          "name": "İşletme",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://iibf.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER-ISLETME-INGILIZCE",
+          "name": "İşletme (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://iibf.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER-MALIYE",
+          "name": "Maliye",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://iibf.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER-SIYASET-BILIMI-VE-KAMU-YONETIMI",
+          "name": "Siyaset Bilimi ve Kamu Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://iibf.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER-SIYASET-BILIMI-VE-KAMU-YONETIMI-INGILIZCE",
+          "name": "Siyaset Bilimi ve Kamu Yönetimi (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://iibf.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER-ULUSLARARASI-TICARET-VE-LOJISTIK",
+          "name": "Uluslararası Ticaret ve Lojistik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://iibf.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER-ULUSLARARASI-TICARET-VE-LOJISTIK-INGILIZCE",
+          "name": "Uluslararası Ticaret ve Lojistik (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://iibf.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER-YONETIM-BILISIM-SISTEMLERI",
+          "name": "Yönetim Bilişim Sistemleri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://iibf.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-IKTISADI-VE-IDARI-BILIMLER-YONETIM-BILISIM-SISTEMLERI-INGILIZCE",
+          "name": "Yönetim Bilişim Sistemleri (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://iibf.anadolu.edu.tr/akademik",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ANADOLU-ILETISIM-BILIMLERI",
+      "name": "İletişim Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Anadolu Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.anadolu.edu.tr/akademik/fakulteler",
+        "https://ibf.anadolu.edu.tr/",
+        "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+        "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ANADOLU-ILETISIM-BILIMLERI-GAZETECILIK-30-INGILIZCE",
+          "name": "Gazetecilik (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://ibf.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ILETISIM-BILIMLERI-HALKLA-ILISKILER-VE-REKLAMCILIK-30-INGILIZCE",
+          "name": "Halkla İlişkiler ve Reklamcılık (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://ibf.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ILETISIM-BILIMLERI-ILETISIM-TASARIMI-VE-YONETIMI",
+          "name": "İletişim Tasarımı ve Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://ibf.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ILETISIM-BILIMLERI-SINEMA-VE-TELEVIZYON-30-INGILIZCE",
+          "name": "Sinema ve Televizyon (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://ibf.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-ILETISIM-BILIMLERI-YENI-MEDYA-VE-ILETISIM-30-INGILIZCE",
+          "name": "Yeni Medya ve İletişim (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://ibf.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans",
+            "https://anahaber.anadolu.edu.tr/tr/haber-detay/nz6thi8zfc92i1khm9w76ey9"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ANADOLU-SAGLIK-BILIMLERI",
+      "name": "Sağlık Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Anadolu Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.anadolu.edu.tr/akademik/fakulteler",
+        "https://sbf.anadolu.edu.tr/",
+        "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ANADOLU-SAGLIK-BILIMLERI-BESLENME-VE-DIYETETIK",
+          "name": "Beslenme ve Diyetetik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://sbf.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-SAGLIK-BILIMLERI-DIL-VE-KONUSMA-TERAPISI",
+          "name": "Dil ve Konuşma Terapisi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://sbf.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-SAGLIK-BILIMLERI-SOSYAL-HIZMET",
+          "name": "Sosyal Hizmet",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://sbf.anadolu.edu.tr/",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "ANADOLU-TURIZM",
+      "name": "Turizm Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Anadolu Üniversitesi 2026 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.anadolu.edu.tr/akademik/fakulteler",
+        "https://turizm.anadolu.edu.tr/akademik",
+        "https://turizm.anadolu.edu.tr/ogrenci/ders-kataloglari",
+        "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "ANADOLU-TURIZM-GASTRONOMI-VE-MUTFAK-SANATLARI",
+          "name": "Gastronomi ve Mutfak Sanatları",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://turizm.anadolu.edu.tr/akademik",
+            "https://turizm.anadolu.edu.tr/ogrenci/ders-kataloglari",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-TURIZM-TURIZM-ISLETMECILIGI",
+          "name": "Turizm İşletmeciliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://turizm.anadolu.edu.tr/akademik",
+            "https://turizm.anadolu.edu.tr/ogrenci/ders-kataloglari",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-TURIZM-TURIZM-ISLETMECILIGI-30-INGILIZCE",
+          "name": "Turizm İşletmeciliği (%30 İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://turizm.anadolu.edu.tr/akademik",
+            "https://turizm.anadolu.edu.tr/ogrenci/ders-kataloglari",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "ANADOLU-TURIZM-TURIZM-REHBERLIGI",
+          "name": "Turizm Rehberliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Anadolu Üniversitesi 2026 Resmi Lisans Program Kaynakları",
+          "sourceUrls": [
+            "https://www.anadolu.edu.tr/akademik/fakulteler",
+            "https://turizm.anadolu.edu.tr/akademik",
+            "https://turizm.anadolu.edu.tr/ogrenci/ders-kataloglari",
+            "https://abp.anadolu.edu.tr/tr/akademik/lisans"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    }
+  ]
+}

@@ -50,18 +50,31 @@ public sealed class AcademicController(
                     x =>
                         x.IsActive &&
                         x.CountryCode == "TR" &&
-                        x.NormalizedName.Contains(
-                            normalizedSearch))
+                        (
+                            x.NormalizedName.Contains(
+                                normalizedSearch) ||
+                            x.Aliases.Any(
+                                alias =>
+                                    alias.NormalizedAlias.Contains(
+                                        normalizedSearch))
+                        ))
                 /*
-                 * Aranan metinle başlayan sonuçlar
-                 * önce gösterilir.
+                 * Öncelik sırası:
+                 * 1. Canonical isim aranan metinle başlıyor.
+                 * 2. Alias aranan metinle başlıyor.
+                 * 3. Canonical isim veya alias yalnızca içeriyor.
                  */
                 .OrderBy(
                     x =>
                         x.NormalizedName.StartsWith(
                             normalizedSearch)
                             ? 0
-                            : 1)
+                            : x.Aliases.Any(
+                                alias =>
+                                    alias.NormalizedAlias.StartsWith(
+                                        normalizedSearch))
+                                ? 1
+                                : 2)
                 .ThenBy(
                     x => x.Name)
                 .Take(10)

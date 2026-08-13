@@ -1,0 +1,1964 @@
+{
+  "catalogKey": "MARMARA",
+  "officialName": "Marmara Üniversitesi",
+  "aliases": [
+    "MARUN"
+  ],
+  "countryCode": "TR",
+  "city": "İstanbul",
+  "sourceName": "Marmara Üniversitesi Resmi Kaynakları",
+  "sourceUrls": [
+    "https://www.marmara.edu.tr/akademik/fakulteler/",
+    "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+    "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+  ],
+  "verifiedAt": "2026-08-13T00:00:00+03:00",
+  "isActive": true,
+  "units": [
+    {
+      "catalogKey": "MARMARA-ATATURK-EGITIM",
+      "name": "Atatürk Eğitim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-ALMANCA-OGRETMENLIGI-ALMANCA",
+          "name": "Almanca Öğretmenliği (Almanca)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Almanca",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-BILGISAYAR-VE-OGRETIM-TEKNOLOJILERI-OGRETMENLIGI",
+          "name": "Bilgisayar ve Öğretim Teknolojileri Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-BIYOLOJI-OGRETMENLIGI",
+          "name": "Biyoloji Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-COGRAFYA-OGRETMENLIGI",
+          "name": "Coğrafya Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-FEN-BILGISI-OGRETMENLIGI",
+          "name": "Fen Bilgisi Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-FIZIK-OGRETMENLIGI",
+          "name": "Fizik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-FRANSIZCA-OGRETMENLIGI-FRANSIZCA",
+          "name": "Fransızca Öğretmenliği (Fransızca)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Fransızca",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-ILKOGRETIM-MATEMATIK-OGRETMENLIGI",
+          "name": "İlköğretim Matematik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-INGILIZCE-OGRETMENLIGI-INGILIZCE",
+          "name": "İngilizce Öğretmenliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-KIMYA-OGRETMENLIGI",
+          "name": "Kimya Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-MATEMATIK-OGRETMENLIGI",
+          "name": "Matematik Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-OKUL-ONCESI-OGRETMENLIGI",
+          "name": "Okul Öncesi Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-OZEL-EGITIM-OGRETMENLIGI",
+          "name": "Özel Eğitim Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-REHBERLIK-VE-PSIKOLOJIK-DANISMANLIK",
+          "name": "Rehberlik ve Psikolojik Danışmanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-SINIF-OGRETMENLIGI",
+          "name": "Sınıf Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-SOSYAL-BILGILER-OGRETMENLIGI",
+          "name": "Sosyal Bilgiler Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-TARIH-OGRETMENLIGI",
+          "name": "Tarih Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-TURK-DILI-VE-EDEBIYATI-OGRETMENLIGI",
+          "name": "Türk Dili ve Edebiyatı Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-TURKCE-OGRETMENLIGI",
+          "name": "Türkçe Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-MUZIK-OGRETMENLIGI-OZEL-YETENEK",
+          "name": "Müzik Öğretmenliği (Özel Yetenek)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ATATURK-EGITIM-RESIM-IS-OGRETMENLIGI-OZEL-YETENEK",
+          "name": "Resim-İş Öğretmenliği (Özel Yetenek)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-DIS-HEKIMLIGI",
+      "name": "Diş Hekimliği Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-DIS-HEKIMLIGI-DIS-HEKIMLIGI-INGILIZCE",
+          "name": "Diş Hekimliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-ECZACILIK",
+      "name": "Eczacılık Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-ECZACILIK-ECZACILIK",
+          "name": "Eczacılık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-FEN",
+      "name": "Fen Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-FEN-BIYOLOJI",
+          "name": "Biyoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-FEN-FIZIK",
+          "name": "Fizik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-FEN-ISTATISTIK",
+          "name": "İstatistik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-FEN-KIMYA",
+          "name": "Kimya",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-FEN-MATEMATIK",
+          "name": "Matematik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-FINANSAL-BILIMLER",
+      "name": "Finansal Bilimler Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-FINANSAL-BILIMLER-AKTUERYA-BILIMLERI",
+          "name": "Aktüerya Bilimleri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-FINANSAL-BILIMLER-BANKACILIK",
+          "name": "Bankacılık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-FINANSAL-BILIMLER-SERMAYE-PIYASASI",
+          "name": "Sermaye Piyasası",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-FINANSAL-BILIMLER-SIGORTACILIK",
+          "name": "Sigortacılık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-GUZEL-SANATLAR",
+      "name": "Güzel Sanatlar Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-GUZEL-SANATLAR-ENDUSTRIYEL-TASARIM",
+          "name": "Endüstriyel Tasarım",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-GUZEL-SANATLAR-FILM-TASARIMI-VE-YONETIMI",
+          "name": "Film Tasarımı ve Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-GUZEL-SANATLAR-FOTOGRAF-OZEL-YETENEK",
+          "name": "Fotoğraf (Özel Yetenek)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-GUZEL-SANATLAR-GELENEKSEL-TURK-SANATLARI-OZEL-YETENEK",
+          "name": "Geleneksel Türk Sanatları (Özel Yetenek)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-GUZEL-SANATLAR-GRAFIK-SANATLAR-OZEL-YETENEK",
+          "name": "Grafik Sanatlar (Özel Yetenek)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-GUZEL-SANATLAR-HEYKEL-OZEL-YETENEK",
+          "name": "Heykel (Özel Yetenek)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-GUZEL-SANATLAR-IC-MIMARLIK",
+          "name": "İç Mimarlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-GUZEL-SANATLAR-MUZIK-OZEL-YETENEK",
+          "name": "Müzik (Özel Yetenek)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-GUZEL-SANATLAR-RESIM-OZEL-YETENEK",
+          "name": "Resim (Özel Yetenek)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-GUZEL-SANATLAR-SERAMIK-VE-CAM-OZEL-YETENEK",
+          "name": "Seramik ve Cam (Özel Yetenek)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-GUZEL-SANATLAR-TEKSTIL-OZEL-YETENEK",
+          "name": "Tekstil (Özel Yetenek)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-HUKUK",
+      "name": "Hukuk Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-HUKUK-HUKUK",
+          "name": "Hukuk",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-IKTISAT",
+      "name": "İktisat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-IKTISAT-CALISMA-EKONOMISI-VE-ENDUSTRI-ILISKILERI",
+          "name": "Çalışma Ekonomisi ve Endüstri İlişkileri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-IKTISAT-EKONOMETRI",
+          "name": "Ekonometri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-IKTISAT-IKTISAT",
+          "name": "İktisat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-IKTISAT-IKTISAT-INGILIZCE",
+          "name": "İktisat (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-IKTISAT-MALIYE",
+          "name": "Maliye",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-ILAHIYAT",
+      "name": "İlahiyat Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-ILAHIYAT-ILAHIYAT",
+          "name": "İlahiyat",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 Arapça",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ILAHIYAT-ILAHIYAT-ARAPCA",
+          "name": "İlahiyat (Arapça)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Arapça",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ILAHIYAT-ILAHIYAT-INGILIZCE",
+          "name": "İlahiyat (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-ILETISIM",
+      "name": "İletişim Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-ILETISIM-GAZETECILIK",
+          "name": "Gazetecilik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ILETISIM-HALKLA-ILISKILER-VE-TANITIM",
+          "name": "Halkla İlişkiler ve Tanıtım",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ILETISIM-RADYO-TELEVIZYON-VE-SINEMA",
+          "name": "Radyo, Televizyon ve Sinema",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI",
+      "name": "İnsan ve Toplum Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-ALMAN-DILI-VE-EDEBIYATI",
+          "name": "Alman Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Almanca",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-ALMANCA-MUTERCIM-VE-TERCUMANLIK",
+          "name": "Almanca Mütercim ve Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Almanca",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-BILGI-VE-BELGE-YONETIMI",
+          "name": "Bilgi ve Belge Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-COGRAFYA",
+          "name": "Coğrafya",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-FELSEFE-INGILIZCE",
+          "name": "Felsefe (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-FRANSIZCA-MUTERCIM-VE-TERCUMANLIK",
+          "name": "Fransızca Mütercim ve Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Fransızca",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-PSIKOLOJI",
+          "name": "Psikoloji",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-PSIKOLOJI-INGILIZCE",
+          "name": "Psikoloji (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-INGILIZ-DILI-VE-EDEBIYATI-INGILIZCE",
+          "name": "İngiliz Dili ve Edebiyatı (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-INGILIZCE-MUTERCIM-VE-TERCUMANLIK",
+          "name": "İngilizce Mütercim ve Tercümanlık",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-SANAT-TARIHI",
+          "name": "Sanat Tarihi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-SOSYOLOJI-INGILIZCE",
+          "name": "Sosyoloji (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-TARIH",
+          "name": "Tarih",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-INSAN-VE-TOPLUM-BILIMLERI-TURK-DILI-VE-EDEBIYATI",
+          "name": "Türk Dili ve Edebiyatı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-ISLETME",
+      "name": "İşletme Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-ISLETME-ISLETME",
+          "name": "İşletme",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ISLETME-ISLETME-ALMANCA",
+          "name": "İşletme (Almanca)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Almanca",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ISLETME-ISLETME-INGILIZCE",
+          "name": "İşletme (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ISLETME-YONETIM-BILISIM-SISTEMLERI-ALMANCA",
+          "name": "Yönetim Bilişim Sistemleri (Almanca)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Almanca",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-ISLETME-YONETIM-BILISIM-SISTEMLERI-INGILIZCE",
+          "name": "Yönetim Bilişim Sistemleri (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-MIMARLIK-VE-TASARIM",
+      "name": "Mimarlık ve Tasarım Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-MIMARLIK-VE-TASARIM-ENDUSTRIYEL-TASARIM-INGILIZCE",
+          "name": "Endüstriyel Tasarım (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-MIMARLIK-VE-TASARIM-MIMARLIK-INGILIZCE",
+          "name": "Mimarlık (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-MUHENDISLIK",
+      "name": "Mühendislik Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-MUHENDISLIK-BILGISAYAR-MUHENDISLIGI-INGILIZCE",
+          "name": "Bilgisayar Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-MUHENDISLIK-BIYOMUHENDISLIK-INGILIZCE",
+          "name": "Biyomühendislik (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-MUHENDISLIK-CEVRE-MUHENDISLIGI-INGILIZCE",
+          "name": "Çevre Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-MUHENDISLIK-ELEKTRIK-ELEKTRONIK-MUHENDISLIGI-INGILIZCE",
+          "name": "Elektrik-Elektronik Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-MUHENDISLIK-ENDUSTRI-MUHENDISLIGI-INGILIZCE",
+          "name": "Endüstri Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-MUHENDISLIK-INSAAT-MUHENDISLIGI-INGILIZCE",
+          "name": "İnşaat Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-MUHENDISLIK-KIMYA-MUHENDISLIGI",
+          "name": "Kimya Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-MUHENDISLIK-MAKINE-MUHENDISLIGI-INGILIZCE",
+          "name": "Makine Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-MUHENDISLIK-METALURJI-VE-MALZEME-MUHENDISLIGI-INGILIZCE",
+          "name": "Metalurji ve Malzeme Mühendisliği (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-SAGLIK-BILIMLERI",
+      "name": "Sağlık Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-SAGLIK-BILIMLERI-BESLENME-VE-DIYETETIK",
+          "name": "Beslenme ve Diyetetik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-SAGLIK-BILIMLERI-EBELIK",
+          "name": "Ebelik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-SAGLIK-BILIMLERI-FIZYOTERAPI-VE-REHABILITASYON",
+          "name": "Fizyoterapi ve Rehabilitasyon",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-SAGLIK-BILIMLERI-HEMSIRELIK",
+          "name": "Hemşirelik",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-SAGLIK-BILIMLERI-SAGLIK-YONETIMI",
+          "name": "Sağlık Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-SIYASAL-BILGILER",
+      "name": "Siyasal Bilgiler Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-SIYASAL-BILGILER-SIYASET-BILIMI-VE-KAMU-YONETIMI",
+          "name": "Siyaset Bilimi ve Kamu Yönetimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-SIYASAL-BILGILER-SIYASET-BILIMI-VE-KAMU-YONETIMI-FRANSIZCA",
+          "name": "Siyaset Bilimi ve Kamu Yönetimi (Fransızca)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Fransızca",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-SIYASAL-BILGILER-ULUSLARARASI-ILISKILER",
+          "name": "Uluslararası İlişkiler",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "%30 İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-SIYASAL-BILGILER-SIYASET-BILIMI-VE-ULUSLARARASI-ILISKILER-INGILIZCE",
+          "name": "Siyaset Bilimi ve Uluslararası İlişkiler (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-SIYASAL-BILGILER-YEREL-YONETIMLER",
+          "name": "Yerel Yönetimler",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-SPOR-BILIMLERI",
+      "name": "Spor Bilimleri Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-SPOR-BILIMLERI-ANTRENORLUK-EGITIMI",
+          "name": "Antrenörlük Eğitimi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-SPOR-BILIMLERI-BEDEN-EGITIMI-VE-SPOR-OGRETMENLIGI",
+          "name": "Beden Eğitimi ve Spor Öğretmenliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-SPOR-BILIMLERI-SPOR-YONETICILIGI",
+          "name": "Spor Yöneticiliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-TEKNOLOJI",
+      "name": "Teknoloji Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-TEKNOLOJI-BILGISAYAR-MUHENDISLIGI",
+          "name": "Bilgisayar Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-TEKNOLOJI-ELEKTRIK-ELEKTRONIK-MUHENDISLIGI",
+          "name": "Elektrik-Elektronik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-TEKNOLOJI-MAKINE-MUHENDISLIGI",
+          "name": "Makine Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-TEKNOLOJI-MEKATRONIK-MUHENDISLIGI",
+          "name": "Mekatronik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-TEKNOLOJI-METALURJI-VE-MALZEME-MUHENDISLIGI",
+          "name": "Metalurji ve Malzeme Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-TEKNOLOJI-SIBER-GUVENLIK-MUHENDISLIGI",
+          "name": "Siber Güvenlik Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": null,
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-TEKNOLOJI-TEKSTIL-MUHENDISLIGI",
+          "name": "Tekstil Mühendisliği",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-TIP",
+      "name": "Tıp Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-TIP-TIP-INGILIZCE",
+          "name": "Tıp (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "catalogKey": "MARMARA-UYGULAMALI-BILIMLER",
+      "name": "Uygulamalı Bilimler Fakültesi",
+      "unitType": "Faculty",
+      "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Akademik Kaynakları",
+      "sourceUrls": [
+        "https://www.marmara.edu.tr/akademik/fakulteler/",
+        "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri"
+      ],
+      "verifiedAt": "2026-08-13T00:00:00+03:00",
+      "isActive": true,
+      "programs": [
+        {
+          "catalogKey": "MARMARA-UYGULAMALI-BILIMLER-BASIM-TEKNOLOJILERI",
+          "name": "Basım Teknolojileri",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-UYGULAMALI-BILIMLER-KUYUMCULUK-VE-MUCEVHER-TASARIMI",
+          "name": "Kuyumculuk ve Mücevher Tasarımı",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-UYGULAMALI-BILIMLER-SAC-VE-GUZELLIK-UYGULAMALARI",
+          "name": "Saç ve Güzellik Uygulamaları",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-UYGULAMALI-BILIMLER-TURIZM-VE-GASTRONOMI-YONETIMI-PROGRAMLARI-INGILIZCE",
+          "name": "Turizm ve Gastronomi Yönetimi Programları (İngilizce)",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "İngilizce",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        },
+        {
+          "catalogKey": "MARMARA-UYGULAMALI-BILIMLER-YAPAY-ZEKA-VE-MAKINE-OGRENMESI",
+          "name": "Yapay Zeka ve Makine Öğrenmesi",
+          "degreeLevel": "Bachelor",
+          "educationLanguage": "Türkçe",
+          "sourceName": "Marmara Üniversitesi 2026-2027 Resmi Program/Kontenjan Kaynakları",
+          "sourceUrls": [
+            "https://oidb.marmara.edu.tr/notice/2026-2027-egitim-ogretim-yili-guz-donemi-kurumlar-arasi-ve-kurum-ici-yatay-gecis-islemleri",
+            "https://muyos.marmara.edu.tr/notice/marmara-universitesi-2026-2027-egitim-ogretim-yili-yurtdisindan-veya-yabanci-uyruklu-ogrenci-secme-ve-yerlestirme-islemleri"
+          ],
+          "verifiedAt": "2026-08-13T00:00:00+03:00",
+          "isActive": true,
+          "isSelectable": true,
+          "aliases": []
+        }
+      ]
+    }
+  ]
+}
