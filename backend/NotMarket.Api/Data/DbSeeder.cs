@@ -20,12 +20,13 @@ public static class DbSeeder
             cancellationToken);
 
         /*
-         * Üniversitelere bağlı akademik birim
-         * ve programlar oluşturulur.
+         * Akademik fakülte/program yapısı artık
+         * versioned AcademicCatalog tarafından
+         * yönetilmektedir.
+         *
+         * Legacy SeedAcademicStructureAsync
+         * bilinçli olarak çalıştırılmaz.
          */
-        await SeedAcademicStructureAsync(
-            db,
-            cancellationToken);
 
         /*
          * Admin kullanıcısı oluşturulur.

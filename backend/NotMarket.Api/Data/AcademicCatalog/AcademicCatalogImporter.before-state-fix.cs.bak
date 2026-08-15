@@ -133,9 +133,6 @@ public sealed class AcademicCatalogImporter
                 result,
                 cancellationToken);
 
-            await PrepareTrackedCatalogEntriesAsync(
-                cancellationToken);
-
             try
             {
                 await _db.SaveChangesAsync(
@@ -1015,66 +1012,6 @@ public sealed class AcademicCatalogImporter
         if (wasActive)
         {
             result.ProgramsDeactivated++;
-        }
-    }
-
-    private async Task PrepareTrackedCatalogEntriesAsync(
-        CancellationToken cancellationToken)
-    {
-        var entries =
-            _db.ChangeTracker
-                .Entries()
-                .Where(
-                    entry =>
-                        entry.State ==
-                            EntityState.Modified &&
-                        (
-                            entry.Entity
-                                is AcademicUniversity ||
-                            entry.Entity
-                                is AcademicUniversityAlias ||
-                            entry.Entity
-                                is AcademicUnit ||
-                            entry.Entity
-                                is AcademicProgram
-                        ))
-                .ToList();
-
-        foreach (var entry in entries)
-        {
-            var databaseValues =
-                await entry.GetDatabaseValuesAsync(
-                    cancellationToken);
-
-            /*
-             * Entity EF tarafından Modified olarak
-             * izleniyor fakat DB'de karşılığı yoksa
-             * bu aslında yeni katalog kaydıdır.
-             */
-            if (databaseValues is null)
-            {
-                _logger.LogInformation(
-                    "Catalog entity Added olarak " +
-                    "yeniden sınıflandırıldı. " +
-                    "Entity={Entity}",
-                    entry.Metadata.ClrType.Name);
-
-                entry.State =
-                    EntityState.Added;
-
-                continue;
-            }
-
-            /*
-             * DB'de mevcut kayıt varsa optimistic
-             * concurrency başlangıç değerlerini
-             * gerçek DB değerleriyle eşitliyoruz.
-             *
-             * Importer katalog verisini otorite kabul
-             * ederek CurrentValues değerlerini korur.
-             */
-            entry.OriginalValues.SetValues(
-                databaseValues);
         }
     }
 

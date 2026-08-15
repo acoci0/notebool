@@ -147,6 +147,35 @@ await using (var scope =
     await DbSeeder.SeedAsync(
         db,
         builder.Configuration);
+
+    if (
+        app.Configuration.GetValue<bool>(
+            "AcademicCatalog:ImportOnStartup")
+    )
+    {
+        var importer =
+            scope.ServiceProvider
+                .GetRequiredService<
+                    AcademicCatalogImporter>();
+
+        var importResult =
+            await importer.ImportAsync();
+
+        app.Logger.LogInformation(
+            "Academic catalog startup import tamamlandı. " +
+            "Version: {CatalogVersion}, " +
+            "DryRun: {DryRun}, " +
+            "DatabaseModified: {DatabaseModified}, " +
+            "UniversitiesAdded: {UniversitiesAdded}, " +
+            "UnitsAdded: {UnitsAdded}, " +
+            "ProgramsAdded: {ProgramsAdded}",
+            importResult.CatalogVersion,
+            importResult.DryRun,
+            importResult.DatabaseModified,
+            importResult.UniversitiesAdded,
+            importResult.UnitsAdded,
+            importResult.ProgramsAdded);
+    }
 }
 
 app.Run();

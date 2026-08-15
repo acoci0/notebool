@@ -133,46 +133,8 @@ public sealed class AcademicCatalogImporter
                 result,
                 cancellationToken);
 
-            await PrepareTrackedCatalogEntriesAsync(
+            await _db.SaveChangesAsync(
                 cancellationToken);
-
-            try
-            {
-                await _db.SaveChangesAsync(
-                    cancellationToken);
-            }
-            catch (DbUpdateConcurrencyException ex)
-            {
-                foreach (var entry in ex.Entries)
-                {
-                    var primaryKey =
-                        entry.Metadata.FindPrimaryKey();
-
-                    var key =
-                        primaryKey is null
-                            ? "<no-primary-key>"
-                            : string.Join(
-                                ", ",
-                                primaryKey.Properties.Select(
-                                    property =>
-                                        property.Name +
-                                        "=" +
-                                        entry.Property(
-                                            property.Name)
-                                            .CurrentValue));
-
-                    _logger.LogError(
-                        "CATALOG CONCURRENCY | " +
-                        "Entity={Entity} | " +
-                        "State={State} | " +
-                        "Key={Key}",
-                        entry.Metadata.ClrType.Name,
-                        entry.State,
-                        key);
-                }
-
-                throw;
-            }
 
             if (dryRun)
             {
@@ -418,8 +380,7 @@ public sealed class AcademicCatalogImporter
 
         changed |= SetIfDifferent(
             university.LastVerifiedAt,
-            ToUtc(
-                catalog.VerifiedAt),
+            catalog.VerifiedAt,
             value =>
                 university.LastVerifiedAt = value);
 
@@ -702,8 +663,7 @@ public sealed class AcademicCatalogImporter
 
         changed |= SetIfDifferent(
             unit.LastVerifiedAt,
-            ToUtc(
-                catalog.VerifiedAt),
+            catalog.VerifiedAt,
             value =>
                 unit.LastVerifiedAt = value);
 
@@ -893,8 +853,7 @@ public sealed class AcademicCatalogImporter
 
         changed |= SetIfDifferent(
             program.LastVerifiedAt,
-            ToUtc(
-                catalog.VerifiedAt),
+            catalog.VerifiedAt,
             value =>
                 program.LastVerifiedAt = value);
 
@@ -1016,72 +975,6 @@ public sealed class AcademicCatalogImporter
         {
             result.ProgramsDeactivated++;
         }
-    }
-
-    private async Task PrepareTrackedCatalogEntriesAsync(
-        CancellationToken cancellationToken)
-    {
-        var entries =
-            _db.ChangeTracker
-                .Entries()
-                .Where(
-                    entry =>
-                        entry.State ==
-                            EntityState.Modified &&
-                        (
-                            entry.Entity
-                                is AcademicUniversity ||
-                            entry.Entity
-                                is AcademicUniversityAlias ||
-                            entry.Entity
-                                is AcademicUnit ||
-                            entry.Entity
-                                is AcademicProgram
-                        ))
-                .ToList();
-
-        foreach (var entry in entries)
-        {
-            var databaseValues =
-                await entry.GetDatabaseValuesAsync(
-                    cancellationToken);
-
-            /*
-             * Entity EF tarafından Modified olarak
-             * izleniyor fakat DB'de karşılığı yoksa
-             * bu aslında yeni katalog kaydıdır.
-             */
-            if (databaseValues is null)
-            {
-                _logger.LogInformation(
-                    "Catalog entity Added olarak " +
-                    "yeniden sınıflandırıldı. " +
-                    "Entity={Entity}",
-                    entry.Metadata.ClrType.Name);
-
-                entry.State =
-                    EntityState.Added;
-
-                continue;
-            }
-
-            /*
-             * DB'de mevcut kayıt varsa optimistic
-             * concurrency başlangıç değerlerini
-             * gerçek DB değerleriyle eşitliyoruz.
-             *
-             * Importer katalog verisini otorite kabul
-             * ederek CurrentValues değerlerini korur.
-             */
-            entry.OriginalValues.SetValues(
-                databaseValues);
-        }
-    }
-
-    private static DateTimeOffset? ToUtc(
-        DateTimeOffset? value)
-    {
-        return value?.ToUniversalTime();
     }
 
     private static string NormalizeCatalogKey(
