@@ -227,10 +227,10 @@ public static class DbSeeder
                 new
                 {
                     CatalogKey = "ANADOLU",
-                    Name = "Anadolu Üniversitesi",
+                    Name = "Eskişehir Anadolu Üniversitesi",
                     Aliases = new[]
                     {
-                        "Eskişehir Anadolu Üniversitesi"
+                        "Anadolu Üniversitesi"
                     }
                 },
 
