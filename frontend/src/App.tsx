@@ -13,6 +13,7 @@ import DashboardPage from "./pages/DashboardPage";
 import LoginPage from "./pages/LoginPage";
 import NotesPage from "./pages/NotesPage";
 import PlaceholderPage from "./pages/PlaceholderPage";
+import ReportsPage from "./pages/ReportsPage";
 import StudentLoginPage from "./pages/StudentLoginPage";
 import StudentProfilePage from "./pages/StudentProfilePage";
 import UsersPage from "./pages/UsersPage";
@@ -76,12 +77,7 @@ export default function App() {
 
           <Route
             path="reports"
-            element={
-              <PlaceholderPage
-                title="Raporlar"
-                description="Satış, komisyon ve operasyon raporları."
-              />
-            }
+            element={<ReportsPage />}
           />
 
           <Route
