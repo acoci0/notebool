@@ -7,17 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference
-      Include="Microsoft.AspNetCore.Authentication.JwtBearer"
-      Version="10.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.10" />
 
-    <PackageReference
-      Include="Microsoft.AspNetCore.OpenApi"
-      Version="10.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.10" />
 
-    <PackageReference
-      Include="Microsoft.EntityFrameworkCore.Design"
-      Version="10.0.10">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>
         runtime;
@@ -29,14 +23,13 @@
       </IncludeAssets>
     </PackageReference>
 
-    <PackageReference
-      Include="Npgsql.EntityFrameworkCore.PostgreSQL"
-      Version="10.0.3" />
+    <PackageReference Include="Microsoft.OpenApi" Version="2.7.5" />
+
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content
-      Update="Data/AcademicCatalog/Catalogs/**/*.json">
+    <Content Update="Data/AcademicCatalog/Catalogs/**/*.json">
       <CopyToOutputDirectory>
         PreserveNewest
       </CopyToOutputDirectory>

@@ -37,6 +37,9 @@ public sealed class AppDbContext(
     public DbSet<AuditLog> AuditLogs =>
         Set<AuditLog>();
 
+    public DbSet<SiteVisit> SiteVisits =>
+        Set<SiteVisit>();
+
     protected override void OnModelCreating(
         ModelBuilder modelBuilder)
     {
@@ -50,6 +53,7 @@ public sealed class AppDbContext(
         ConfigureStudentVerification(modelBuilder);
         ConfigureNoteSubmission(modelBuilder);
         ConfigureAuditLog(modelBuilder);
+        ConfigureSiteVisit(modelBuilder);
     }
 
     private static void ConfigureApplicationUser(
@@ -476,5 +480,24 @@ public sealed class AppDbContext(
         modelBuilder.Entity<AuditLog>()
             .HasIndex(
                 x => x.CreatedAt);
+    }
+
+    private static void ConfigureSiteVisit(
+        ModelBuilder modelBuilder)
+    {
+        var siteVisit =
+            modelBuilder.Entity<SiteVisit>();
+
+        siteVisit.HasKey(x => x.Id);
+
+        siteVisit.HasIndex(x => x.VisitedAt);
+
+        siteVisit.HasIndex(
+            x => new
+            {
+                x.SessionHash,
+                x.Path,
+                x.VisitedAt
+            });
     }
 }

@@ -1,7 +1,9 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NotMarket.Api.Data;
@@ -17,6 +19,30 @@ builder.Services.AddScoped<AcademicCatalogValidator>();
 builder.Services.AddScoped<AcademicCatalogImporter>();
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
+
+builder.Services.AddRateLimiter(options =>
+{
+    options.AddPolicy(
+        "AnalyticsVisits",
+        httpContext =>
+        {
+            var partitionKey =
+                httpContext.Connection.RemoteIpAddress
+                    ?.ToString() ??
+                "unknown";
+
+            return RateLimitPartition
+                .GetFixedWindowLimiter(
+                    partitionKey,
+                    _ => new FixedWindowRateLimiterOptions
+                    {
+                        PermitLimit = 60,
+                        Window = TimeSpan.FromMinutes(1),
+                        QueueLimit = 0,
+                        AutoReplenishment = true
+                    });
+        });
+});
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(
@@ -129,7 +155,9 @@ else
     app.UseHttpsRedirection();
 }
 
+app.UseRouting();
 app.UseCors("Frontend");
+app.UseRateLimiter();
 
 app.UseAuthentication();
 app.UseAuthorization();
