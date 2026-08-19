@@ -10,151 +10,57 @@ import {
   Users,
   WalletCards
 } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import api from "../api/client";
+import type {
+  AdminReports,
+  ReportChartPoint,
+  ReportDistribution,
+  ReportSummary
+} from "../types";
 
 type TimeRange =
   | "daily"
   | "weekly"
   | "monthly"
-  | "halfYear"
+  | "halfyear"
   | "yearly"
   | "all";
-
-type ChartPoint = {
-  label: string;
-  value: number;
-};
 
 const timeRanges: Array<{ value: TimeRange; label: string }> = [
   { value: "daily", label: "Günlük" },
   { value: "weekly", label: "Haftalık" },
   { value: "monthly", label: "Aylık" },
-  { value: "halfYear", label: "Yarım Yıllık" },
+  { value: "halfyear", label: "Yarım Yıllık" },
   { value: "yearly", label: "Yıllık" },
   { value: "all", label: "Tüm Zamanlar" }
 ];
-
-const visitSeries: Record<TimeRange, ChartPoint[]> = {
-  daily: [
-    { label: "00:00", value: 150 },
-    { label: "03:00", value: 120 },
-    { label: "06:00", value: 180 },
-    { label: "09:00", value: 520 },
-    { label: "12:00", value: 980 },
-    { label: "15:00", value: 1430 },
-    { label: "18:00", value: 1470 },
-    { label: "21:00", value: 1160 },
-    { label: "23:00", value: 310 }
-  ],
-  weekly: [
-    { label: "Pzt", value: 6240 },
-    { label: "Sal", value: 7010 },
-    { label: "Çar", value: 6840 },
-    { label: "Per", value: 7620 },
-    { label: "Cum", value: 8190 },
-    { label: "Cmt", value: 9380 },
-    { label: "Paz", value: 8760 }
-  ],
-  monthly: [
-    { label: "1 Ağu", value: 1680 },
-    { label: "4 Ağu", value: 1940 },
-    { label: "7 Ağu", value: 2180 },
-    { label: "10 Ağu", value: 2070 },
-    { label: "13 Ağu", value: 2520 },
-    { label: "16 Ağu", value: 2840 },
-    { label: "19 Ağu", value: 3120 },
-    { label: "22 Ağu", value: 2980 },
-    { label: "25 Ağu", value: 3360 },
-    { label: "28 Ağu", value: 3610 }
-  ],
-  halfYear: [
-    { label: "Mar", value: 28600 },
-    { label: "Nis", value: 32100 },
-    { label: "May", value: 37800 },
-    { label: "Haz", value: 42300 },
-    { label: "Tem", value: 46100 },
-    { label: "Ağu", value: 50400 }
-  ],
-  yearly: [
-    { label: "Oca", value: 23100 },
-    { label: "Şub", value: 24900 },
-    { label: "Mar", value: 28600 },
-    { label: "Nis", value: 32100 },
-    { label: "May", value: 37800 },
-    { label: "Haz", value: 42300 },
-    { label: "Tem", value: 46100 },
-    { label: "Ağu", value: 50400 },
-    { label: "Eyl", value: 53600 },
-    { label: "Eki", value: 57900 },
-    { label: "Kas", value: 61200 },
-    { label: "Ara", value: 65800 }
-  ],
-  all: [
-    { label: "2022", value: 48200 },
-    { label: "2023", value: 128400 },
-    { label: "2024", value: 246700 },
-    { label: "2025", value: 389100 },
-    { label: "2026", value: 512800 }
-  ]
-};
 
 const rangeTitles: Record<TimeRange, string> = {
   daily: "Saatlik Site Ziyaretleri",
   weekly: "Haftalık Site Ziyaretleri",
   monthly: "Aylık Site Ziyaretleri",
-  halfYear: "Yarım Yıllık Site Ziyaretleri",
+  halfyear: "Yarım Yıllık Site Ziyaretleri",
   yearly: "Yıllık Site Ziyaretleri",
   all: "Tüm Zamanlardaki Site Ziyaretleri"
 };
 
-const universities = [
-  { name: "Marmara", value: 32, color: "#6c5ce7" },
-  { name: "İTÜ", value: 24, color: "#14a873" },
-  { name: "Boğaziçi", value: 18, color: "#2782e7" },
-  { name: "YTÜ", value: 14, color: "#e89a18" },
-  { name: "Hacettepe", value: 12, color: "#dc4b56" }
+const distributionColors = [
+  "#6c5ce7",
+  "#14a873",
+  "#2782e7",
+  "#e89a18",
+  "#dc4b56"
 ];
 
-const faculties = [
-  { name: "Mühendislik Fakültesi", count: 3420, rate: 27 },
-  { name: "Fen-Edebiyat Fakültesi", count: 2680, rate: 21 },
-  { name: "İktisat Fakültesi", count: 1940, rate: 16 },
-  { name: "Hukuk Fakültesi", count: 1520, rate: 12 },
-  { name: "Eğitim Fakültesi", count: 1310, rate: 10 }
-];
-
-const moderationRows = [
-  {
-    user: "ahmet.yilmaz@ogr.marmara.edu.tr",
-    type: "İçerik Şikâyeti",
-    status: "İncelemede",
-    badge: "badge-warning"
-  },
-  {
-    user: "zeynep.kara@itu.edu.tr",
-    type: "Öğrenci Doğrulama",
-    status: "Çözüldü",
-    badge: "badge-success"
-  },
-  {
-    user: "emre.dogan@boun.edu.tr",
-    type: "İçerik Şikâyeti",
-    status: "Çözüldü",
-    badge: "badge-success"
-  },
-  {
-    user: "sena.tas@yildiz.edu.tr",
-    type: "Kullanıcı Raporu",
-    status: "Bekliyor",
-    badge: "badge-warning"
-  },
-  {
-    user: "burak.acar@hacettepe.edu.tr",
-    type: "Öğrenci Doğrulama",
-    status: "İncelemede",
-    badge: "badge-warning"
-  }
-];
+const emptySummary: ReportSummary = {
+  totalUsers: 0,
+  verifiedStudents: 0,
+  pendingVerifications: 0,
+  totalSales: 0,
+  platformRevenue: 0,
+  openComplaints: 0
+};
 
 const numberFormatter = new Intl.NumberFormat("tr-TR");
 const currencyFormatter = new Intl.NumberFormat("tr-TR", {
@@ -163,14 +69,18 @@ const currencyFormatter = new Intl.NumberFormat("tr-TR", {
   maximumFractionDigits: 0
 });
 
-function VisitLineChart({ points }: { points: ChartPoint[] }) {
+function VisitLineChart({ points }: { points: ReportChartPoint[] }) {
+  if (points.length === 0) {
+    return <div className="reports-empty-chart">Bu dönem için ziyaret verisi yok.</div>;
+  }
+
   const width = 760;
   const height = 280;
   const padding = { top: 20, right: 18, bottom: 44, left: 58 };
   const chartWidth = width - padding.left - padding.right;
   const chartHeight = height - padding.top - padding.bottom;
   const maxValue = Math.max(...points.map((point) => point.value), 1);
-  const roundedMax = Math.ceil(maxValue / 4) * 4;
+  const roundedMax = Math.max(4, Math.ceil(maxValue / 4) * 4);
 
   const coordinates = points.map((point, index) => {
     const x =
@@ -229,12 +139,7 @@ function VisitLineChart({ points }: { points: ChartPoint[] }) {
         {coordinates.map((point, index) => (
           <g key={`${point.label}-${index}`}>
             <circle cx={point.x} cy={point.y} r="4" className="reports-chart-dot" />
-            <text
-              x={point.x}
-              y={height - 14}
-              textAnchor="middle"
-              className="reports-chart-axis-label"
-            >
+            <text x={point.x} y={height - 14} textAnchor="middle">
               {point.label}
             </text>
           </g>
@@ -244,19 +149,27 @@ function VisitLineChart({ points }: { points: ChartPoint[] }) {
   );
 }
 
-function UniversityDonut() {
-  const gradient = universities
-    .reduce(
-      (result, item) => {
-        const start = result.total;
-        const end = start + item.value;
-        result.parts.push(`${item.color} ${start}% ${end}%`);
-        result.total = end;
-        return result;
-      },
-      { parts: [] as string[], total: 0 }
-    )
-    .parts.join(", ");
+function UniversityDonut({
+  items,
+  total
+}: {
+  items: ReportDistribution[];
+  total: number;
+}) {
+  if (items.length === 0) {
+    return <div className="reports-empty-chart">Doğrulanmış üniversite verisi yok.</div>;
+  }
+
+  let accumulated = 0;
+  const gradient = items
+    .map((item, index) => {
+      const start = accumulated;
+      accumulated = index === items.length - 1
+        ? 100
+        : accumulated + item.percentage;
+      return `${distributionColors[index % distributionColors.length]} ${start}% ${accumulated}%`;
+    })
+    .join(", ");
 
   return (
     <div className="reports-donut-layout">
@@ -267,20 +180,22 @@ function UniversityDonut() {
         aria-label="Üniversitelere göre üye dağılımı"
       >
         <div className="reports-donut__center">
-          <strong>12.480</strong>
-          <span>üye</span>
+          <strong>{numberFormatter.format(total)}</strong>
+          <span>öğrenci</span>
         </div>
       </div>
 
       <div className="reports-donut-legend">
-        {universities.map((item) => (
+        {items.map((item, index) => (
           <div key={item.name}>
             <span
               className="reports-legend-dot"
-              style={{ background: item.color }}
+              style={{
+                background: distributionColors[index % distributionColors.length]
+              }}
             />
             <span>{item.name}</span>
-            <strong>%{item.value}</strong>
+            <strong>%{item.percentage}</strong>
           </div>
         ))}
       </div>
@@ -288,30 +203,67 @@ function UniversityDonut() {
   );
 }
 
+function getBadgeClass(status: string) {
+  if (status === "Çözüldü") return "badge-success";
+  if (status === "Reddedildi" || status === "Süresi Doldu") return "badge-danger";
+  return "badge-warning";
+}
+
 export default function ReportsPage() {
   const [timeRange, setTimeRange] = useState<TimeRange>("monthly");
-  const [university, setUniversity] = useState("all");
-  const [refreshing, setRefreshing] = useState(false);
-  const [lastUpdated, setLastUpdated] = useState(new Date());
+  const [universityId, setUniversityId] = useState("all");
+  const [reports, setReports] = useState<AdminReports | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const chartPoints = useMemo(() => visitSeries[timeRange], [timeRange]);
+  const loadReports = useCallback(async () => {
+    setLoading(true);
+    setError(null);
 
-  const refreshData = () => {
-    setRefreshing(true);
-    window.setTimeout(() => {
-      setLastUpdated(new Date());
-      setRefreshing(false);
-    }, 650);
-  };
+    try {
+      const { data } = await api.get<AdminReports>("/admin/reports", {
+        params: {
+          range: timeRange,
+          universityId: universityId === "all" ? undefined : universityId
+        }
+      });
+
+      setReports(data);
+    } catch {
+      setError("Rapor verileri alınamadı. Backend bağlantısını kontrol edin.");
+    } finally {
+      setLoading(false);
+    }
+  }, [timeRange, universityId]);
+
+  useEffect(() => {
+    void loadReports();
+  }, [loadReports]);
+
+  const summary = reports?.summary ?? emptySummary;
 
   const exportReport = () => {
-    const rows = [
+    if (!reports) return;
+
+    const selectedUniversity =
+      reports.universityOptions.find((item) => item.id === universityId)?.name ??
+      "Tüm Üniversiteler";
+    const selectedRange =
+      timeRanges.find((item) => item.value === timeRange)?.label ?? "Aylık";
+    const rows: Array<Array<string | number>> = [
       ["NotMarket Raporu"],
-      ["Zaman Aralığı", timeRanges.find((item) => item.value === timeRange)?.label],
-      ["Üniversite", university === "all" ? "Tüm Üniversiteler" : university],
+      ["Zaman Aralığı", selectedRange],
+      ["Üniversite", selectedUniversity],
+      ["Toplam Kullanıcı", summary.totalUsers],
+      ["Doğrulanmış Öğrenci", summary.verifiedStudents],
+      ["Bekleyen Başvuru", summary.pendingVerifications],
       [],
       ["Fakülte", "Üye Sayısı", "Oran"],
-      ...faculties.map((item) => [item.name, item.count, `%${item.rate}`])
+      ...reports.facultyDistribution.map((item) => [
+        item.name,
+        item.count,
+        `%${item.percentage}`
+      ])
     ];
     const csv = rows.map((row) => row.join(";")).join("\n");
     const blob = new Blob([`\uFEFF${csv}`], {
@@ -337,67 +289,66 @@ export default function ReportsPage() {
           <label className="reports-select">
             <Building2 size={17} />
             <select
-              value={university}
-              onChange={(event) => setUniversity(event.target.value)}
+              value={universityId}
+              onChange={(event) => setUniversityId(event.target.value)}
               aria-label="Üniversite filtresi"
+              disabled={loading}
             >
               <option value="all">Tüm Üniversiteler</option>
-              <option value="Marmara Üniversitesi">Marmara Üniversitesi</option>
-              <option value="İstanbul Teknik Üniversitesi">İTÜ</option>
-              <option value="Boğaziçi Üniversitesi">Boğaziçi Üniversitesi</option>
-              <option value="Yıldız Teknik Üniversitesi">YTÜ</option>
-              <option value="Hacettepe Üniversitesi">Hacettepe Üniversitesi</option>
+              {reports?.universityOptions.map((item) => (
+                <option key={item.id} value={item.id}>{item.name}</option>
+              ))}
             </select>
           </label>
 
           <button
             type="button"
             className="secondary-button"
-            onClick={refreshData}
-            disabled={refreshing}
+            onClick={() => void loadReports()}
+            disabled={loading}
           >
-            <RefreshCw size={17} className={refreshing ? "is-spinning" : ""} />
-            {refreshing ? "Güncelleniyor" : "Verileri Güncelle"}
+            <RefreshCw size={17} className={loading ? "is-spinning" : ""} />
+            {loading ? "Güncelleniyor" : "Verileri Güncelle"}
           </button>
 
-          <button type="button" className="primary-button" onClick={exportReport}>
+          <button
+            type="button"
+            className="primary-button"
+            onClick={exportReport}
+            disabled={!reports || loading}
+          >
             <Download size={17} />
             Raporu Dışa Aktar
           </button>
         </div>
       </div>
 
+      {error && <div className="reports-feedback reports-feedback--error">{error}</div>}
+
       <section className="reports-stats" aria-label="Rapor özeti">
         <article className="report-stat-card report-stat-card--purple">
-          <Users size={21} />
-          <div><span>Toplam Kullanıcı</span><strong>12.480</strong></div>
+          <Users size={21} /><div><span>Toplam Kullanıcı</span><strong>{numberFormatter.format(summary.totalUsers)}</strong></div>
         </article>
         <article className="report-stat-card report-stat-card--green">
-          <ShieldCheck size={21} />
-          <div><span>Doğrulanmış Öğrenci</span><strong>8.942</strong></div>
+          <ShieldCheck size={21} /><div><span>Doğrulanmış Öğrenci</span><strong>{numberFormatter.format(summary.verifiedStudents)}</strong></div>
         </article>
         <article className="report-stat-card report-stat-card--amber">
-          <Clock3 size={21} />
-          <div><span>Bekleyen Başvuru</span><strong>184</strong></div>
+          <Clock3 size={21} /><div><span>Bekleyen Başvuru</span><strong>{numberFormatter.format(summary.pendingVerifications)}</strong></div>
         </article>
         <article className="report-stat-card report-stat-card--green">
-          <ShoppingCart size={21} />
-          <div><span>Toplam Satış</span><strong>{currencyFormatter.format(486250)}</strong></div>
+          <ShoppingCart size={21} /><div><span>Toplam Satış</span><strong>{numberFormatter.format(summary.totalSales)}</strong></div>
         </article>
         <article className="report-stat-card report-stat-card--purple">
-          <WalletCards size={21} />
-          <div><span>Platform Geliri</span><strong>{currencyFormatter.format(58350)}</strong></div>
+          <WalletCards size={21} /><div><span>Platform Geliri</span><strong>{currencyFormatter.format(summary.platformRevenue)}</strong></div>
         </article>
         <article className="report-stat-card report-stat-card--red">
-          <TriangleAlert size={21} />
-          <div><span>Açık Şikâyet</span><strong>23</strong></div>
+          <TriangleAlert size={21} /><div><span>Açık Şikâyet</span><strong>{numberFormatter.format(summary.openComplaints)}</strong></div>
         </article>
       </section>
 
       <section className="reports-range-filter" aria-label="Grafik zaman aralığı">
         <div className="reports-range-filter__label">
-          <CalendarRange size={18} />
-          <strong>Grafik Zaman Aralığı</strong>
+          <CalendarRange size={18} /><strong>Grafik Zaman Aralığı</strong>
         </div>
         <div className="reports-range-filter__options">
           {timeRanges.map((item) => (
@@ -406,6 +357,7 @@ export default function ReportsPage() {
               type="button"
               className={timeRange === item.value ? "is-active" : ""}
               onClick={() => setTimeRange(item.value)}
+              disabled={loading}
             >
               {item.label}
             </button>
@@ -418,63 +370,70 @@ export default function ReportsPage() {
           <div className="reports-panel-heading">
             <div>
               <h2>{rangeTitles[timeRange]}</h2>
-              <span className="reports-chart-legend">
-                <i /> Ziyaret Sayısı
-              </span>
+              <span className="reports-chart-legend"><i /> Ziyaret Sayısı</span>
             </div>
           </div>
-          <VisitLineChart points={chartPoints} />
+          {loading && !reports ? (
+            <div className="reports-empty-chart">Rapor verileri yükleniyor…</div>
+          ) : (
+            <VisitLineChart points={reports?.visits ?? []} />
+          )}
         </article>
 
         <article className="panel reports-chart-panel">
           <div className="reports-panel-heading">
             <h2>Üniversitelere Göre Üye Dağılımı</h2>
           </div>
-          <UniversityDonut />
+          <UniversityDonut
+            items={reports?.universityDistribution ?? []}
+            total={summary.verifiedStudents}
+          />
         </article>
       </section>
 
       <section className="reports-table-grid">
         <article className="panel reports-table-panel">
-          <div className="reports-panel-heading">
-            <h2>Fakültelere Göre Üye Dağılımı</h2>
-          </div>
+          <div className="reports-panel-heading"><h2>Fakültelere Göre Üye Dağılımı</h2></div>
           <div className="table-wrapper">
             <table>
               <thead><tr><th>Fakülte</th><th>Üye Sayısı</th><th>Oran</th></tr></thead>
               <tbody>
-                {faculties.map((faculty) => (
+                {(reports?.facultyDistribution ?? []).map((faculty) => (
                   <tr key={faculty.name}>
                     <td>{faculty.name}</td>
                     <td>{numberFormatter.format(faculty.count)}</td>
                     <td>
                       <div className="reports-rate-cell">
-                        <span>%{faculty.rate}</span>
-                        <i><b style={{ width: `${faculty.rate * 2.5}%` }} /></i>
+                        <span>%{faculty.percentage}</span>
+                        <i><b style={{ width: `${faculty.percentage}%` }} /></i>
                       </div>
                     </td>
                   </tr>
                 ))}
+                {!loading && reports?.facultyDistribution.length === 0 && (
+                  <tr><td colSpan={3}>Doğrulanmış fakülte verisi bulunmuyor.</td></tr>
+                )}
               </tbody>
             </table>
           </div>
         </article>
 
         <article className="panel reports-table-panel">
-          <div className="reports-panel-heading">
-            <h2>Son Moderasyon Kayıtları</h2>
-          </div>
+          <div className="reports-panel-heading"><h2>Son Moderasyon Kayıtları</h2></div>
           <div className="table-wrapper">
             <table>
               <thead><tr><th>Kullanıcı</th><th>Tür</th><th>Durum</th></tr></thead>
               <tbody>
-                {moderationRows.map((row) => (
-                  <tr key={`${row.user}-${row.type}`}>
-                    <td>{row.user}</td>
+                {(reports?.recentModeration ?? []).map((row) => (
+                  <tr key={`${row.userEmail}-${row.createdAt}`}>
+                    <td>{row.userEmail}</td>
                     <td>{row.type}</td>
-                    <td><span className={`badge ${row.badge}`}>{row.status}</span></td>
+                    <td><span className={`badge ${getBadgeClass(row.status)}`}>{row.status}</span></td>
                   </tr>
                 ))}
+                {!loading && reports?.recentModeration.length === 0 && (
+                  <tr><td colSpan={3}>Moderasyon kaydı bulunmuyor.</td></tr>
+                )}
               </tbody>
             </table>
           </div>
@@ -482,13 +441,16 @@ export default function ReportsPage() {
       </section>
 
       <p className="reports-updated-at">
-        Son güncelleme: {lastUpdated.toLocaleString("tr-TR", {
-          day: "2-digit",
-          month: "2-digit",
-          year: "numeric",
-          hour: "2-digit",
-          minute: "2-digit"
-        })}
+        Son güncelleme:{" "}
+        {reports
+          ? new Date(reports.generatedAt).toLocaleString("tr-TR", {
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric",
+              hour: "2-digit",
+              minute: "2-digit"
+            })
+          : "—"}
       </p>
     </div>
   );

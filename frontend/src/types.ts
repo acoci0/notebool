@@ -116,3 +116,44 @@ export type AcademicProgram = {
   name: string;
 };
 
+export type ReportSummary = {
+  totalUsers: number;
+  verifiedStudents: number;
+  pendingVerifications: number;
+  totalSales: number;
+  platformRevenue: number;
+  openComplaints: number;
+};
+
+export type ReportFilterOption = {
+  id: string;
+  name: string;
+};
+
+export type ReportChartPoint = {
+  label: string;
+  value: number;
+};
+
+export type ReportDistribution = {
+  name: string;
+  count: number;
+  percentage: number;
+};
+
+export type ReportModerationItem = {
+  userEmail: string;
+  type: string;
+  status: string;
+  createdAt: string;
+};
+
+export type AdminReports = {
+  summary: ReportSummary;
+  universityOptions: ReportFilterOption[];
+  visits: ReportChartPoint[];
+  universityDistribution: ReportDistribution[];
+  facultyDistribution: ReportDistribution[];
+  recentModeration: ReportModerationItem[];
+  generatedAt: string;
+};

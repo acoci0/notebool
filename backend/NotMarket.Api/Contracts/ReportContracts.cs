@@ -6,11 +6,16 @@ public sealed record TrackSiteVisitRequest(
 
 public sealed record AdminReportsDto(
     ReportSummaryDto Summary,
+    IReadOnlyList<ReportFilterOptionDto> UniversityOptions,
     IReadOnlyList<ReportChartPointDto> Visits,
     IReadOnlyList<ReportDistributionDto> UniversityDistribution,
     IReadOnlyList<ReportDistributionDto> FacultyDistribution,
     IReadOnlyList<ReportModerationItemDto> RecentModeration,
     DateTimeOffset GeneratedAt);
+
+public sealed record ReportFilterOptionDto(
+    Guid Id,
+    string Name);
 
 public sealed record ReportSummaryDto(
     int TotalUsers,

@@ -2160,6 +2160,30 @@ td {
   text-align: center;
 }
 
+.reports-feedback {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: #ffffff;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.reports-feedback--error {
+  border-color: #f3c8cc;
+  background: #fff5f6;
+  color: #ad303b;
+}
+
+.reports-empty-chart {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .is-spinning { animation: reports-spin 700ms linear infinite; }
 
 @keyframes reports-spin {

@@ -16,19 +16,11 @@ public sealed class AdminReportsController(AppDbContext db)
     [HttpGet]
     public async Task<ActionResult<AdminReportsDto>> Get(
         [FromQuery] string range = "monthly",
+        [FromQuery] Guid? universityId = null,
         CancellationToken cancellationToken = default)
     {
         var selectedRange = ParseRange(range);
         var now = DateTimeOffset.UtcNow;
-
-        var totalUsers = await db.Users
-            .CountAsync(cancellationToken);
-
-        var pendingVerifications =
-            await db.StudentVerifications
-                .CountAsync(
-                    x => x.Status == VerificationStatus.Pending,
-                    cancellationToken);
 
         var approvedMemberships =
             await db.StudentVerifications
@@ -44,19 +36,75 @@ public sealed class AdminReportsController(AppDbContext db)
                     x => new
                     {
                         x.UserId,
+                        x.UniversityId,
                         x.UniversityName,
                         x.FacultyName
                     })
                 .ToListAsync(cancellationToken);
 
-        var verifiedStudents = approvedMemberships
+        var universityOptions = approvedMemberships
+            .Where(x => x.UniversityId.HasValue)
+            .GroupBy(
+                x => new
+                {
+                    Id = x.UniversityId!.Value,
+                    x.UniversityName
+                })
+            .OrderBy(x => x.Key.UniversityName)
+            .Select(
+                x => new ReportFilterOptionDto(
+                    x.Key.Id,
+                    x.Key.UniversityName))
+            .ToArray();
+
+        if (
+            universityId.HasValue &&
+            universityOptions.All(
+                x => x.Id != universityId.Value))
+        {
+            return BadRequest(new
+            {
+                message =
+                    "Seçilen üniversite için aktif doğrulama kaydı bulunamadı."
+            });
+        }
+
+        var filteredMemberships = universityId.HasValue
+            ? approvedMemberships
+                .Where(
+                    x => x.UniversityId == universityId.Value)
+                .ToArray()
+            : approvedMemberships.ToArray();
+
+        var totalUsers = universityId.HasValue
+            ? filteredMemberships
+                .Select(x => x.UserId)
+                .Distinct()
+                .Count()
+            : await db.Users.CountAsync(cancellationToken);
+
+        var pendingQuery = db.StudentVerifications
+            .AsNoTracking()
+            .Where(
+                x => x.Status == VerificationStatus.Pending);
+
+        if (universityId.HasValue)
+        {
+            pendingQuery = pendingQuery.Where(
+                x => x.UniversityId == universityId.Value);
+        }
+
+        var pendingVerifications = await pendingQuery
+            .CountAsync(cancellationToken);
+
+        var verifiedStudents = filteredMemberships
             .Select(x => x.UserId)
             .Distinct()
             .Count();
 
         var universityDistribution =
             BuildDistribution(
-                approvedMemberships
+                filteredMemberships
                     .Where(
                         x => !string.IsNullOrWhiteSpace(
                             x.UniversityName))
@@ -69,7 +117,7 @@ public sealed class AdminReportsController(AppDbContext db)
 
         var facultyDistribution =
             BuildDistribution(
-                approvedMemberships
+                filteredMemberships
                     .Where(
                         x => !string.IsNullOrWhiteSpace(
                             x.FacultyName))
@@ -104,13 +152,21 @@ public sealed class AdminReportsController(AppDbContext db)
             now,
             visitDates);
 
-        var moderationRows =
-            await db.StudentVerifications
-                .AsNoTracking()
-                .Include(x => x.User)
-                .OrderByDescending(x => x.CreatedAt)
-                .Take(5)
-                .ToListAsync(cancellationToken);
+        var moderationQuery = db.StudentVerifications
+            .AsNoTracking()
+            .Include(x => x.User)
+            .AsQueryable();
+
+        if (universityId.HasValue)
+        {
+            moderationQuery = moderationQuery.Where(
+                x => x.UniversityId == universityId.Value);
+        }
+
+        var moderationRows = await moderationQuery
+            .OrderByDescending(x => x.CreatedAt)
+            .Take(5)
+            .ToListAsync(cancellationToken);
 
         var recentModeration = moderationRows
             .Select(
@@ -129,6 +185,7 @@ public sealed class AdminReportsController(AppDbContext db)
                 TotalSales: 0,
                 PlatformRevenue: 0,
                 OpenComplaints: 0),
+            universityOptions,
             visits,
             universityDistribution,
             facultyDistribution,

@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 
 import ProtectedRoute from "./components/ProtectedRoute";
+import SiteVisitTracker from "./components/SiteVisitTracker";
 import StudentProtectedRoute from "./components/StudentProtectedRoute";
 
 import AdminLayout from "./layout/AdminLayout";
@@ -21,7 +22,9 @@ import VerificationsPage from "./pages/VerificationsPage";
 
 export default function App() {
   return (
-    <Routes>
+    <>
+      <SiteVisitTracker />
+      <Routes>
       {/* ========================= */}
       {/* ÖĞRENCİ TARAFI            */}
       {/* ========================= */}
@@ -105,6 +108,7 @@ export default function App() {
           />
         }
       />
-    </Routes>
+      </Routes>
+    </>
   );
 }
