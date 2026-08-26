@@ -10,17 +10,14 @@ public sealed class AppDbContext(
     public DbSet<ApplicationUser> Users =>
         Set<ApplicationUser>();
 
-    public DbSet<StudentVerification>
-        StudentVerifications =>
-            Set<StudentVerification>();
+    public DbSet<StudentVerification> StudentVerifications =>
+        Set<StudentVerification>();
 
-    public DbSet<AcademicUniversity>
-        AcademicUniversities =>
-            Set<AcademicUniversity>();
+    public DbSet<AcademicUniversity> AcademicUniversities =>
+        Set<AcademicUniversity>();
 
-    public DbSet<AcademicUniversityAlias>
-        AcademicUniversityAliases =>
-            Set<AcademicUniversityAlias>();
+    public DbSet<AcademicUniversityAlias> AcademicUniversityAliases =>
+        Set<AcademicUniversityAlias>();
 
     public DbSet<AcademicUnit> AcademicUnits =>
         Set<AcademicUnit>();
@@ -40,6 +37,12 @@ public sealed class AppDbContext(
     public DbSet<SiteVisit> SiteVisits =>
         Set<SiteVisit>();
 
+    public DbSet<Order> Orders =>
+        Set<Order>();
+
+    public DbSet<Payment> Payments =>
+        Set<Payment>();
+
     protected override void OnModelCreating(
         ModelBuilder modelBuilder)
     {
@@ -52,6 +55,8 @@ public sealed class AppDbContext(
         ConfigureAcademicProgram(modelBuilder);
         ConfigureStudentVerification(modelBuilder);
         ConfigureNoteSubmission(modelBuilder);
+        ConfigureOrder(modelBuilder);
+        ConfigurePayment(modelBuilder);
         ConfigureAuditLog(modelBuilder);
         ConfigureSiteVisit(modelBuilder);
     }
@@ -88,14 +93,6 @@ public sealed class AppDbContext(
                 x => x.CatalogKey)
             .HasMaxLength(100);
 
-        /*
-         * Katalog kapsamındaki üniversiteler
-         * kalıcı CatalogKey üzerinden eşleştirilir.
-         *
-         * Alan nullable olduğu için eski seed
-         * kayıtlarının migration sırasında
-         * bozulmasına neden olmaz.
-         */
         university.HasIndex(
                 x => x.CatalogKey)
             .IsUnique();
@@ -127,10 +124,6 @@ public sealed class AppDbContext(
                 x => x.SourceName)
             .HasMaxLength(200);
 
-        /*
-         * Aynı ülkede aynı normalize edilmiş
-         * üniversite adı yalnızca bir kez bulunabilir.
-         */
         university.HasIndex(
                 x => new
                 {
@@ -139,9 +132,6 @@ public sealed class AppDbContext(
                 })
             .IsUnique();
 
-        /*
-         * Aktif üniversite aramalarını hızlandırır.
-         */
         university.HasIndex(
             x => new
             {
@@ -172,22 +162,10 @@ public sealed class AppDbContext(
             .HasMaxLength(250)
             .IsRequired();
 
-        /*
-         * Aynı normalize edilmiş alias iki farklı
-         * üniversiteye bağlanamaz.
-         *
-         * Örnek:
-         * "odtu" yalnızca Orta Doğu Teknik
-         * Üniversitesi kaydına ait olabilir.
-         */
         alias.HasIndex(
                 x => x.NormalizedAlias)
             .IsUnique();
 
-        /*
-         * Bir üniversiteye bağlı alias kayıtlarının
-         * sorgulanmasını hızlandırır.
-         */
         alias.HasIndex(
             x => x.UniversityId);
 
@@ -217,10 +195,6 @@ public sealed class AppDbContext(
                 x => x.CatalogKey)
             .HasMaxLength(150);
 
-        /*
-         * Fakülte veya diğer akademik birimler
-         * katalog anahtarına göre eşleştirilir.
-         */
         academicUnit.HasIndex(
                 x => x.CatalogKey)
             .IsUnique();
@@ -247,14 +221,6 @@ public sealed class AppDbContext(
                 x => x.SourceName)
             .HasMaxLength(200);
 
-        /*
-         * Aynı üniversitede aynı normalize edilmiş
-         * akademik birim adı tekrar oluşturulamaz.
-         *
-         * Örnek:
-         * Marmara Üniversitesi içerisinde
-         * "Fen Fakültesi" yalnızca bir kez bulunur.
-         */
         academicUnit.HasIndex(
                 x => new
                 {
@@ -263,10 +229,6 @@ public sealed class AppDbContext(
                 })
             .IsUnique();
 
-        /*
-         * Üniversiteye bağlı aktif akademik
-         * birim sorgularını hızlandırır.
-         */
         academicUnit.HasIndex(
             x => new
             {
@@ -300,10 +262,6 @@ public sealed class AppDbContext(
                 x => x.CatalogKey)
             .HasMaxLength(200);
 
-        /*
-         * Bölüm veya programlar kalıcı katalog
-         * anahtarı üzerinden eşleştirilir.
-         */
         academicProgram.HasIndex(
                 x => x.CatalogKey)
             .IsUnique();
@@ -334,20 +292,10 @@ public sealed class AppDbContext(
                 x => x.EducationLanguage)
             .HasMaxLength(50);
 
-        /*
-         * Yeni ve mevcut programların varsayılan
-         * olarak öğrenci formunda seçilebilir
-         * olmasını sağlar.
-         */
         academicProgram.Property(
                 x => x.IsSelectable)
             .HasDefaultValue(true);
 
-        /*
-         * Aynı akademik birim altında aynı
-         * normalize edilmiş bölüm veya program
-         * adı tekrar oluşturulamaz.
-         */
         academicProgram.HasIndex(
                 x => new
                 {
@@ -356,10 +304,6 @@ public sealed class AppDbContext(
                 })
             .IsUnique();
 
-        /*
-         * Akademik birime bağlı aktif program
-         * sorgularını hızlandırır.
-         */
         academicProgram.HasIndex(
             x => new
             {
@@ -367,10 +311,6 @@ public sealed class AppDbContext(
                 x.IsActive
             });
 
-        /*
-         * Öğrenci formunda gösterilecek programların
-         * sorgulanmasını hızlandırır.
-         */
         academicProgram.HasIndex(
             x => new
             {
@@ -399,10 +339,6 @@ public sealed class AppDbContext(
                 x => x.Status)
             .HasConversion<string>();
 
-        /*
-         * Aynı PDF dosyasının birden fazla
-         * doğrulamada kullanılmasını engeller.
-         */
         verification.HasIndex(
                 x => x.DocumentHash)
             .IsUnique();
@@ -434,15 +370,6 @@ public sealed class AppDbContext(
             .OnDelete(
                 DeleteBehavior.Restrict);
 
-        /*
-         * Aynı öğrencinin aynı akademik alan
-         * için yaptığı doğrulama kontrollerini
-         * hızlandırır.
-         *
-         * Bu indeks unique değildir. Geçmişte
-         * reddedilen veya süresi dolan kayıtların
-         * saklanmasına izin verir.
-         */
         verification.HasIndex(
             x => new
             {
@@ -460,6 +387,19 @@ public sealed class AppDbContext(
         var noteSubmission =
             modelBuilder.Entity<NoteSubmission>();
 
+        noteSubmission.ToTable(
+            "NoteSubmissions",
+            table =>
+            {
+                table.HasCheckConstraint(
+                    "CK_NoteSubmissions_SalePrice",
+                    "\"SalePrice\" IS NULL OR \"SalePrice\" > 0");
+            });
+
+        noteSubmission.Property(
+                x => x.SalePrice)
+            .HasPrecision(18, 2);
+
         noteSubmission.Property(
                 x => x.Status)
             .HasConversion<string>();
@@ -472,6 +412,180 @@ public sealed class AppDbContext(
                 x => x.SellerId)
             .OnDelete(
                 DeleteBehavior.Restrict);
+    }
+
+    private static void ConfigureOrder(
+        ModelBuilder modelBuilder)
+    {
+        var order =
+            modelBuilder.Entity<Order>();
+
+        order.ToTable(
+            "Orders",
+            table =>
+            {
+                table.HasCheckConstraint(
+                    "CK_Orders_DifferentUsers",
+                    "\"BuyerId\" <> \"SellerId\"");
+
+                table.HasCheckConstraint(
+                    "CK_Orders_PositiveAmounts",
+                    "\"GrossAmount\" > 0 AND " +
+                    "\"PlatformCommissionAmount\" >= 0 AND " +
+                    "\"SellerEarningAmount\" >= 0");
+
+                table.HasCheckConstraint(
+                    "CK_Orders_AmountBalance",
+                    "\"GrossAmount\" = " +
+                    "\"PlatformCommissionAmount\" + " +
+                    "\"SellerEarningAmount\"");
+            });
+
+        order.HasKey(
+            x => x.Id);
+
+        order.Property(
+                x => x.Status)
+            .HasConversion<string>();
+
+        order.Property(
+                x => x.GrossAmount)
+            .HasPrecision(18, 2);
+
+        order.Property(
+                x => x.PlatformCommissionAmount)
+            .HasPrecision(18, 2);
+
+        order.Property(
+                x => x.SellerEarningAmount)
+            .HasPrecision(18, 2);
+
+        order.Property(
+                x => x.Currency)
+            .HasMaxLength(3)
+            .IsRequired();
+
+        order.Property(
+                x => x.NoteTitleSnapshot)
+            .HasMaxLength(220)
+            .IsRequired();
+
+        order.HasOne(
+                x => x.Buyer)
+            .WithMany()
+            .HasForeignKey(
+                x => x.BuyerId)
+            .OnDelete(
+                DeleteBehavior.Restrict);
+
+        order.HasOne(
+                x => x.Seller)
+            .WithMany()
+            .HasForeignKey(
+                x => x.SellerId)
+            .OnDelete(
+                DeleteBehavior.Restrict);
+
+        order.HasOne(
+                x => x.NoteSubmission)
+            .WithMany(
+                x => x.Orders)
+            .HasForeignKey(
+                x => x.NoteSubmissionId)
+            .OnDelete(
+                DeleteBehavior.Restrict);
+
+        order.HasIndex(
+            x => x.CreatedAt);
+
+        order.HasIndex(
+            x => new
+            {
+                x.BuyerId,
+                x.Status
+            });
+
+        order.HasIndex(
+            x => new
+            {
+                x.SellerId,
+                x.Status
+            });
+
+        order.HasIndex(
+                x => new
+                {
+                    x.BuyerId,
+                    x.NoteSubmissionId
+                })
+            .IsUnique()
+            .HasFilter(
+                "\"Status\" IN ('PendingPayment', 'Paid')");
+    }
+
+    private static void ConfigurePayment(
+        ModelBuilder modelBuilder)
+    {
+        var payment =
+            modelBuilder.Entity<Payment>();
+
+        payment.ToTable(
+            "Payments",
+            table =>
+            {
+                table.HasCheckConstraint(
+                    "CK_Payments_PositiveAmount",
+                    "\"Amount\" > 0");
+            });
+
+        payment.HasKey(
+            x => x.Id);
+
+        payment.Property(
+                x => x.Status)
+            .HasConversion<string>();
+
+        payment.Property(
+                x => x.Amount)
+            .HasPrecision(18, 2);
+
+        payment.Property(
+                x => x.Currency)
+            .HasMaxLength(3)
+            .IsRequired();
+
+        payment.Property(
+                x => x.Provider)
+            .HasMaxLength(50)
+            .IsRequired();
+
+        payment.Property(
+                x => x.ProviderPaymentId)
+            .HasMaxLength(200);
+
+        payment.Property(
+                x => x.FailureReason)
+            .HasMaxLength(600);
+
+        payment.HasOne(
+                x => x.Order)
+            .WithOne(
+                x => x.Payment)
+            .HasForeignKey<Payment>(
+                x => x.OrderId)
+            .OnDelete(
+                DeleteBehavior.Cascade);
+
+        payment.HasIndex(
+                x => x.OrderId)
+            .IsUnique();
+
+        payment.HasIndex(
+                x => x.ProviderPaymentId)
+            .IsUnique();
+
+        payment.HasIndex(
+            x => x.CreatedAt);
     }
 
     private static void ConfigureAuditLog(
@@ -488,9 +602,11 @@ public sealed class AppDbContext(
         var siteVisit =
             modelBuilder.Entity<SiteVisit>();
 
-        siteVisit.HasKey(x => x.Id);
+        siteVisit.HasKey(
+            x => x.Id);
 
-        siteVisit.HasIndex(x => x.VisitedAt);
+        siteVisit.HasIndex(
+            x => x.VisitedAt);
 
         siteVisit.HasIndex(
             x => new

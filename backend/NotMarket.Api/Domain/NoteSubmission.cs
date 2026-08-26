@@ -25,6 +25,8 @@ public sealed class NoteSubmission
     public int ReadabilityScore { get; set; }
     public int OriginalityRiskScore { get; set; }
 
+    public decimal? SalePrice { get; set; }
+
     public NoteSubmissionStatus Status { get; set; } =
         NoteSubmissionStatus.Uploaded;
 
@@ -34,4 +36,6 @@ public sealed class NoteSubmission
     public Guid? ReviewedByUserId { get; set; }
     public DateTimeOffset? ReviewedAt { get; set; }
     public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
+    public ICollection<Order> Orders { get; set; } = [];
+
 }

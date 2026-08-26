@@ -39,3 +39,20 @@ public enum AcademicUnitType
     VocationalSchool,
     Other
 }
+
+public enum OrderStatus
+{
+    PendingPayment = 1,
+    Paid = 2,
+    PaymentFailed = 3,
+    Cancelled = 4,
+    Refunded = 5
+}
+
+public enum PaymentStatus
+{
+    Pending = 1,
+    Succeeded = 2,
+    Failed = 3,
+    Refunded = 4
+}
