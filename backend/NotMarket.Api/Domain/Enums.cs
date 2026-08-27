@@ -27,7 +27,8 @@ public enum NoteSubmissionStatus
     AiReview = 2,
     ManualReview = 3,
     Approved = 4,
-    Rejected = 5
+    Rejected = 5,
+    PdfGeneration = 6
 }
 
 public enum AcademicUnitType
@@ -55,4 +56,10 @@ public enum PaymentStatus
     Succeeded = 2,
     Failed = 3,
     Refunded = 4
+}
+public enum NoteReviewDecision
+{
+    AutoApprove = 1,
+    ManualReview = 2,
+    TechnicalReject = 3
 }

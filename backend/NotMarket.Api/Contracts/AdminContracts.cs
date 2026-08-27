@@ -67,15 +67,27 @@ public sealed record AdminNoteSubmissionDto(
     int MatchScore,
     int ReadabilityScore,
     int OriginalityRiskScore,
+    decimal SuggestedMinPrice,
+    decimal SuggestedMaxPrice,
+    decimal? SalePrice,
     string Status,
     string? GeneratedPdfBlobPath,
     DateTimeOffset CreatedAt);
 
+/*
+ * Öğrenci doğrulama kararı için kullanılır.
+ */
 public sealed record ReviewDecisionRequest(
     bool Approve,
     string? ReviewNote);
 
+/*
+ * Not onayında satış fiyatı da belirlenir.
+ */
+public sealed record NoteReviewDecisionRequest(
+    bool Approve,
+    string? ReviewNote,
+    decimal? SalePrice);
+
 public sealed record AccountStatusRequest(
     string Status);
-
-

@@ -36,6 +36,8 @@ public sealed class NoteSubmission
     public Guid? ReviewedByUserId { get; set; }
     public DateTimeOffset? ReviewedAt { get; set; }
     public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
-    public ICollection<Order> Orders { get; set; } = [];
-
+    public ICollection<NoteAiReview> AiReviews { get; set; } =
+        [];
+    public ICollection<Order> Orders { get; set; } =
+        [];
 }

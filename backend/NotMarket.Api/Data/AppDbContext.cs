@@ -31,6 +31,9 @@ public sealed class AppDbContext(
     public DbSet<NoteSubmission> NoteSubmissions =>
         Set<NoteSubmission>();
 
+    public DbSet<NoteAiReview> NoteAiReviews =>
+    Set<NoteAiReview>();
+
     public DbSet<AuditLog> AuditLogs =>
         Set<AuditLog>();
 
@@ -55,6 +58,7 @@ public sealed class AppDbContext(
         ConfigureAcademicProgram(modelBuilder);
         ConfigureStudentVerification(modelBuilder);
         ConfigureNoteSubmission(modelBuilder);
+        ConfigureNoteAiReview(modelBuilder);
         ConfigureOrder(modelBuilder);
         ConfigurePayment(modelBuilder);
         ConfigureAuditLog(modelBuilder);
@@ -413,7 +417,73 @@ public sealed class AppDbContext(
             .OnDelete(
                 DeleteBehavior.Restrict);
     }
+    private static void ConfigureNoteAiReview(
+        ModelBuilder modelBuilder)
+    {
+        var review =
+            modelBuilder.Entity<NoteAiReview>();
 
+        review.ToTable(
+            "NoteAiReviews",
+            table =>
+            {
+                table.HasCheckConstraint(
+                    "CK_NoteAiReviews_ScoresRange",
+                    "\"ReadabilityScore\" BETWEEN 0 AND 100 AND " +
+                    "\"CourseMatchScore\" BETWEEN 0 AND 100 AND " +
+                    "\"DepartmentMatchScore\" BETWEEN 0 AND 100 AND " +
+                    "\"ContentCompletenessScore\" BETWEEN 0 AND 100 AND " +
+                    "\"OriginalityAndReliabilityScore\" BETWEEN 0 AND 100 AND " +
+                    "\"OriginalityRiskScore\" BETWEEN 0 AND 100 AND " +
+                    "\"OverallScore\" BETWEEN 0 AND 100 AND " +
+                    "\"ConfidenceScore\" BETWEEN 0 AND 100");
+            });
+
+        review.HasKey(x => x.Id);
+
+        review.Property(x => x.Decision)
+            .HasConversion<string>()
+            .HasMaxLength(30);
+
+        review.Property(x => x.Summary)
+            .HasMaxLength(2000)
+            .IsRequired();
+
+        review.Property(x => x.FindingsJson)
+            .HasColumnType("jsonb")
+            .IsRequired();
+
+        review.Property(x => x.DetectedCourse)
+            .HasMaxLength(220);
+
+        review.Property(x => x.DetectedDepartment)
+            .HasMaxLength(220);
+
+        review.Property(x => x.ModelName)
+            .HasMaxLength(100)
+            .IsRequired();
+
+        review.Property(x => x.PromptVersion)
+            .HasMaxLength(50)
+            .IsRequired();
+
+        review.HasOne(x => x.NoteSubmission)
+            .WithMany(x => x.AiReviews)
+            .HasForeignKey(x => x.NoteSubmissionId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        review.HasIndex(x => new
+        {
+            x.NoteSubmissionId,
+            x.ReviewedAt
+        });
+
+        review.HasIndex(x => new
+        {
+            x.Decision,
+            x.ReviewedAt
+        });
+    }
     private static void ConfigureOrder(
         ModelBuilder modelBuilder)
     {

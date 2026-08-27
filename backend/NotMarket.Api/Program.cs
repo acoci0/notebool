@@ -5,21 +5,160 @@ using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using NotMarket.Api.Data;
-using NotMarket.Api.Services;
 using NotMarket.Api.Data.AcademicCatalog;
+using NotMarket.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.Configure<AcademicCatalogImportOptions>(
-    builder.Configuration.GetSection(AcademicCatalogImportOptions.SectionName));
 
-builder.Services.AddScoped<AcademicCatalogLoader>();
-builder.Services.AddScoped<AcademicCatalogValidator>();
-builder.Services.AddScoped<AcademicCatalogImporter>();
+/*
+ * Yapılandırma seçenekleri
+ */
+builder.Services.Configure<AcademicCatalogImportOptions>(
+    builder.Configuration.GetSection(
+        AcademicCatalogImportOptions.SectionName));
+
+builder.Services
+    .AddOptions<NoteReviewOptions>()
+    .Bind(
+        builder.Configuration.GetSection(
+            NoteReviewOptions.SectionName))
+    .Validate(
+        options =>
+            options.AutoApproveThreshold
+                is >= 0 and <= 100,
+        "Otomatik onay sınırı 0-100 arasında olmalıdır.")
+    .Validate(
+        options =>
+            options.Weights.Total == 100,
+        "Not inceleme ağırlıklarının toplamı 100 olmalıdır.")
+    .ValidateOnStart();
+
+builder.Services
+    .AddOptions<OpenAiOptions>()
+    .Bind(
+        builder.Configuration.GetSection(
+            OpenAiOptions.SectionName))
+    .Validate(
+        options =>
+            !string.IsNullOrWhiteSpace(
+                options.ApiKey),
+        "OpenAI API anahtarı tanımlı olmalıdır.")
+    .Validate(
+        options =>
+            !string.IsNullOrWhiteSpace(
+                options.Model),
+        "OpenAI model adı tanımlı olmalıdır.")
+    .Validate(
+        options =>
+            Uri.TryCreate(
+                options.BaseUrl,
+                UriKind.Absolute,
+                out _),
+        "OpenAI BaseUrl geçerli bir adres olmalıdır.")
+    .Validate(
+        options =>
+            options.MaxOutputTokens > 0,
+        "OpenAI çıktı token sınırı pozitif olmalıdır.")
+    .Validate(
+        options =>
+            options.MaxDocumentBytes > 0,
+        "OpenAI belge boyutu sınırı pozitif olmalıdır.")
+    .ValidateOnStart();
+
+/*
+ * Controller ve OpenAPI
+ */
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
+/*
+ * Veritabanı
+ */
+builder.Services.AddDbContext<AppDbContext>(
+    options =>
+        options.UseNpgsql(
+            builder.Configuration
+                .GetConnectionString(
+                    "DefaultConnection")));
+
+/*
+ * Akademik katalog servisleri
+ */
+builder.Services.AddScoped<AcademicCatalogLoader>();
+builder.Services.AddScoped<AcademicCatalogValidator>();
+builder.Services.AddScoped<AcademicCatalogImporter>();
+
+/*
+ * Uygulama servisleri
+ */
+builder.Services.AddScoped<
+    ITokenService,
+    TokenService>();
+
+builder.Services.AddScoped<
+    IAuditService,
+    AuditService>();
+
+/*
+ * Belge saklama servisleri
+ */
+builder.Services.AddSingleton<
+    IVerificationDocumentStorage,
+    LocalVerificationDocumentStorage>();
+
+builder.Services.AddSingleton<
+    INoteDocumentStorage,
+    LocalNoteDocumentStorage>();
+
+/*
+ * AI not inceleme servisleri
+ */
+builder.Services.AddSingleton<
+    NoteReviewScoreCalculator>();
+
+builder.Services.AddHttpClient<
+    INoteReviewService,
+    OpenAiNoteReviewService>(
+        (serviceProvider, client) =>
+        {
+            var openAiOptions =
+                serviceProvider
+                    .GetRequiredService<
+                        IOptions<OpenAiOptions>>()
+                    .Value;
+
+            client.BaseAddress =
+                new Uri(
+                    openAiOptions.BaseUrl);
+
+            client.Timeout =
+                TimeSpan.FromMinutes(5);
+        });
+
+builder.Services.AddScoped<
+    INoteReviewOrchestrator,
+    NoteReviewOrchestrator>();
+
+/*
+ * AI inceleme kuyruğu uygulama boyunca
+ * tek örnek olarak çalışır.
+ */
+builder.Services.AddSingleton<
+    INoteReviewQueue,
+    NoteReviewQueue>();
+
+/*
+ * Kuyruktaki notları arka planda işler.
+ */
+builder.Services.AddHostedService<
+    NoteReviewBackgroundService>();
+
+/*
+ * Rate limiter
+ */
 builder.Services.AddRateLimiter(options =>
 {
     options.AddPolicy(
@@ -27,37 +166,39 @@ builder.Services.AddRateLimiter(options =>
         httpContext =>
         {
             var partitionKey =
-                httpContext.Connection.RemoteIpAddress
+                httpContext.Connection
+                    .RemoteIpAddress
                     ?.ToString() ??
                 "unknown";
 
             return RateLimitPartition
                 .GetFixedWindowLimiter(
                     partitionKey,
-                    _ => new FixedWindowRateLimiterOptions
-                    {
-                        PermitLimit = 60,
-                        Window = TimeSpan.FromMinutes(1),
-                        QueueLimit = 0,
-                        AutoReplenishment = true
-                    });
+                    _ =>
+                        new FixedWindowRateLimiterOptions
+                        {
+                            PermitLimit =
+                                60,
+
+                            Window =
+                                TimeSpan.FromMinutes(1),
+
+                            QueueLimit =
+                                0,
+
+                            AutoReplenishment =
+                                true
+                        });
         });
 });
 
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(
-        builder.Configuration.GetConnectionString(
-            "DefaultConnection")));
-
-builder.Services.AddScoped<ITokenService, TokenService>();
-builder.Services.AddScoped<IAuditService, AuditService>();
-
-builder.Services.AddSingleton<
-    IVerificationDocumentStorage,
-    LocalVerificationDocumentStorage>();
-
-var jwtKey = builder.Configuration["Jwt:Key"]
-    ?? throw new InvalidOperationException(
+/*
+ * JWT yapılandırması
+ */
+var jwtKey =
+    builder.Configuration["Jwt:Key"]
+    ??
+    throw new InvalidOperationException(
         "Jwt:Key tanımlı değil.");
 
 if (Encoding.UTF8.GetByteCount(jwtKey) < 32)
@@ -74,34 +215,52 @@ builder.Services
         options.TokenValidationParameters =
             new TokenValidationParameters
             {
-                ValidateIssuer = true,
+                ValidateIssuer =
+                    true,
+
                 ValidIssuer =
-                    builder.Configuration["Jwt:Issuer"],
+                    builder.Configuration[
+                        "Jwt:Issuer"],
 
-                ValidateAudience = true,
+                ValidateAudience =
+                    true,
+
                 ValidAudience =
-                    builder.Configuration["Jwt:Audience"],
+                    builder.Configuration[
+                        "Jwt:Audience"],
 
-                ValidateLifetime = true,
+                ValidateLifetime =
+                    true,
 
-                ValidateIssuerSigningKey = true,
+                ValidateIssuerSigningKey =
+                    true,
+
                 IssuerSigningKey =
                     new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(jwtKey)),
+                        Encoding.UTF8.GetBytes(
+                            jwtKey)),
 
-                ClockSkew = TimeSpan.FromMinutes(1)
+                ClockSkew =
+                    TimeSpan.FromMinutes(1)
             };
     });
 
+/*
+ * Yetkilendirme politikaları
+ */
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy(
         "AdminOnly",
-        policy => policy.RequireRole("Admin"));
+        policy =>
+            policy.RequireRole(
+                "Admin"));
 
     options.AddPolicy(
         "StudentOnly",
-        policy => policy.RequireRole("Student"));
+        policy =>
+            policy.RequireRole(
+                "Student"));
 });
 
 /*
@@ -112,46 +271,52 @@ builder.Services.AddAuthorization(options =>
  * - 10.x.x.x:5173
  * - 172.16.x.x - 172.31.x.x:5173
  *
- * adreslerinden gelen frontend isteklerine izin verir.
+ * adreslerinden gelen frontend isteklerine
+ * izin verir.
  */
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("Frontend", policy =>
-    {
-        if (builder.Environment.IsDevelopment())
+    options.AddPolicy(
+        "Frontend",
+        policy =>
         {
-            policy
-                .SetIsOriginAllowed(
-                    IsAllowedDevelopmentOrigin)
-                .AllowAnyHeader()
-                .AllowAnyMethod();
-        }
-        else
-        {
-            var allowedOrigins = builder.Configuration
-                .GetSection("Cors:AllowedOrigins")
-                .Get<string[]>() ?? [];
+            if (builder.Environment.IsDevelopment())
+            {
+                policy
+                    .SetIsOriginAllowed(
+                        IsAllowedDevelopmentOrigin)
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            }
+            else
+            {
+                var allowedOrigins =
+                    builder.Configuration
+                        .GetSection(
+                            "Cors:AllowedOrigins")
+                        .Get<string[]>() ??
+                    [];
 
-            policy
-                .WithOrigins(allowedOrigins)
-                .AllowAnyHeader()
-                .AllowAnyMethod();
-        }
-    });
+                policy
+                    .WithOrigins(
+                        allowedOrigins)
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            }
+        });
 });
 
 var app = builder.Build();
 
+/*
+ * HTTP pipeline
+ */
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 else
 {
-    /*
-     * Yerel mobil testte HTTP kullanıyoruz.
-     * HTTPS yönlendirmesi yalnızca üretimde devreye girer.
-     */
     app.UseHttpsRedirection();
 }
 
@@ -164,11 +329,16 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+/*
+ * Migration, seed ve akademik katalog
+ * başlangıç işlemleri
+ */
 await using (var scope =
     app.Services.CreateAsyncScope())
 {
-    var db = scope.ServiceProvider
-        .GetRequiredService<AppDbContext>();
+    var db =
+        scope.ServiceProvider
+            .GetRequiredService<AppDbContext>();
 
     await db.Database.MigrateAsync();
 
@@ -211,10 +381,12 @@ app.Run();
 static bool IsAllowedDevelopmentOrigin(
     string origin)
 {
-    if (!Uri.TryCreate(
+    if (
+        !Uri.TryCreate(
             origin,
             UriKind.Absolute,
-            out var uri))
+            out var uri)
+    )
     {
         return false;
     }
@@ -244,10 +416,12 @@ static bool IsAllowedDevelopmentOrigin(
         return false;
     }
 
-    if (string.Equals(
+    if (
+        string.Equals(
             uri.Host,
             "localhost",
-            StringComparison.OrdinalIgnoreCase))
+            StringComparison.OrdinalIgnoreCase)
+    )
     {
         return true;
     }
@@ -257,18 +431,25 @@ static bool IsAllowedDevelopmentOrigin(
         return true;
     }
 
-    if (!IPAddress.TryParse(uri.Host, out var ip))
+    if (
+        !IPAddress.TryParse(
+            uri.Host,
+            out var ip)
+    )
     {
         return false;
     }
 
-    if (ip.AddressFamily !=
-        AddressFamily.InterNetwork)
+    if (
+        ip.AddressFamily !=
+        AddressFamily.InterNetwork
+    )
     {
         return false;
     }
 
-    var bytes = ip.GetAddressBytes();
+    var bytes =
+        ip.GetAddressBytes();
 
     /*
      * 10.0.0.0/8
@@ -281,9 +462,11 @@ static bool IsAllowedDevelopmentOrigin(
     /*
      * 172.16.0.0/12
      */
-    if (bytes[0] == 172 &&
+    if (
+        bytes[0] == 172 &&
         bytes[1] >= 16 &&
-        bytes[1] <= 31)
+        bytes[1] <= 31
+    )
     {
         return true;
     }
@@ -291,6 +474,7 @@ static bool IsAllowedDevelopmentOrigin(
     /*
      * 192.168.0.0/16
      */
-    return bytes[0] == 192 &&
-           bytes[1] == 168;
+    return
+        bytes[0] == 192 &&
+        bytes[1] == 168;
 }
