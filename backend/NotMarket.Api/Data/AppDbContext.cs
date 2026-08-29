@@ -398,15 +398,61 @@ public sealed class AppDbContext(
                 table.HasCheckConstraint(
                     "CK_NoteSubmissions_SalePrice",
                     "\"SalePrice\" IS NULL OR \"SalePrice\" > 0");
+
+                table.HasCheckConstraint(
+                    "CK_NoteSubmissions_PdfGenerationAttemptCount",
+                    "\"PdfGenerationAttemptCount\" >= 0");
             });
 
         noteSubmission.Property(
                 x => x.SalePrice)
-            .HasPrecision(18, 2);
+            .HasPrecision(
+                18,
+                2);
 
         noteSubmission.Property(
                 x => x.Status)
             .HasConversion<string>();
+
+        noteSubmission.Property(
+                x => x.PdfGenerationAttemptCount)
+            .HasDefaultValue(
+                0);
+
+        noteSubmission.Property(
+                x => x.PdfGenerationError)
+            .HasMaxLength(
+                2000);
+
+        noteSubmission.Property(
+                x => x.PdfGenerationModelName)
+            .HasMaxLength(
+                100);
+
+        noteSubmission.Property(
+                x => x.PdfConversionPromptVersion)
+            .HasMaxLength(
+                100);
+
+        noteSubmission.Property(
+                x => x.PdfTemplateVersion)
+            .HasMaxLength(
+                100);
+
+        noteSubmission.Property(
+                x => x.PdfCompilerName)
+            .HasMaxLength(
+                100);
+
+        noteSubmission.HasIndex(
+            x => x.Status);
+
+        noteSubmission.HasIndex(
+            x => new
+            {
+                x.Status,
+                x.CreatedAt
+            });
 
         noteSubmission.HasOne(
                 x => x.Seller)

@@ -59,6 +59,15 @@ public sealed class OpenAiNoteReviewService(
                 },
                 JsonOptions);
 
+        /*
+         * Responses API, doğrudan gönderilen
+         * dosya verisini data URL biçiminde bekler.
+         */
+        var fileData =
+            "data:application/pdf;base64," +
+            Convert.ToBase64String(
+                bytes);
+
         var payload =
             new
             {
@@ -78,12 +87,17 @@ public sealed class OpenAiNoteReviewService(
                     - departmentMatch: İçeriğin belirtilen bölümle akademik uyumu.
                     - contentCompleteness: İçeriğin bütünlüğü, kapsamı ve kullanılabilirliği.
                     - originalityAndReliability: İçeriğin özgünlük ve akademik güvenilirliği.
+                    - confidenceScore: Değerlendirmenin güven seviyesi.
 
                     Toplam puanı sen hesaplama.
                     Yalnızca bileşen puanlarını ve bulguları döndür.
 
+                    findings alanında en fazla 12 kısa ve açıklayıcı bulgu döndür.
+
                     Belge boş, bozuk, şifreli veya anlamlı şekilde okunamıyorsa
                     isTechnicallyValid alanını false yap.
+
+                    Tespit edilemeyen ders veya bölüm bilgisini null olarak döndür.
                     Eksik bilgileri tahmin etme.
                     """,
 
@@ -92,7 +106,8 @@ public sealed class OpenAiNoteReviewService(
                     {
                         new
                         {
-                            role = "user",
+                            role =
+                                "user",
 
                             content =
                                 new object[]
@@ -103,7 +118,7 @@ public sealed class OpenAiNoteReviewService(
                                             "input_text",
 
                                         text =
-                                            "Aşağıdaki PDF'i bu ders ve bölüm bilgilerine göre değerlendir:\n" +
+                                            "Aşağıdaki PDF'i ders, bölüm ve talep bilgilerine göre değerlendir:\n" +
                                             metadata
                                     },
 
@@ -116,8 +131,7 @@ public sealed class OpenAiNoteReviewService(
                                             input.FileName,
 
                                         file_data =
-                                            Convert.ToBase64String(
-                                                bytes)
+                                            fileData
                                     }
                                 }
                         }
@@ -170,16 +184,22 @@ public sealed class OpenAiNoteReviewService(
                 request,
                 cancellationToken);
 
-        if (!response.IsSuccessStatusCode)
-        {
-            throw new HttpRequestException(
-                $"OpenAI isteği başarısız oldu. HTTP durum kodu: {(int)response.StatusCode}.");
-        }
-
+        /*
+         * Yanıt gövdesi başarı ve hata
+         * durumlarında yalnızca bir kez okunur.
+         */
         var responseJson =
             await response.Content
                 .ReadAsStringAsync(
                     cancellationToken);
+
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new HttpRequestException(
+                $"OpenAI isteği başarısız oldu. " +
+                $"HTTP durum kodu: {(int)response.StatusCode}. " +
+                $"OpenAI yanıtı: {responseJson}");
+        }
 
         using var responseDocument =
             JsonDocument.Parse(
@@ -189,14 +209,25 @@ public sealed class OpenAiNoteReviewService(
             ExtractOutputText(
                 responseDocument.RootElement);
 
-        var aiResult =
-            JsonSerializer.Deserialize<
-                OpenAiEvaluationResponse>(
-                    outputText,
-                    JsonOptions)
-            ??
+        OpenAiEvaluationResponse aiResult;
+
+        try
+        {
+            aiResult =
+                JsonSerializer.Deserialize<
+                    OpenAiEvaluationResponse>(
+                        outputText,
+                        JsonOptions)
+                ??
+                throw new InvalidOperationException(
+                    "OpenAI değerlendirme sonucu boş döndü.");
+        }
+        catch (JsonException exception)
+        {
             throw new InvalidOperationException(
-                "OpenAI değerlendirme sonucu çözümlenemedi.");
+                "OpenAI değerlendirme sonucu geçerli JSON biçiminde değil.",
+                exception);
+        }
 
         var evaluation =
             new AiNoteEvaluation(
@@ -315,7 +346,8 @@ public sealed class OpenAiNoteReviewService(
                     isTechnicallyValid =
                         new
                         {
-                            type = "boolean"
+                            type =
+                                "boolean"
                         },
 
                     readability =
@@ -339,18 +371,24 @@ public sealed class OpenAiNoteReviewService(
                     summary =
                         new
                         {
-                            type = "string"
+                            type =
+                                "string"
                         },
 
                     findings =
                         new
                         {
-                            type = "array",
-                            maxItems = 12,
+                            type =
+                                "array",
+
+                            maxItems =
+                                12,
+
                             items =
                                 new
                                 {
-                                    type = "string"
+                                    type =
+                                        "string"
                                 }
                         },
 
@@ -399,15 +437,50 @@ public sealed class OpenAiNoteReviewService(
     {
         return new
         {
-            type = "integer",
-            minimum = 0,
-            maximum = 100
+            type =
+                "integer",
+
+            minimum =
+                0,
+
+            maximum =
+                100
         };
     }
 
     private static string ExtractOutputText(
         JsonElement response)
     {
+        /*
+         * Responses API başarılı HTTP koduyla
+         * incomplete veya failed döndürebilir.
+         */
+        if (
+            response.TryGetProperty(
+                "error",
+                out var error) &&
+            error.ValueKind !=
+                JsonValueKind.Null
+        )
+        {
+            throw new InvalidOperationException(
+                $"OpenAI değerlendirme hatası: {error.GetRawText()}");
+        }
+
+        if (
+            response.TryGetProperty(
+                "status",
+                out var status) &&
+            status.ValueKind ==
+                JsonValueKind.String &&
+            status.GetString() is
+                "failed" or "cancelled"
+        )
+        {
+            throw new InvalidOperationException(
+                $"OpenAI değerlendirmesi tamamlanamadı. Yanıt: {response.GetRawText()}");
+        }
+
         if (
             !response.TryGetProperty(
                 "output",
@@ -453,7 +526,45 @@ public sealed class OpenAiNoteReviewService(
                         throw new InvalidOperationException(
                             "OpenAI boş değerlendirme döndürdü.");
                 }
+
+                if (
+                    contentItem.TryGetProperty(
+                        "type",
+                        out var refusalType) &&
+                    refusalType.GetString() ==
+                        "refusal"
+                )
+                {
+                    var refusalMessage =
+                        contentItem.TryGetProperty(
+                            "refusal",
+                            out var refusal)
+                            ? refusal.GetString()
+                            : null;
+
+                    throw new InvalidOperationException(
+                        "OpenAI belge değerlendirmesini reddetti." +
+                        (
+                            string.IsNullOrWhiteSpace(
+                                refusalMessage)
+                                ? string.Empty
+                                : $" Açıklama: {refusalMessage}"
+                        ));
+                }
             }
+        }
+
+        if (
+            response.TryGetProperty(
+                "incomplete_details",
+                out var incompleteDetails) &&
+            incompleteDetails.ValueKind !=
+                JsonValueKind.Null
+        )
+        {
+            throw new InvalidOperationException(
+                $"OpenAI değerlendirmesi eksik tamamlandı. " +
+                $"Ayrıntı: {incompleteDetails.GetRawText()}");
         }
 
         throw new InvalidOperationException(

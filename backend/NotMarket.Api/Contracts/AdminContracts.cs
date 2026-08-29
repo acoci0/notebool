@@ -72,6 +72,13 @@ public sealed record AdminNoteSubmissionDto(
     decimal? SalePrice,
     string Status,
     string? GeneratedPdfBlobPath,
+    int PdfGenerationAttemptCount,
+    string? PdfGenerationError,
+    DateTimeOffset? PdfGeneratedAt,
+    string? PdfGenerationModelName,
+    string? PdfConversionPromptVersion,
+    string? PdfTemplateVersion,
+    string? PdfCompilerName,
     DateTimeOffset CreatedAt);
 
 /*

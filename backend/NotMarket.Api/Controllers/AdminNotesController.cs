@@ -14,7 +14,10 @@ namespace NotMarket.Api.Controllers;
 [Authorize(Policy = "AdminOnly")]
 public sealed class AdminNotesController(
     AppDbContext db,
-    IAuditService auditService) : ControllerBase
+    IAuditService auditService,
+    INotePdfGenerationQueue pdfGenerationQueue,
+    INoteDocumentStorage storage)
+    : ControllerBase
 {
     /*
      * Admin incelemesindeki notları listeler.
@@ -23,7 +26,8 @@ public sealed class AdminNotesController(
      */
     [HttpGet]
     public async Task<
-        ActionResult<IReadOnlyList<AdminNoteSubmissionDto>>>
+        ActionResult<
+            IReadOnlyList<AdminNoteSubmissionDto>>>
         Get(
             [FromQuery]
             NoteSubmissionStatus? status,
@@ -32,15 +36,19 @@ public sealed class AdminNotesController(
         var query =
             db.NoteSubmissions
                 .AsNoTracking()
-                .Include(x => x.Seller)
-                .Include(x => x.Request)
+                .Include(
+                    x => x.Seller)
+                .Include(
+                    x => x.Request)
                 .AsQueryable();
 
         if (status is not null)
         {
             query =
                 query.Where(
-                    x => x.Status == status);
+                    x =>
+                        x.Status ==
+                        status);
         }
 
         var items =
@@ -48,33 +56,119 @@ public sealed class AdminNotesController(
                 .OrderByDescending(
                     x => x.CreatedAt)
                 .Select(
-                    x => new AdminNoteSubmissionDto(
-                        x.Id,
-                        x.Title,
-                        x.Seller.DisplayName,
-                        x.Request.UniversityName,
-                        x.Request.DepartmentName,
-                        x.Request.CourseName,
-                        x.MatchScore,
-                        x.ReadabilityScore,
-                        x.OriginalityRiskScore,
-                        x.Request.SuggestedMinPrice,
-                        x.Request.SuggestedMaxPrice,
-                        x.SalePrice,
-                        x.Status.ToString(),
-                        x.GeneratedPdfBlobPath,
-                        x.CreatedAt))
+                    x =>
+                        new AdminNoteSubmissionDto(
+                            x.Id,
+                            x.Title,
+                            x.Seller.DisplayName,
+                            x.Request.UniversityName,
+                            x.Request.DepartmentName,
+                            x.Request.CourseName,
+                            x.MatchScore,
+                            x.ReadabilityScore,
+                            x.OriginalityRiskScore,
+                            x.Request.SuggestedMinPrice,
+                            x.Request.SuggestedMaxPrice,
+                            x.SalePrice,
+                            x.Status.ToString(),
+                            x.GeneratedPdfBlobPath,
+                            x.PdfGenerationAttemptCount,
+                            x.PdfGenerationError,
+                            x.PdfGeneratedAt,
+                            x.PdfGenerationModelName,
+                            x.PdfConversionPromptVersion,
+                            x.PdfTemplateVersion,
+                            x.PdfCompilerName,
+                            x.CreatedAt))
                 .ToListAsync(
                     cancellationToken);
 
-        return Ok(items);
+        return Ok(
+            items);
     }
 
     /*
-     * Admin notu onaylar veya reddeder.
+    * Admin oluşturulmuş PDF dosyasını indirir.
+    *
+    * GET:
+    * /api/admin/notes/{submissionId}/generated-document
+    */
+    [HttpGet(
+        "{submissionId:guid}/generated-document")]
+    public async Task<IActionResult>
+        GetGeneratedDocument(
+            Guid submissionId,
+            CancellationToken cancellationToken)
+    {
+        var submission =
+            await db.NoteSubmissions
+                .AsNoTracking()
+                .Where(
+                    x =>
+                        x.Id ==
+                            submissionId)
+                .Select(
+                    x => new
+                    {
+                        x.Id,
+                        x.Status,
+                        x.GeneratedPdfBlobPath
+                    })
+                .SingleOrDefaultAsync(
+                    cancellationToken);
+
+        if (submission is null)
+        {
+            return NotFound(new
+            {
+                message =
+                    "Not kaydı bulunamadı."
+            });
+        }
+
+        if (
+            string.IsNullOrWhiteSpace(
+                submission.GeneratedPdfBlobPath)
+        )
+        {
+            return Conflict(new
+            {
+                message =
+                    "Bu not için oluşturulmuş PDF dosyası bulunmuyor."
+            });
+        }
+
+        var stream =
+            await storage.OpenReadAsync(
+                submission.GeneratedPdfBlobPath,
+                cancellationToken);
+
+        if (stream is null)
+        {
+            return NotFound(new
+            {
+                message =
+                    "Oluşturulmuş PDF dosyası storage alanında bulunamadı."
+            });
+        }
+
+        return File(
+            stream,
+            "application/pdf",
+            $"notmarket-{submission.Id:N}.pdf",
+            enableRangeProcessing:
+                true);
+    }
+
+    /*
+     * Admin manuel incelemedeki notu
+     * onaylar veya reddeder.
      *
-     * Onay sırasında satış fiyatı zorunludur
-     * ve sistemin önerdiği aralıkta olmalıdır.
+     * Onay:
+     * ManualReview → PdfGeneration
+     *
+     * Ret:
+     * ManualReview → Rejected
      *
      * POST:
      * /api/admin/notes/{submissionId}/decision
@@ -95,9 +189,12 @@ public sealed class AdminNotesController(
 
         var submission =
             await db.NoteSubmissions
-                .Include(x => x.Request)
+                .Include(
+                    x => x.Request)
                 .SingleOrDefaultAsync(
-                    x => x.Id == submissionId,
+                    x =>
+                        x.Id ==
+                            submissionId,
                     cancellationToken);
 
         if (submission is null)
@@ -109,10 +206,6 @@ public sealed class AdminNotesController(
             });
         }
 
-        /*
-         * Tamamlanmış bir kararın yanlışlıkla
-         * tekrar değiştirilmesini engeller.
-         */
         if (
             submission.Status !=
             NoteSubmissionStatus.ManualReview
@@ -140,18 +233,6 @@ public sealed class AdminNotesController(
 
         if (request.Approve)
         {
-            if (
-                string.IsNullOrWhiteSpace(
-                    submission.GeneratedPdfBlobPath)
-            )
-            {
-                return BadRequest(new
-                {
-                    message =
-                        "Oluşturulmuş PDF dosyası bulunmayan not onaylanamaz."
-                });
-            }
-
             if (
                 request.SalePrice is null ||
                 request.SalePrice <= 0
@@ -191,15 +272,18 @@ public sealed class AdminNotesController(
 
         submission.Status =
             request.Approve
-                ? NoteSubmissionStatus.Approved
-                : NoteSubmissionStatus.Rejected;
+                ? NoteSubmissionStatus
+                    .PdfGeneration
+                : NoteSubmissionStatus
+                    .Rejected;
 
         submission.SalePrice =
             request.Approve
                 ? decimal.Round(
                     request.SalePrice!.Value,
                     2,
-                    MidpointRounding.AwayFromZero)
+                    MidpointRounding
+                        .AwayFromZero)
                 : null;
 
         submission.ReviewNote =
@@ -214,13 +298,32 @@ public sealed class AdminNotesController(
         submission.ReviewedAt =
             DateTimeOffset.UtcNow;
 
+        submission.PdfGenerationError =
+            null;
+
         await db.SaveChangesAsync(
             cancellationToken);
+
+        /*
+         * Admin onayında PDF üretimi
+         * arka plan kuyruğuna gönderilir.
+         */
+        if (request.Approve)
+        {
+            using var enqueueTimeout =
+                new CancellationTokenSource(
+                    TimeSpan.FromSeconds(10));
+
+            await pdfGenerationQueue
+                .EnqueueAsync(
+                    submission.Id,
+                    enqueueTimeout.Token);
+        }
 
         await auditService.WriteAsync(
             adminId.Value,
             request.Approve
-                ? "NOTE_APPROVED"
+                ? "NOTE_PDF_GENERATION_REQUESTED"
                 : "NOTE_REJECTED",
             nameof(NoteSubmission),
             submission.Id.ToString(),
@@ -228,16 +331,144 @@ public sealed class AdminNotesController(
             {
                 submission.ReviewNote,
                 submission.SalePrice,
+
+                Status =
+                    submission.Status
+                        .ToString(),
+
                 SuggestedMinPrice =
                     submission.Request
                         .SuggestedMinPrice,
+
                 SuggestedMaxPrice =
                     submission.Request
                         .SuggestedMaxPrice
             },
             cancellationToken);
 
+        if (request.Approve)
+        {
+            return Accepted(new
+            {
+                submissionId =
+                    submission.Id,
+
+                status =
+                    NoteSubmissionStatus
+                        .PdfGeneration
+                        .ToString(),
+
+                message =
+                    "Not onaylandı ve PDF üretim kuyruğuna gönderildi."
+            });
+        }
+
         return NoContent();
+    }
+
+    /*
+     * Başarısız PDF üretimini admin
+     * yeniden kuyruğa gönderir.
+     *
+     * POST:
+     * /api/admin/notes/{submissionId}/retry-pdf-generation
+     */
+    [HttpPost(
+        "{submissionId:guid}/retry-pdf-generation")]
+    public async Task<IActionResult>
+        RetryPdfGeneration(
+            Guid submissionId,
+            CancellationToken cancellationToken)
+    {
+        var adminId =
+            GetAdminId();
+
+        if (adminId is null)
+        {
+            return Unauthorized();
+        }
+
+        var submission =
+            await db.NoteSubmissions
+                .SingleOrDefaultAsync(
+                    x =>
+                        x.Id ==
+                            submissionId,
+                    cancellationToken);
+
+        if (submission is null)
+        {
+            return NotFound(new
+            {
+                message =
+                    "Not kaydı bulunamadı."
+            });
+        }
+
+        if (
+            submission.Status !=
+            NoteSubmissionStatus
+                .PdfGenerationFailed
+        )
+        {
+            return Conflict(new
+            {
+                message =
+                    "Yalnızca PDF üretimi başarısız olan notlar yeniden denenebilir."
+            });
+        }
+
+        /*
+         * İlk onayın varlığı korunur.
+         * Yalnızca üretim durumu ve son hata
+         * temizlenir.
+         */
+        submission.Status =
+            NoteSubmissionStatus
+                .PdfGeneration;
+
+        submission.PdfGenerationError =
+            null;
+
+        await db.SaveChangesAsync(
+            cancellationToken);
+
+        using var enqueueTimeout =
+            new CancellationTokenSource(
+                TimeSpan.FromSeconds(10));
+
+        await pdfGenerationQueue.EnqueueAsync(
+            submission.Id,
+            enqueueTimeout.Token);
+
+        await auditService.WriteAsync(
+            adminId.Value,
+            "NOTE_PDF_GENERATION_RETRIED",
+            nameof(NoteSubmission),
+            submission.Id.ToString(),
+            new
+            {
+                submission
+                    .PdfGenerationAttemptCount,
+
+                Status =
+                    submission.Status
+                        .ToString()
+            },
+            cancellationToken);
+
+        return Accepted(new
+        {
+            submissionId =
+                submission.Id,
+
+            status =
+                submission.Status
+                    .ToString(),
+
+            message =
+                "Not yeniden PDF üretim kuyruğuna gönderildi."
+        });
     }
 
     private Guid? GetAdminId()

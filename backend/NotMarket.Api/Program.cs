@@ -68,6 +68,47 @@ builder.Services
         "OpenAI belge boyutu sınırı pozitif olmalıdır.")
     .ValidateOnStart();
 
+builder.Services
+    .AddOptions<NotePdfGenerationOptions>()
+    .Bind(
+        builder.Configuration.GetSection(
+            NotePdfGenerationOptions
+                .SectionName))
+    .Validate(
+        options =>
+            !options.Enabled ||
+            !string.IsNullOrWhiteSpace(
+                options.Model),
+        "PDF üretim modeli tanımlı olmalıdır.")
+    .Validate(
+        options =>
+            !options.Enabled ||
+            !string.IsNullOrWhiteSpace(
+                options.CompilerPath),
+        "LaTeX derleyici yolu tanımlı olmalıdır.")
+    .Validate(
+        options =>
+            options.MaxOutputTokens > 0,
+        "PDF içerik dönüşümü çıktı token sınırı pozitif olmalıdır.")
+    .Validate(
+        options =>
+            options.TimeoutSeconds > 0,
+        "PDF derleme zaman aşımı pozitif olmalıdır.")
+    .Validate(
+        options =>
+            options.MaxSourceCharacters > 0,
+        "Maksimum LaTeX kaynak uzunluğu pozitif olmalıdır.")
+    .Validate(
+        options =>
+            options.MaxGeneratedPdfBytes > 0,
+        "Maksimum oluşturulan PDF boyutu pozitif olmalıdır.")
+    .Validate(
+        options =>
+            !string.IsNullOrWhiteSpace(
+                options.TemplateVersion),
+        "LaTeX şablon sürümü tanımlı olmalıdır.")
+    .ValidateOnStart();
+
 /*
  * Controller ve OpenAPI
  */
@@ -155,6 +196,66 @@ builder.Services.AddSingleton<
  */
 builder.Services.AddHostedService<
     NoteReviewBackgroundService>();
+
+/*
+ * OpenAI belge içerik dönüştürme servisi
+ */
+builder.Services.AddHttpClient<
+    INoteContentConversionService,
+    OpenAiNoteContentConversionService>(
+        (serviceProvider, client) =>
+        {
+            var openAiOptions =
+                serviceProvider
+                    .GetRequiredService<
+                        IOptions<OpenAiOptions>>()
+                    .Value;
+
+            client.BaseAddress =
+                new Uri(
+                    openAiOptions.BaseUrl);
+
+            client.Timeout =
+                TimeSpan.FromMinutes(10);
+        });
+
+/*
+ * Güvenli LaTeX oluşturma ve PDF
+ * derleme servisleri
+ */
+builder.Services.AddSingleton<
+    LatexSecurityValidator>();
+
+builder.Services.AddSingleton<
+    ILatexDocumentRenderer,
+    LatexDocumentRenderer>();
+
+builder.Services.AddSingleton<
+    ILatexPdfCompiler,
+    TectonicLatexPdfCompiler>();
+
+/*
+ * PDF üretim orchestrator'ı her işlemde
+ * yeni DbContext kullanabilmek için scoped
+ * olarak kaydedilir.
+ */
+builder.Services.AddScoped<
+    INotePdfGenerationOrchestrator,
+    NotePdfGenerationOrchestrator>();
+
+/*
+ * PDF üretim kuyruğu uygulama boyunca
+ * tek örnek olarak çalışır.
+ */
+builder.Services.AddSingleton<
+    INotePdfGenerationQueue,
+    NotePdfGenerationQueue>();
+
+/*
+ * PDF üretim kuyruğunu arka planda işler.
+ */
+builder.Services.AddHostedService<
+    NotePdfGenerationBackgroundService>();
 
 /*
  * Rate limiter

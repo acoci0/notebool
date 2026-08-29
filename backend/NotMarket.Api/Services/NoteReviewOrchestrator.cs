@@ -10,6 +10,7 @@ public sealed class NoteReviewOrchestrator(
     AppDbContext db,
     INoteDocumentStorage storage,
     INoteReviewService reviewService,
+    INotePdfGenerationQueue pdfGenerationQueue,
     IOptions<OpenAiOptions> openAiOptions)
     : INoteReviewOrchestrator
 {
@@ -225,6 +226,20 @@ public sealed class NoteReviewOrchestrator(
 
             await db.SaveChangesAsync(
                 cancellationToken);
+
+            /*
+            * AI otomatik onay verdiyse not artık
+            * PDF üretim kuyruğuna gönderilir.
+            */
+            if (
+                result.Decision ==
+                NoteReviewDecision.AutoApprove
+            )
+            {
+                await pdfGenerationQueue.EnqueueAsync(
+                    submission.Id,
+                    cancellationToken);
+            }
 
             return result;
         }

@@ -28,7 +28,9 @@ public enum NoteSubmissionStatus
     ManualReview = 3,
     Approved = 4,
     Rejected = 5,
-    PdfGeneration = 6
+    PdfGeneration = 6,
+    PdfGenerating = 7,
+    PdfGenerationFailed = 8
 }
 
 public enum AcademicUnitType
