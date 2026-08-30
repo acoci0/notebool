@@ -187,10 +187,9 @@ public sealed class LatexSecurityValidator
             latex.Any(
                 character =>
                     char.IsControl(character) &&
-                    character is not
-                        '\r' and
-                        '\n' and
-                        '\t')
+                    character != '\r' &&
+                    character != '\n' &&
+                    character != '\t')
         )
         {
             throw new InvalidOperationException(

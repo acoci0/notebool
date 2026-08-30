@@ -367,8 +367,12 @@ public sealed class AdminNotesController(
     }
 
     /*
-     * Başarısız PDF üretimini admin
-     * yeniden kuyruğa gönderir.
+     * Başarısız PDF üretimini yeniden dener
+     * veya daha önce oluşturulmuş PDF'i güncel
+     * şablonla yeniden üretir.
+     *
+     * Mevcut oluşturulmuş PDF, yeni PDF başarıyla
+     * kaydedilene kadar korunur.
      *
      * POST:
      * /api/admin/notes/{submissionId}/retry-pdf-generation
@@ -405,23 +409,38 @@ public sealed class AdminNotesController(
             });
         }
 
-        if (
-            submission.Status !=
-            NoteSubmissionStatus
-                .PdfGenerationFailed
-        )
+        var isRegeneration =
+            submission.Status ==
+            NoteSubmissionStatus.Approved;
+
+        var canGenerate =
+            submission.Status ==
+                NoteSubmissionStatus
+                    .PdfGenerationFailed ||
+            submission.Status ==
+                NoteSubmissionStatus
+                    .Approved;
+
+        if (!canGenerate)
         {
             return Conflict(new
             {
                 message =
-                    "Yalnızca PDF üretimi başarısız olan notlar yeniden denenebilir."
+                    "Yalnızca PDF üretimi başarısız olan veya onaylanmış notlar yeniden üretilebilir.",
+
+                currentStatus =
+                    submission.Status
+                        .ToString()
             });
         }
 
         /*
-         * İlk onayın varlığı korunur.
-         * Yalnızca üretim durumu ve son hata
-         * temizlenir.
+         * Daha önce oluşturulmuş PDF yolu
+         * temizlenmez. Yeni PDF başarıyla
+         * oluşturulana kadar eski dosya korunur.
+         *
+         * Orchestrator yeni PDF veritabanına
+         * kaydedildikten sonra eski dosyayı siler.
          */
         submission.Status =
             NoteSubmissionStatus
@@ -433,17 +452,58 @@ public sealed class AdminNotesController(
         await db.SaveChangesAsync(
             cancellationToken);
 
-        using var enqueueTimeout =
-            new CancellationTokenSource(
+        try
+        {
+            using var enqueueTimeout =
+                CancellationTokenSource
+                    .CreateLinkedTokenSource(
+                        cancellationToken);
+
+            enqueueTimeout.CancelAfter(
                 TimeSpan.FromSeconds(10));
 
-        await pdfGenerationQueue.EnqueueAsync(
-            submission.Id,
-            enqueueTimeout.Token);
+            await pdfGenerationQueue.EnqueueAsync(
+                submission.Id,
+                enqueueTimeout.Token);
+        }
+        catch
+        {
+            /*
+             * Kuyruğa ekleme başarısız olursa
+             * önceki durum geri yüklenir.
+             */
+            submission.Status =
+                isRegeneration
+                    ? NoteSubmissionStatus
+                        .Approved
+                    : NoteSubmissionStatus
+                        .PdfGenerationFailed;
+
+            submission.PdfGenerationError =
+                "PDF üretim isteği kuyruğa eklenemedi.";
+
+            try
+            {
+                await db.SaveChangesAsync(
+                    CancellationToken.None);
+            }
+            catch
+            {
+                /*
+                 * İlk kuyruğa ekleme hatasının
+                 * kaybolmaması için geri alma
+                 * hatası burada yutulur.
+                 */
+            }
+
+            throw;
+        }
 
         await auditService.WriteAsync(
             adminId.Value,
-            "NOTE_PDF_GENERATION_RETRIED",
+            isRegeneration
+                ? "NOTE_PDF_REGENERATION_REQUESTED"
+                : "NOTE_PDF_GENERATION_RETRIED",
             nameof(NoteSubmission),
             submission.Id.ToString(),
             new
@@ -451,9 +511,23 @@ public sealed class AdminNotesController(
                 submission
                     .PdfGenerationAttemptCount,
 
+                PreviousStatus =
+                    isRegeneration
+                        ? NoteSubmissionStatus
+                            .Approved
+                            .ToString()
+                        : NoteSubmissionStatus
+                            .PdfGenerationFailed
+                            .ToString(),
+
                 Status =
                     submission.Status
-                        .ToString()
+                        .ToString(),
+
+                PreviousPdfPreserved =
+                    !string.IsNullOrWhiteSpace(
+                        submission
+                            .GeneratedPdfBlobPath)
             },
             cancellationToken);
 
@@ -467,11 +541,12 @@ public sealed class AdminNotesController(
                     .ToString(),
 
             message =
-                "Not yeniden PDF üretim kuyruğuna gönderildi."
+                isRegeneration
+                    ? "Onaylanmış not güncel şablonla yeniden PDF üretim kuyruğuna gönderildi."
+                    : "Not yeniden PDF üretim kuyruğuna gönderildi."
         });
     }
-
-    private Guid? GetAdminId()
+        private Guid? GetAdminId()
     {
         var value =
             User.FindFirstValue(

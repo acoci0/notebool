@@ -14,12 +14,11 @@ public sealed class LatexDocumentRenderer(
         \documentclass[11pt,a4paper]{article}
 
         \usepackage{fontspec}
-        \usepackage{unicode-math}
         \usepackage{geometry}
         \usepackage{xcolor}
         \usepackage{amsmath}
-        \usepackage{amssymb}
         \usepackage{mathtools}
+        \usepackage{unicode-math}
         \usepackage{enumitem}
         \usepackage[most]{tcolorbox}
         \usepackage{fancyhdr}
@@ -27,8 +26,8 @@ public sealed class LatexDocumentRenderer(
         \usepackage{hyperref}
         \usepackage{microtype}
 
-        \setmainfont{Latin Modern Roman}
-        \setmathfont{Latin Modern Math}
+        \setmainfont{Verdana}
+        \setmathfont{STIX Two Math}
 
         \geometry{
           top=22mm,
@@ -75,6 +74,7 @@ public sealed class LatexDocumentRenderer(
 
         \setlength{\parindent}{0pt}
         \setlength{\parskip}{0.75em}
+
         \setlist[itemize]{
           leftmargin=1.8em,
           itemsep=0.35em,
@@ -182,8 +182,7 @@ public sealed class LatexDocumentRenderer(
 
             source.AppendLine(
                 EscapeText(
-                    input.Document
-                        .Introduction));
+                    input.Document.Introduction));
 
             source.AppendLine();
         }
@@ -494,7 +493,10 @@ public sealed class LatexDocumentRenderer(
         StringBuilder source,
         string? text)
     {
-        if (string.IsNullOrWhiteSpace(text))
+        if (
+            string.IsNullOrWhiteSpace(
+                text)
+        )
         {
             return;
         }
@@ -512,7 +514,10 @@ public sealed class LatexDocumentRenderer(
         string title,
         string? text)
     {
-        if (string.IsNullOrWhiteSpace(text))
+        if (
+            string.IsNullOrWhiteSpace(
+                text)
+        )
         {
             return;
         }
@@ -553,11 +558,24 @@ public sealed class LatexDocumentRenderer(
         StringBuilder source,
         IReadOnlyList<string> items)
     {
+        if (items.Count == 0)
+        {
+            return;
+        }
+
         source.AppendLine(
             @"\begin{itemize}");
 
         foreach (var item in items)
         {
+            if (
+                string.IsNullOrWhiteSpace(
+                    item)
+            )
+            {
+                continue;
+            }
+
             source.Append(
                 @"\item ");
 
@@ -582,7 +600,7 @@ public sealed class LatexDocumentRenderer(
 
         var escaped =
             new StringBuilder(
-                value.Length + 32);
+                value.Length + 64);
 
         foreach (var character in value)
         {
@@ -636,6 +654,236 @@ public sealed class LatexDocumentRenderer(
                 case '^':
                     escaped.Append(
                         @"\textasciicircum{}");
+                    break;
+
+                /*
+                 * Normal metin içerisinde gelen
+                 * Unicode matematik sembolleri,
+                 * matematik fontuyla gösterilmesi
+                 * için güvenli LaTeX komutlarına
+                 * dönüştürülür.
+                 */
+                case '→':
+                    escaped.Append(
+                        @"\(\rightarrow\)");
+                    break;
+
+                case '←':
+                    escaped.Append(
+                        @"\(\leftarrow\)");
+                    break;
+
+                case '↔':
+                    escaped.Append(
+                        @"\(\leftrightarrow\)");
+                    break;
+
+                case '⇒':
+                case '⟹':
+                    escaped.Append(
+                        @"\(\Rightarrow\)");
+                    break;
+
+                case '⇐':
+                case '⟸':
+                    escaped.Append(
+                        @"\(\Leftarrow\)");
+                    break;
+
+                case '⇔':
+                case '⟺':
+                    escaped.Append(
+                        @"\(\Leftrightarrow\)");
+                    break;
+
+                case '↦':
+                    escaped.Append(
+                        @"\(\mapsto\)");
+                    break;
+
+                case '¬':
+                    escaped.Append(
+                        @"\(\neg\)");
+                    break;
+
+                case '∧':
+                    escaped.Append(
+                        @"\(\land\)");
+                    break;
+
+                case '∨':
+                    escaped.Append(
+                        @"\(\lor\)");
+                    break;
+
+                case '∀':
+                    escaped.Append(
+                        @"\(\forall\)");
+                    break;
+
+                case '∃':
+                    escaped.Append(
+                        @"\(\exists\)");
+                    break;
+
+                case '∄':
+                    escaped.Append(
+                        @"\(\nexists\)");
+                    break;
+
+                case '∈':
+                    escaped.Append(
+                        @"\(\in\)");
+                    break;
+
+                case '∉':
+                    escaped.Append(
+                        @"\(\notin\)");
+                    break;
+
+                case '⊂':
+                    escaped.Append(
+                        @"\(\subset\)");
+                    break;
+
+                case '⊆':
+                    escaped.Append(
+                        @"\(\subseteq\)");
+                    break;
+
+                case '⊃':
+                    escaped.Append(
+                        @"\(\supset\)");
+                    break;
+
+                case '⊇':
+                    escaped.Append(
+                        @"\(\supseteq\)");
+                    break;
+
+                case '∩':
+                    escaped.Append(
+                        @"\(\cap\)");
+                    break;
+
+                case '∪':
+                    escaped.Append(
+                        @"\(\cup\)");
+                    break;
+
+                case '∅':
+                    escaped.Append(
+                        @"\(\varnothing\)");
+                    break;
+
+                case '≠':
+                    escaped.Append(
+                        @"\(\neq\)");
+                    break;
+
+                case '≤':
+                    escaped.Append(
+                        @"\(\leq\)");
+                    break;
+
+                case '≥':
+                    escaped.Append(
+                        @"\(\geq\)");
+                    break;
+
+                case '≈':
+                    escaped.Append(
+                        @"\(\approx\)");
+                    break;
+
+                case '≡':
+                    escaped.Append(
+                        @"\(\equiv\)");
+                    break;
+
+                case '±':
+                    escaped.Append(
+                        @"\(\pm\)");
+                    break;
+
+                case '×':
+                    escaped.Append(
+                        @"\(\times\)");
+                    break;
+
+                case '÷':
+                    escaped.Append(
+                        @"\(\div\)");
+                    break;
+
+                case '∞':
+                    escaped.Append(
+                        @"\(\infty\)");
+                    break;
+
+                case '√':
+                    escaped.Append(
+                        @"\(\sqrt{\vphantom{x}}\)");
+                    break;
+
+                case '∑':
+                    escaped.Append(
+                        @"\(\sum\)");
+                    break;
+
+                case '∏':
+                    escaped.Append(
+                        @"\(\prod\)");
+                    break;
+
+                case '∫':
+                    escaped.Append(
+                        @"\(\int\)");
+                    break;
+
+                case '∂':
+                    escaped.Append(
+                        @"\(\partial\)");
+                    break;
+
+                case '∴':
+                    escaped.Append(
+                        @"\(\therefore\)");
+                    break;
+
+                case '⊥':
+                    escaped.Append(
+                        @"\(\bot\)");
+                    break;
+
+                case '⊤':
+                    escaped.Append(
+                        @"\(\top\)");
+                    break;
+
+                case 'ℕ':
+                    escaped.Append(
+                        @"\(\mathbb{N}\)");
+                    break;
+
+                case 'ℤ':
+                    escaped.Append(
+                        @"\(\mathbb{Z}\)");
+                    break;
+
+                case 'ℚ':
+                    escaped.Append(
+                        @"\(\mathbb{Q}\)");
+                    break;
+
+                case 'ℝ':
+                    escaped.Append(
+                        @"\(\mathbb{R}\)");
+                    break;
+
+                case 'ℂ':
+                    escaped.Append(
+                        @"\(\mathbb{C}\)");
                     break;
 
                 case '\r':

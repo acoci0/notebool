@@ -20,6 +20,16 @@ public sealed class OpenAiNoteContentConversionService(
                     true
             };
 
+    private static readonly char[]
+        InvalidPlaceholderCharacters =
+        [
+            '□',
+            '■',
+            '▯',
+            '◻',
+            '�'
+        ];
+
     private readonly OpenAiOptions
         _openAiOptions =
             openAiOptions.Value;
@@ -111,6 +121,8 @@ public sealed class OpenAiNoteContentConversionService(
                     16. Liste maddelerini items alanında ayrı ayrı döndür.
                     17. Kullanılmayan nullable alanları null olarak döndür.
                     18. Kullanılmayan items alanını boş dizi olarak döndür.
+                    19. Matematiksel ifadeleri eksik veya bozuk karakterlerle döndürme.
+                    20. Mantık bağlaçlarının anlamını başka bir bağlaçla değiştirme.
 
                     Desteklenen blok türleri:
 
@@ -135,8 +147,10 @@ public sealed class OpenAiNoteContentConversionService(
                       İçerik text alanında olmalıdır.
 
                     - solution:
-                      Örnek veya sorunun çözümü.
-                      İçerik text alanında olmalıdır.
+                      Örnek veya sorunun sözel çözümü.
+                      Sözel açıklama text alanında olmalıdır.
+                      Çözümde formül varsa formülü solution bloğunun latex alanına koyma.
+                      Formülü hemen ardından ayrı bir equation bloğu olarak döndür.
 
                     - list:
                       Maddeli içerik.
@@ -145,6 +159,65 @@ public sealed class OpenAiNoteContentConversionService(
                     - warning:
                       Önemli not veya dikkat edilmesi gereken bilgi.
                       İçerik text alanında olmalıdır.
+
+                    Mantık ve matematik sembolleri için aşağıdaki kurallar zorunludur:
+
+                    - Değil bağlacı: ¬
+                    - Ve bağlacı: ∧
+                    - Veya bağlacı: ∨
+                    - İse bağlacı: →
+                    - Ancak ve ancak bağlacı: ↔
+                    - Evrensel niceleyici: ∀
+                    - Varoluş niceleyicisi: ∃
+                    - Elemanıdır: ∈
+                    - Alt kümedir: ⊆
+                    - Denk değildir: ≠
+                    - Küçük eşittir: ≤
+                    - Büyük eşittir: ≥
+
+                    Başlık ve açıklama metinlerinde mantık bağlaçlarının
+                    gerçek Unicode karakterlerini kullan.
+
+                    Başlık ve açıklama alanlarında:
+
+                    - "ve" bağlacının sembolik kullanımı gerekiyorsa ∧ kullan.
+                    - "veya" bağlacının sembolik kullanımı gerekiyorsa ∨ kullan.
+                    - "ise" bağlacının sembolik kullanımı gerekiyorsa → kullan.
+                    - "ancak ve ancak" için ↔ kullan.
+                    - "değil" için ¬ kullan.
+
+                    equation türündeki blokların latex alanında Unicode sembol yerine
+                    yalnızca geçerli LaTeX komutları kullan:
+
+                    - ¬ için \neg
+                    - ∧ için \land
+                    - ∨ için \lor
+                    - → için \rightarrow
+                    - ↔ için \leftrightarrow
+                    - ⇒ için \Rightarrow
+                    - ⇔ için \Leftrightarrow
+                    - ∀ için \forall
+                    - ∃ için \exists
+                    - ∈ için \in
+                    - ∉ için \notin
+                    - ⊂ için \subset
+                    - ⊆ için \subseteq
+                    - ∪ için \cup
+                    - ∩ için \cap
+                    - ∅ için \varnothing
+                    - ≠ için \neq
+                    - ≤ için \leq
+                    - ≥ için \geq
+
+                    □, ■, ▯, ◻ ve � karakterlerini hiçbir alanda kullanma.
+
+                    Okunamayan veya belirsiz matematik sembolünü tahmin etme.
+                    Belirsiz sembol bulunuyorsa kare veya yer tutucu karakter
+                    yazmak yerine "okunamayan matematik sembolü" ifadesini kullan.
+
+                    Yanıtı vermeden önce title, subtitle, introduction,
+                    heading, text, latex ve items alanlarının hiçbirinde
+                    bozuk kare veya yer tutucu karakter bulunmadığını kontrol et.
 
                     Çıktı dili Türkçe olmalıdır.
                     Çıktıyı yalnızca verilen JSON şemasına göre oluştur.
@@ -168,6 +241,7 @@ public sealed class OpenAiNoteContentConversionService(
 
                                         text =
                                             "Aşağıdaki üniversite ders notunu yapılandırılmış belge modeline dönüştür.\n" +
+                                            "Mantık sembollerini eksiksiz ve doğru biçimde koru.\n" +
                                             "Talep ve ders bilgileri:\n" +
                                             metadata
                                     },
@@ -276,6 +350,16 @@ public sealed class OpenAiNoteContentConversionService(
                 exception);
         }
 
+        /*
+         * OpenAI bazı çözüm veya açıklama bloklarında
+         * matematiksel içeriği doğrudan latex alanına
+         * koyabilir. İçerik doğrulanmadan önce güvenli
+         * bloklara ayrılır ve semboller standartlaştırılır.
+         */
+        document =
+            NormalizeDocument(
+                document);
+
         ValidateConvertedDocument(
             document);
 
@@ -338,9 +422,458 @@ public sealed class OpenAiNoteContentConversionService(
         }
     }
 
+    private static NoteDocumentModel
+        NormalizeDocument(
+            NoteDocumentModel document)
+    {
+        var normalizedDocument =
+            document with
+            {
+                Title =
+                    NormalizeTextSymbols(
+                        document.Title)
+                    ??
+                    document.Title,
+
+                Subtitle =
+                    NormalizeTextSymbols(
+                        document.Subtitle),
+
+                Introduction =
+                    NormalizeTextSymbols(
+                        document.Introduction)
+            };
+
+        if (document.Sections is null)
+        {
+            return normalizedDocument;
+        }
+
+        var normalizedSections =
+            document.Sections
+                .Select(
+                    section =>
+                    {
+                        var normalizedHeading =
+                            NormalizeTextSymbols(
+                                section.Heading)
+                            ??
+                            section.Heading;
+
+                        if (section.Blocks is null)
+                        {
+                            return section with
+                            {
+                                Heading =
+                                    normalizedHeading
+                            };
+                        }
+
+                        return section with
+                        {
+                            Heading =
+                                normalizedHeading,
+
+                            Blocks =
+                                NormalizeBlocks(
+                                    section.Blocks)
+                        };
+                    })
+                .ToList();
+
+        return normalizedDocument with
+        {
+            Sections =
+                normalizedSections
+        };
+    }
+
+    private static IReadOnlyList<NoteDocumentBlock>
+        NormalizeBlocks(
+            IReadOnlyList<NoteDocumentBlock> blocks)
+    {
+        var normalizedBlocks =
+            new List<NoteDocumentBlock>();
+
+        foreach (var originalBlock in blocks)
+        {
+            var normalizedItems =
+                (
+                    originalBlock.Items ??
+                    []
+                )
+                .Select(
+                    item =>
+                        NormalizeTextSymbols(
+                            item)
+                        ??
+                        string.Empty)
+                .ToList();
+
+            var block =
+                originalBlock with
+                {
+                    Heading =
+                        NormalizeTextSymbols(
+                            originalBlock.Heading),
+
+                    Text =
+                        NormalizeTextSymbols(
+                            originalBlock.Text),
+
+                    Latex =
+                        NormalizeLatexSymbols(
+                            originalBlock.Latex),
+
+                    Items =
+                        normalizedItems
+                };
+
+            var hasText =
+                !string.IsNullOrWhiteSpace(
+                    block.Text);
+
+            var hasLatex =
+                !string.IsNullOrWhiteSpace(
+                    block.Latex);
+
+            var hasItems =
+                block.Items.Count > 0;
+
+            /*
+             * Tamamen boş blok burada korunur.
+             * Sonraki doğrulama aşaması geçersiz
+             * içeriği açıkça reddeder.
+             */
+            if (
+                !hasText &&
+                !hasLatex &&
+                !hasItems
+            )
+            {
+                normalizedBlocks.Add(
+                    block);
+
+                continue;
+            }
+
+            var headingUsed =
+                false;
+
+            /*
+             * Equation ve list bloklarındaki açıklama
+             * metinleri paragraph bloğuna dönüştürülür.
+             * Diğer türler semantik türlerini korur.
+             */
+            if (hasText)
+            {
+                var textBlockType =
+                    block.Type is
+                        NoteDocumentBlockTypes.Equation or
+                        NoteDocumentBlockTypes.List
+                        ? NoteDocumentBlockTypes.Paragraph
+                        : block.Type;
+
+                normalizedBlocks.Add(
+                    new NoteDocumentBlock(
+                        textBlockType,
+                        block.Heading,
+                        block.Text,
+                        null,
+                        []));
+
+                headingUsed =
+                    true;
+            }
+
+            /*
+             * Herhangi bir blokta items bulunursa
+             * bağımsız list bloğuna taşınır.
+             */
+            if (hasItems)
+            {
+                normalizedBlocks.Add(
+                    new NoteDocumentBlock(
+                        NoteDocumentBlockTypes.List,
+                        headingUsed
+                            ? null
+                            : block.Heading,
+                        null,
+                        null,
+                        block.Items));
+
+                headingUsed =
+                    true;
+            }
+
+            /*
+             * LaTeX yalnızca equation bloğunda
+             * bulunabilir. Diğer blokların LaTeX
+             * içeriği ayrı equation bloğuna taşınır.
+             */
+            if (hasLatex)
+            {
+                normalizedBlocks.Add(
+                    new NoteDocumentBlock(
+                        NoteDocumentBlockTypes.Equation,
+                        headingUsed
+                            ? null
+                            : block.Heading,
+                        null,
+                        block.Latex,
+                        []));
+
+                headingUsed =
+                    true;
+            }
+        }
+
+        return normalizedBlocks;
+    }
+
+    private static string?
+        NormalizeTextSymbols(
+            string? value)
+    {
+        if (value is null)
+        {
+            return null;
+        }
+
+        return value
+            .Replace(
+                "⋀",
+                "∧",
+                StringComparison.Ordinal)
+            .Replace(
+                "⋁",
+                "∨",
+                StringComparison.Ordinal)
+            .Replace(
+                "⟶",
+                "→",
+                StringComparison.Ordinal)
+            .Replace(
+                "⟵",
+                "←",
+                StringComparison.Ordinal)
+            .Replace(
+                "⟷",
+                "↔",
+                StringComparison.Ordinal)
+            .Replace(
+                "⟹",
+                "⇒",
+                StringComparison.Ordinal)
+            .Replace(
+                "⟸",
+                "⇐",
+                StringComparison.Ordinal)
+            .Replace(
+                "⟺",
+                "⇔",
+                StringComparison.Ordinal);
+    }
+
+    private static string?
+        NormalizeLatexSymbols(
+            string? value)
+    {
+        if (value is null)
+        {
+            return null;
+        }
+
+        return value
+            .Replace(
+                "⟺",
+                @"\Leftrightarrow ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⇔",
+                @"\Leftrightarrow ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⟹",
+                @"\Rightarrow ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⇒",
+                @"\Rightarrow ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⟸",
+                @"\Leftarrow ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⇐",
+                @"\Leftarrow ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⟷",
+                @"\leftrightarrow ",
+                StringComparison.Ordinal)
+            .Replace(
+                "↔",
+                @"\leftrightarrow ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⟶",
+                @"\rightarrow ",
+                StringComparison.Ordinal)
+            .Replace(
+                "→",
+                @"\rightarrow ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⟵",
+                @"\leftarrow ",
+                StringComparison.Ordinal)
+            .Replace(
+                "←",
+                @"\leftarrow ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⋀",
+                @"\land ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∧",
+                @"\land ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⋁",
+                @"\lor ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∨",
+                @"\lor ",
+                StringComparison.Ordinal)
+            .Replace(
+                "¬",
+                @"\neg ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∀",
+                @"\forall ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∃",
+                @"\exists ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∄",
+                @"\nexists ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∉",
+                @"\notin ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∈",
+                @"\in ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⊆",
+                @"\subseteq ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⊂",
+                @"\subset ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⊇",
+                @"\supseteq ",
+                StringComparison.Ordinal)
+            .Replace(
+                "⊃",
+                @"\supset ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∪",
+                @"\cup ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∩",
+                @"\cap ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∅",
+                @"\varnothing ",
+                StringComparison.Ordinal)
+            .Replace(
+                "≠",
+                @"\neq ",
+                StringComparison.Ordinal)
+            .Replace(
+                "≤",
+                @"\leq ",
+                StringComparison.Ordinal)
+            .Replace(
+                "≥",
+                @"\geq ",
+                StringComparison.Ordinal)
+            .Replace(
+                "≈",
+                @"\approx ",
+                StringComparison.Ordinal)
+            .Replace(
+                "≡",
+                @"\equiv ",
+                StringComparison.Ordinal)
+            .Replace(
+                "±",
+                @"\pm ",
+                StringComparison.Ordinal)
+            .Replace(
+                "×",
+                @"\times ",
+                StringComparison.Ordinal)
+            .Replace(
+                "÷",
+                @"\div ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∞",
+                @"\infty ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∑",
+                @"\sum ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∏",
+                @"\prod ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∫",
+                @"\int ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∂",
+                @"\partial ",
+                StringComparison.Ordinal)
+            .Replace(
+                "∴",
+                @"\therefore ",
+                StringComparison.Ordinal);
+    }
+
     private static void ValidateConvertedDocument(
         NoteDocumentModel document)
     {
+        ValidateNoPlaceholderCharacters(
+            document.Title,
+            "Belge başlığı");
+
+        ValidateNoPlaceholderCharacters(
+            document.Subtitle,
+            "Belge alt başlığı");
+
+        ValidateNoPlaceholderCharacters(
+            document.Introduction,
+            "Belge giriş metni");
+
         if (
             string.IsNullOrWhiteSpace(
                 document.Title)
@@ -377,6 +910,10 @@ public sealed class OpenAiNoteContentConversionService(
         foreach (var section
                  in document.Sections)
         {
+            ValidateNoPlaceholderCharacters(
+                section.Heading,
+                "Bölüm başlığı");
+
             if (
                 string.IsNullOrWhiteSpace(
                     section.Heading)
@@ -419,6 +956,29 @@ public sealed class OpenAiNoteContentConversionService(
     private static void ValidateBlock(
         NoteDocumentBlock block)
     {
+        ValidateNoPlaceholderCharacters(
+            block.Heading,
+            $"{block.Type} başlığı");
+
+        ValidateNoPlaceholderCharacters(
+            block.Text,
+            $"{block.Type} metni");
+
+        ValidateNoPlaceholderCharacters(
+            block.Latex,
+            $"{block.Type} LaTeX içeriği");
+
+        var blockItems =
+            block.Items ??
+            [];
+
+        foreach (var item in blockItems)
+        {
+            ValidateNoPlaceholderCharacters(
+                item,
+                $"{block.Type} liste maddesi");
+        }
+
         if (
             !NoteDocumentBlockTypes
                 .IsSupported(
@@ -471,23 +1031,20 @@ public sealed class OpenAiNoteContentConversionService(
                 break;
 
             case NoteDocumentBlockTypes.List:
-                if (
-                    block.Items is null ||
-                    block.Items.Count == 0
-                )
+                if (blockItems.Count == 0)
                 {
                     throw new InvalidOperationException(
                         "Liste bloğunda madde bulunmuyor.");
                 }
 
-                if (block.Items.Count > 200)
+                if (blockItems.Count > 200)
                 {
                     throw new InvalidOperationException(
                         "Liste bloğu izin verilenden fazla madde içeriyor.");
                 }
 
                 if (
-                    block.Items.Any(
+                    blockItems.Any(
                         item =>
                             string.IsNullOrWhiteSpace(
                                 item) ||
@@ -512,6 +1069,33 @@ public sealed class OpenAiNoteContentConversionService(
 
                 break;
         }
+    }
+
+    private static void
+        ValidateNoPlaceholderCharacters(
+            string? value,
+            string fieldName)
+    {
+        if (string.IsNullOrEmpty(value))
+        {
+            return;
+        }
+
+        var invalidCharacterIndex =
+            value.IndexOfAny(
+                InvalidPlaceholderCharacters);
+
+        if (invalidCharacterIndex < 0)
+        {
+            return;
+        }
+
+        var invalidCharacter =
+            value[invalidCharacterIndex];
+
+        throw new InvalidOperationException(
+            $"{fieldName} bozuk veya belirsiz " +
+            $"'{invalidCharacter}' karakterini içeriyor.");
     }
 
     private static object CreateResponseSchema()
