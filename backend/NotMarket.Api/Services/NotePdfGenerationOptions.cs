@@ -70,5 +70,5 @@ public sealed class NotePdfGenerationOptions
      * LaTeX şablonunun sürümü.
      */
     public string TemplateVersion { get; set; } =
-        "note-pdf-template-v1";
+        "note-pdf-template-v5";
 }

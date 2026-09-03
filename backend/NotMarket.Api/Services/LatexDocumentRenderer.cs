@@ -26,8 +26,13 @@ public sealed class LatexDocumentRenderer(
         \usepackage{hyperref}
         \usepackage{microtype}
 
-        \setmainfont{Verdana}
-        \setmathfont{STIX Two Math}
+        \setmainfont[
+        BoldFont=texgyreheros-bold.otf,
+        ItalicFont=texgyreheros-italic.otf,
+        BoldItalicFont=texgyreheros-bolditalic.otf
+        ]{texgyreheros-regular.otf}
+
+        \setmathfont{texgyretermes-math.otf}
 
         \geometry{
           top=22mm,
