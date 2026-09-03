@@ -30,11 +30,14 @@ public sealed class NotePdfGenerationBackgroundService(
                 stoppingToken);
 
             await foreach (
-                var noteSubmissionId
+                var queueItem
                 in queue.ReadAllAsync(
                     stoppingToken)
             )
             {
+                var noteSubmissionId =
+                    queueItem.NoteSubmissionId;
+
                 try
                 {
                     await using var scope =
@@ -47,8 +50,10 @@ public sealed class NotePdfGenerationBackgroundService(
                                 INotePdfGenerationOrchestrator>();
 
                     logger.LogInformation(
-                        "Not PDF üretimi başladı. NoteSubmissionId: {NoteSubmissionId}",
-                        noteSubmissionId);
+                        "Not PDF üretimi başladı. " +
+                        "NoteSubmissionId: {NoteSubmissionId}, " +
+                        "Mode: {Mode}",
+                        noteSubmissionId, queueItem.Mode);
 
                     var result =
                         await orchestrator

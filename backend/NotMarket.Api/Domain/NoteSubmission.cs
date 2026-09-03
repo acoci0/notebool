@@ -98,4 +98,8 @@ public sealed class NoteSubmission
 
     public ICollection<Order> Orders { get; set; } =
         [];
+
+    public NotePdfGenerationArtifact?
+        PdfGenerationArtifact { get; set; }
+
 }

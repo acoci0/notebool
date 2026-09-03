@@ -31,8 +31,12 @@ public sealed class AppDbContext(
     public DbSet<NoteSubmission> NoteSubmissions =>
         Set<NoteSubmission>();
 
+    public DbSet<NotePdfGenerationArtifact>
+        NotePdfGenerationArtifacts =>
+            Set<NotePdfGenerationArtifact>();
+
     public DbSet<NoteAiReview> NoteAiReviews =>
-    Set<NoteAiReview>();
+        Set<NoteAiReview>();
 
     public DbSet<AuditLog> AuditLogs =>
         Set<AuditLog>();
@@ -58,6 +62,7 @@ public sealed class AppDbContext(
         ConfigureAcademicProgram(modelBuilder);
         ConfigureStudentVerification(modelBuilder);
         ConfigureNoteSubmission(modelBuilder);
+        ConfigureNotePdfGenerationArtifact(modelBuilder);
         ConfigureNoteAiReview(modelBuilder);
         ConfigureOrder(modelBuilder);
         ConfigurePayment(modelBuilder);
@@ -71,13 +76,16 @@ public sealed class AppDbContext(
         var user =
             modelBuilder.Entity<ApplicationUser>();
 
-        user.HasIndex(x => x.Email)
+        user.HasIndex(
+                x => x.Email)
             .IsUnique();
 
-        user.Property(x => x.Role)
+        user.Property(
+                x => x.Role)
             .HasConversion<string>();
 
-        user.Property(x => x.Status)
+        user.Property(
+                x => x.Status)
             .HasConversion<string>();
     }
 
@@ -416,33 +424,27 @@ public sealed class AppDbContext(
 
         noteSubmission.Property(
                 x => x.PdfGenerationAttemptCount)
-            .HasDefaultValue(
-                0);
+            .HasDefaultValue(0);
 
         noteSubmission.Property(
                 x => x.PdfGenerationError)
-            .HasMaxLength(
-                2000);
+            .HasMaxLength(2000);
 
         noteSubmission.Property(
                 x => x.PdfGenerationModelName)
-            .HasMaxLength(
-                100);
+            .HasMaxLength(100);
 
         noteSubmission.Property(
                 x => x.PdfConversionPromptVersion)
-            .HasMaxLength(
-                100);
+            .HasMaxLength(100);
 
         noteSubmission.Property(
                 x => x.PdfTemplateVersion)
-            .HasMaxLength(
-                100);
+            .HasMaxLength(100);
 
         noteSubmission.Property(
                 x => x.PdfCompilerName)
-            .HasMaxLength(
-                100);
+            .HasMaxLength(100);
 
         noteSubmission.HasIndex(
             x => x.Status);
@@ -463,6 +465,73 @@ public sealed class AppDbContext(
             .OnDelete(
                 DeleteBehavior.Restrict);
     }
+
+    private static void
+        ConfigureNotePdfGenerationArtifact(
+            ModelBuilder modelBuilder)
+    {
+        var artifact =
+            modelBuilder.Entity<
+                NotePdfGenerationArtifact>();
+
+        artifact.ToTable(
+            "NotePdfGenerationArtifacts");
+
+        artifact.HasKey(
+            x => x.Id);
+
+        artifact.Property(
+                x => x.SourceDocumentSha256)
+            .HasMaxLength(64)
+            .IsRequired();
+
+        artifact.Property(
+                x => x.DocumentModelJson)
+            .HasColumnType("jsonb")
+            .IsRequired();
+
+        artifact.Property(
+                x => x.LatexSource)
+            .HasColumnType("text")
+            .IsRequired();
+
+        artifact.Property(
+                x => x.ModelName)
+            .HasMaxLength(100)
+            .IsRequired();
+
+        artifact.Property(
+                x => x.PromptVersion)
+            .HasMaxLength(100)
+            .IsRequired();
+
+        artifact.Property(
+                x => x.TemplateVersion)
+            .HasMaxLength(100)
+            .IsRequired();
+
+        /*
+         * Her not gönderimi için yalnızca
+         * bir güncel önbellek kaydı tutulur.
+         */
+        artifact.HasIndex(
+                x => x.NoteSubmissionId)
+            .IsUnique();
+
+        artifact.HasIndex(
+            x => x.SourceDocumentSha256);
+
+        artifact.HasOne(
+                x => x.NoteSubmission)
+            .WithOne(
+                x => x.PdfGenerationArtifact)
+            .HasForeignKey<
+                NotePdfGenerationArtifact>(
+                x => x.NoteSubmissionId)
+            .OnDelete(
+                DeleteBehavior.Cascade);
+    }
+
     private static void ConfigureNoteAiReview(
         ModelBuilder modelBuilder)
     {
@@ -485,51 +554,66 @@ public sealed class AppDbContext(
                     "\"ConfidenceScore\" BETWEEN 0 AND 100");
             });
 
-        review.HasKey(x => x.Id);
+        review.HasKey(
+            x => x.Id);
 
-        review.Property(x => x.Decision)
+        review.Property(
+                x => x.Decision)
             .HasConversion<string>()
             .HasMaxLength(30);
 
-        review.Property(x => x.Summary)
+        review.Property(
+                x => x.Summary)
             .HasMaxLength(2000)
             .IsRequired();
 
-        review.Property(x => x.FindingsJson)
+        review.Property(
+                x => x.FindingsJson)
             .HasColumnType("jsonb")
             .IsRequired();
 
-        review.Property(x => x.DetectedCourse)
+        review.Property(
+                x => x.DetectedCourse)
             .HasMaxLength(220);
 
-        review.Property(x => x.DetectedDepartment)
+        review.Property(
+                x => x.DetectedDepartment)
             .HasMaxLength(220);
 
-        review.Property(x => x.ModelName)
+        review.Property(
+                x => x.ModelName)
             .HasMaxLength(100)
             .IsRequired();
 
-        review.Property(x => x.PromptVersion)
+        review.Property(
+                x => x.PromptVersion)
             .HasMaxLength(50)
             .IsRequired();
 
-        review.HasOne(x => x.NoteSubmission)
-            .WithMany(x => x.AiReviews)
-            .HasForeignKey(x => x.NoteSubmissionId)
-            .OnDelete(DeleteBehavior.Cascade);
+        review.HasOne(
+                x => x.NoteSubmission)
+            .WithMany(
+                x => x.AiReviews)
+            .HasForeignKey(
+                x => x.NoteSubmissionId)
+            .OnDelete(
+                DeleteBehavior.Cascade);
 
-        review.HasIndex(x => new
-        {
-            x.NoteSubmissionId,
-            x.ReviewedAt
-        });
+        review.HasIndex(
+            x => new
+            {
+                x.NoteSubmissionId,
+                x.ReviewedAt
+            });
 
-        review.HasIndex(x => new
-        {
-            x.Decision,
-            x.ReviewedAt
-        });
+        review.HasIndex(
+            x => new
+            {
+                x.Decision,
+                x.ReviewedAt
+            });
     }
+
     private static void ConfigureOrder(
         ModelBuilder modelBuilder)
     {
@@ -566,15 +650,21 @@ public sealed class AppDbContext(
 
         order.Property(
                 x => x.GrossAmount)
-            .HasPrecision(18, 2);
+            .HasPrecision(
+                18,
+                2);
 
         order.Property(
                 x => x.PlatformCommissionAmount)
-            .HasPrecision(18, 2);
+            .HasPrecision(
+                18,
+                2);
 
         order.Property(
                 x => x.SellerEarningAmount)
-            .HasPrecision(18, 2);
+            .HasPrecision(
+                18,
+                2);
 
         order.Property(
                 x => x.Currency)
@@ -663,7 +753,9 @@ public sealed class AppDbContext(
 
         payment.Property(
                 x => x.Amount)
-            .HasPrecision(18, 2);
+            .HasPrecision(
+                18,
+                2);
 
         payment.Property(
                 x => x.Currency)

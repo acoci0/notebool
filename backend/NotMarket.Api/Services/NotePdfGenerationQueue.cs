@@ -8,42 +8,69 @@ public sealed class NotePdfGenerationQueue
     private const int QueueCapacity =
         2000;
 
-    private readonly Channel<Guid> _channel =
-        Channel.CreateBounded<Guid>(
-            new BoundedChannelOptions(
-                QueueCapacity)
-            {
-                FullMode =
-                    BoundedChannelFullMode.Wait,
+    private readonly
+        Channel<NotePdfGenerationQueueItem>
+        _channel =
+            Channel.CreateBounded<
+                NotePdfGenerationQueueItem>(
+                new BoundedChannelOptions(
+                    QueueCapacity)
+                {
+                    FullMode =
+                        BoundedChannelFullMode.Wait,
 
-                SingleReader =
-                    true,
+                    SingleReader =
+                        true,
 
-                SingleWriter =
-                    false,
+                    SingleWriter =
+                        false,
 
-                AllowSynchronousContinuations =
-                    false
-            });
+                    AllowSynchronousContinuations =
+                        false
+                });
 
     public ValueTask EnqueueAsync(
         Guid noteSubmissionId,
         CancellationToken cancellationToken)
     {
-        if (noteSubmissionId == Guid.Empty)
-        {
-            throw new ArgumentException(
-                "PDF üretim kuyruğu için not gönderim ID'si geçersiz.",
-                nameof(noteSubmissionId));
-        }
-
-        return _channel.Writer.WriteAsync(
-            noteSubmissionId,
+        return EnqueueAsync(
+            new NotePdfGenerationQueueItem(
+                noteSubmissionId,
+                NotePdfGenerationMode
+                    .UseCachedContent),
             cancellationToken);
     }
 
-    public IAsyncEnumerable<Guid> ReadAllAsync(
+    public ValueTask EnqueueAsync(
+        NotePdfGenerationQueueItem item,
         CancellationToken cancellationToken)
+    {
+        ArgumentNullException.ThrowIfNull(
+            item);
+
+        if (item.NoteSubmissionId == Guid.Empty)
+        {
+            throw new ArgumentException(
+                "PDF üretim kuyruğu için not gönderim ID'si geçersiz.",
+                nameof(item));
+        }
+
+        if (!Enum.IsDefined(item.Mode))
+        {
+            throw new ArgumentOutOfRangeException(
+                nameof(item),
+                "PDF üretim modu geçersiz.");
+        }
+
+        return _channel.Writer.WriteAsync(
+            item,
+            cancellationToken);
+    }
+
+    public IAsyncEnumerable<
+        NotePdfGenerationQueueItem>
+        ReadAllAsync(
+            CancellationToken cancellationToken)
     {
         return _channel.Reader.ReadAllAsync(
             cancellationToken);
